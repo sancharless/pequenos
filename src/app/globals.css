@@ -583,7 +583,47 @@ html, body {
   border: 1px solid rgba(0, 191, 165, 0.2);
 }
 
-/* Responsive */
+/* Bottom Mobile Navigation */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 68px;
+  background-color: rgba(18, 18, 24, 0.95);
+  border-top: 1px solid var(--border-color);
+  z-index: 999;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+  backdrop-filter: blur(12px);
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-secondary);
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+  padding: 8px 0;
+}
+
+.mobile-nav-item.active {
+  color: #00bfa5;
+}
+
+.mobile-nav-item svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive Overrides */
 @media (max-width: 1024px) {
   .widgets-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -595,20 +635,62 @@ html, body {
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 70px;
-    padding: 16px 8px;
+    display: none !important;
   }
-  .logo-text, .menu-item span {
-    display: none;
+  .mobile-nav {
+    display: flex;
   }
   .main-wrapper {
-    margin-left: 70px;
+    margin-left: 0 !important;
+    padding: 16px;
+    padding-bottom: 96px;
   }
   .widgets-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .widget-card {
+    padding: 14px;
+    border-radius: 12px;
+    gap: 10px;
+  }
+  .widget-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+  .widget-title {
+    font-size: 11px;
+  }
+  .widget-value {
+    font-size: 16px;
+  }
+  .header-bar {
+    height: auto;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+  .header-welcome h1 {
+    font-size: 20px;
+  }
+  .header-welcome p {
+    font-size: 12px;
+  }
+  .content-split {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .panel-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .panel-header {
+    padding: 14px;
+    margin-bottom: 16px;
   }
   .pix-container {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 

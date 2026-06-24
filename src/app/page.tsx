@@ -458,6 +458,44 @@ export default function Dashboard() {
 
   return (
     <div className="app-container">
+      {/* Mobile Bottom Navigation */}
+      <nav className="mobile-nav">
+        <div className={`mobile-nav-item ${activeTab === 'novo-pedido' ? 'active' : ''}`} onClick={() => setActiveTab('novo-pedido')}>
+          <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <rect width="7" height="9" x="3" y="3" rx="1"/>
+            <rect width="7" height="5" x="14" y="3" rx="1"/>
+            <rect width="7" height="9" x="14" y="12" rx="1"/>
+            <rect width="7" height="5" x="3" y="16" rx="1"/>
+          </svg>
+          <span>Novo Pedido</span>
+        </div>
+        <div className={`mobile-nav-item ${activeTab === 'servicos' ? 'active' : ''}`} onClick={() => setActiveTab('servicos')}>
+          <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          <span>Serviços</span>
+        </div>
+        <div className={`mobile-nav-item ${activeTab === 'adicionar-saldo' ? 'active' : ''}`} onClick={() => { setActiveTab('adicionar-saldo'); setGeneratedPix(null); setPixFeedback(null); }}>
+          <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <rect width="20" height="14" x="2" y="5" rx="2"/>
+            <line x1="2" x2="22" y1="10" y2="10"/>
+          </svg>
+          <span>Saldo</span>
+        </div>
+        <div className={`mobile-nav-item ${activeTab === 'pedidos' ? 'active' : ''}`} onClick={() => setActiveTab('pedidos')}>
+          <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+          </svg>
+          <span>Pedidos</span>
+        </div>
+        <div className={`mobile-nav-item ${activeTab === 'api' ? 'active' : ''}`} onClick={() => setActiveTab('api')}>
+          <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+          </svg>
+          <span>API</span>
+        </div>
+      </nav>
+
       {/* Sidebar */}
       <aside className="sidebar">
         <div>
