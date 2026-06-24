@@ -309,6 +309,8 @@ html, body {
 .panel-header-info {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  flex: 1;
 }
 
 .panel-header h2 {
@@ -691,6 +693,34 @@ html, body {
   .pix-container {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+  
+  /* Better table responsiveness on mobile */
+  .services-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -16px;
+    padding: 0 16px;
+  }
+  .smm-table th,
+  .smm-table td {
+    padding: 12px 10px !important;
+    white-space: nowrap;
+  }
+  
+  /* Flexbox text wrapping fix for headers */
+  .panel-header-info {
+    min-width: 0;
+    flex: 1;
+  }
+  
+  /* Adjust heading sizes for better look on small screens */
+  .panel-header h2 {
+    font-size: 16px;
+  }
+  .panel-header p {
+    font-size: 11px;
+    line-height: 1.4;
   }
 }
 
