@@ -96,7 +96,11 @@ const INITIAL_DB: DatabaseSchema = {
 // JSON Local Fallback Helpers
 function getLocalDb(): DatabaseSchema {
   if (!fs.existsSync(DB_PATH)) {
-    fs.writeFileSync(DB_PATH, JSON.stringify(INITIAL_DB, null, 2), 'utf-8');
+    try {
+      fs.writeFileSync(DB_PATH, JSON.stringify(INITIAL_DB, null, 2), 'utf-8');
+    } catch (err) {
+      console.warn('Failed to write initial DB fallback file (likely read-only environment):', err);
+    }
     return INITIAL_DB;
   }
   try {
@@ -108,7 +112,11 @@ function getLocalDb(): DatabaseSchema {
 }
 
 function saveLocalDb(db: DatabaseSchema) {
-  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), 'utf-8');
+  try {
+    fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), 'utf-8');
+  } catch (err) {
+    console.warn('Failed to write local database file (likely read-only environment):', err);
+  }
 }
 
 export const dbHelper = {
