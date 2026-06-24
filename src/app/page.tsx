@@ -1018,12 +1018,6 @@ export default function Dashboard() {
                   {generatedPix.status === 'pending' ? (
                     <div className="payment-status-banner pending" style={{ width: '100%', justifyContent: 'center' }}>
                       <span className="badge pending">Aguardando pagamento...</span>
-                      <button 
-                        onClick={handleSimulateWebhook} 
-                        style={{ marginLeft: '12px', background: '#ffd700', border: 'none', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold', color: '#121218' }}
-                      >
-                        Simular Aprovação
-                      </button>
                     </div>
                   ) : (
                     <div className="payment-status-banner approved" style={{ width: '100%', justifyContent: 'center' }}>
