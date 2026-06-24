@@ -1,0 +1,48 @@
+{
+  "user": {
+    "balance": 0.03095,
+    "totalOrders": 6238743,
+    "totalSpent": 2209.63,
+    "status": "Elite"
+  },
+  "services": [
+    {
+      "id": "1895",
+      "name": "Instagram Seguidores Mundial 🌏 [SR] - R$ 6,90 por 1000",
+      "category": "SERVIÇOS EM PROMOÇÃO ☀️",
+      "ratePer1000": 6.9,
+      "min": 10,
+      "max": 10000,
+      "description": "Instagram Seguidores de alta qualidade, entrega rápida e garantia de reposição de 30 dias."
+    },
+    {
+      "id": "2001",
+      "name": "Instagram Curtidas Brasileiras 🇧🇷 [Rápido] - R$ 4,50 por 1000",
+      "category": "SERVIÇOS EM PROMOÇÃO ☀️",
+      "ratePer1000": 4.5,
+      "min": 20,
+      "max": 5000,
+      "description": "Curtidas brasileiras em posts do Instagram. Início imediato."
+    },
+    {
+      "id": "3045",
+      "name": "TikTok Visualizações Ultra Rápidas ⚡ - R$ 0,15 por 1000",
+      "category": "TIKTOK",
+      "ratePer1000": 0.15,
+      "min": 100,
+      "max": 1000000,
+      "description": "Visualizações baratas e extremamente rápidas para vídeos do TikTok."
+    },
+    {
+      "id": "4012",
+      "name": "YouTube Visualizações Alta Retenção 📈 - R$ 12,90 por 1000",
+      "category": "YOUTUBE",
+      "ratePer1000": 12.9,
+      "min": 50,
+      "max": 50000,
+      "description": "Visualizações qualificadas com retenção de 2 a 5 minutos."
+    }
+  ],
+  "orders": [],
+  "payments": []
+}
