@@ -256,7 +256,7 @@ export default function Dashboard() {
   }, [selectedServiceId, orderQuantity, services]);
 
   // Handle Auth actions
-  const handleAuthSubmit = (e: React.FormEvent) => {
+  const handleAuthSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setAuthFeedback(null);
 
@@ -265,78 +265,53 @@ export default function Dashboard() {
       return;
     }
 
-    const userName = authEmail.split('@')[0];
-    const displayName = userName.charAt(0).toUpperCase() + userName.slice(1);
-    const isElite = authEmail.toLowerCase() === 'admin@goobox.com';
-    const role = isElite ? 'admin' : 'user';
-
     if (authScreen === 'login') {
-      // Login simulation (Accepts admin@goobox.com, or any email for demonstration ease!)
-      fetch(`/api/user?email=${encodeURIComponent(authEmail)}`)
-        .then(res => res.json())
-        .then(data => {
-          if (data && !data.error) {
-            const loggedUser: UserStats = {
-              name: data.name || displayName,
-              email: data.email || authEmail,
-              balance: data.balance !== undefined ? data.balance : (isElite ? 0.03095 : 50.00),
-              totalOrders: data.totalOrders !== undefined ? data.totalOrders : (isElite ? 1475 : 0),
-              totalSpent: data.totalSpent !== undefined ? data.totalSpent : (isElite ? 412.50 : 0.00),
-              status: data.status || (isElite ? 'Elite' : 'Iniciante'),
-              role: data.role || role
-            };
-            sessionStorage.setItem('goobox_session', JSON.stringify(loggedUser));
-            setUser(loggedUser);
-            setIsAuthenticated(true);
-          } else {
-            const loggedUser: UserStats = {
-              name: displayName,
-              email: authEmail,
-              balance: isElite ? 0.03095 : 50.00,
-              totalOrders: isElite ? 1475 : 0,
-              totalSpent: isElite ? 412.50 : 0.00,
-              status: isElite ? 'Elite' : 'Iniciante',
-              role: role
-            };
-            sessionStorage.setItem('goobox_session', JSON.stringify(loggedUser));
-            setUser(loggedUser);
-            setIsAuthenticated(true);
-          }
-        })
-        .catch(() => {
-          const loggedUser: UserStats = {
-            name: displayName,
-            email: authEmail,
-            balance: isElite ? 0.03095 : 50.00,
-            totalOrders: isElite ? 1475 : 0,
-            totalSpent: isElite ? 412.50 : 0.00,
-            status: isElite ? 'Elite' : 'Iniciante',
-            role: role
-          };
-          sessionStorage.setItem('goobox_session', JSON.stringify(loggedUser));
-          setUser(loggedUser);
-          setIsAuthenticated(true);
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: authEmail, password: authPassword })
         });
+        const data = await res.json();
+        
+        if (!res.ok) {
+          setAuthFeedback(data.error || 'Erro ao realizar login.');
+          return;
+        }
+
+        sessionStorage.setItem('goobox_session', JSON.stringify(data.user));
+        setUser(data.user);
+        setIsAuthenticated(true);
+      } catch (err) {
+        console.error(err);
+        setAuthFeedback('Erro de conexão ao realizar login.');
+      }
     } else {
-      // Register simulation: Initializes user with R$ 50,00 so they can immediately test placing SMM orders!
       if (!authName) {
         setAuthFeedback('Por favor, informe seu nome completo.');
         return;
       }
 
-      const registeredUser: UserStats = {
-        name: authName,
-        email: authEmail,
-        balance: 0.00, // starting balance set to 0.00
-        totalOrders: 0,
-        totalSpent: 0.0,
-        status: 'Iniciante',
-        role: role
-      };
+      try {
+        const res = await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: authName, email: authEmail, password: authPassword })
+        });
+        const data = await res.json();
 
-      sessionStorage.setItem('goobox_session', JSON.stringify(registeredUser));
-      setUser(registeredUser);
-      setIsAuthenticated(true);
+        if (!res.ok) {
+          setAuthFeedback(data.error || 'Erro ao criar conta.');
+          return;
+        }
+
+        sessionStorage.setItem('goobox_session', JSON.stringify(data.user));
+        setUser(data.user);
+        setIsAuthenticated(true);
+      } catch (err) {
+        console.error(err);
+        setAuthFeedback('Erro de conexão ao criar conta.');
+      }
     }
   };
 
