@@ -3,7 +3,7 @@ import { dbHelper, Payment } from '@/lib/db';
 
 export async function POST(request: Request) {
   try {
-    const { amount } = await request.json();
+    const { amount, userEmail } = await request.json();
 
     if (!amount || amount <= 0) {
       return NextResponse.json(
@@ -52,11 +52,12 @@ export async function POST(request: Request) {
       status: 'pending',
       qrCodeBase64,
       qrCode,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
+      userEmail: userEmail || 'admin@goobox.com'
     };
 
     // Save payment
-    dbHelper.addPayment(newPayment);
+    await dbHelper.addPayment(newPayment);
 
     // Integridade com Mercado Pago Real (Opcional se houver token)
     const accessToken = process.env.MERCADO_PAGO_ACCESS_TOKEN;

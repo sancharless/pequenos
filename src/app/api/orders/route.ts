@@ -3,7 +3,7 @@ import { dbHelper } from '@/lib/db';
 import { supplierClient } from '@/lib/supplier';
 
 export async function GET() {
-  const orders = dbHelper.getOrders();
+  const orders = await dbHelper.getOrders();
   return NextResponse.json(orders);
 }
 
@@ -38,7 +38,7 @@ export async function POST(request: Request) {
 
     const rate = parseFloat(service.rate);
     const charge = (rate / 1000) * quantity;
-    const user = dbHelper.getUser();
+    const user = await dbHelper.getUser();
 
     // Verificação de saldo simulado do usuário (ou da sessão)
     // O front-end gerencia a redução local do saldo do usuário logado na sessão também.
@@ -62,15 +62,16 @@ export async function POST(request: Request) {
     }
 
     // Deduct user balance in central db
-    dbHelper.updateUserBalance(-charge);
+    await dbHelper.updateUserBalance(user.email, -charge);
 
     // Save order in local database
-    const newOrder = dbHelper.addOrder({
+    const newOrder = await dbHelper.addOrder({
       serviceId,
       serviceName: service.name,
       link,
       quantity,
-      charge
+      charge,
+      userEmail: user.email
     });
 
     // Subtitui ID local pelo ID do fornecedor se retornado

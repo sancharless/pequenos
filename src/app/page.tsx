@@ -287,7 +287,7 @@ export default function Dashboard() {
       const res = await fetch('/api/payment/pix', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ amount: amountNum })
+        body: JSON.stringify({ amount: amountNum, userEmail: user?.email })
       });
 
       const data = await res.json();

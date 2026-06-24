@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     let shouldApprove = false;
     let paymentAmount = 0;
 
-    const payments = dbHelper.getPayments();
+    const payments = await dbHelper.getPayments();
     const localPayment = payments.find(p => p.id === paymentId);
 
     if (isSimulation) {
@@ -61,7 +61,7 @@ export async function POST(request: Request) {
     }
 
     if (shouldApprove) {
-      const updated = dbHelper.updatePaymentStatus(paymentId, 'approved');
+      const updated = await dbHelper.updatePaymentStatus(paymentId, 'approved');
       if (updated) {
         console.log(`Pagamento ${paymentId} APROVADO. Saldo atualizado com sucesso!`);
         return NextResponse.json({ 
