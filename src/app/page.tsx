@@ -327,7 +327,7 @@ export default function Dashboard() {
       const registeredUser: UserStats = {
         name: authName,
         email: authEmail,
-        balance: 50.00, // starting balance gift to test the SMM flow!
+        balance: 0.00, // starting balance set to 0.00
         totalOrders: 0,
         totalSpent: 0.0,
         status: 'Iniciante',
@@ -511,7 +511,7 @@ export default function Dashboard() {
               </div>
               <span className="login-logo-text">Goobox</span>
               <p className="login-subtitle">
-                {authScreen === 'login' ? 'Impulsione sua presença digital com o painel SMM do futuro.' : 'Crie sua conta em segundos e ganhe R$ 50,00 de saldo para testar imediatamente!'}
+                {authScreen === 'login' ? 'Impulsione sua presença digital com o painel SMM do futuro.' : 'Crie sua conta em segundos para começar a impulsionar suas redes sociais!'}
               </p>
             </div>
 

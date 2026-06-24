@@ -158,7 +158,7 @@ export const dbHelper = {
   },
 
   createUser: async (user: Omit<UserStats, 'totalOrders' | 'totalSpent' | 'status'>): Promise<UserStats> => {
-    const startingBalance = 50.00; // Gift starting balance for testing
+    const startingBalance = 0.00; // Users start with 0.00 balance
     const role = user.email.toLowerCase() === 'admin@goobox.com' ? 'admin' : 'user';
     
     if (supabase) {
@@ -226,7 +226,7 @@ export const dbHelper = {
         name: displayName,
         email: targetEmail,
         passwordHash: '',
-        balance: 50.00
+        balance: 0.00
       });
 
       if (isElite) {
