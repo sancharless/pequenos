@@ -213,6 +213,83 @@ export const dbHelper = {
     return newUser;
   },
 
+  deleteUser: async (email: string): Promise<boolean> => {
+    if (email.toLowerCase() === 'admin@goobox.com') return false;
+    
+    if (supabase) {
+      try {
+        const { error } = await supabase
+          .from('users')
+          .delete()
+          .eq('email', email);
+
+        if (error) throw error;
+      } catch (err) {
+        console.error('Supabase user deletion failed:', err);
+      }
+    }
+
+    const db = getLocalDb();
+    if (db.usersList) {
+      db.usersList = db.usersList.filter(u => u.email.toLowerCase() !== email.toLowerCase());
+      saveLocalDb(db);
+    }
+    return true;
+  },
+
+  adminCreateUser: async (user: Omit<UserStats, 'totalOrders' | 'totalSpent' | 'status'> & { passwordHash: string; balance: number; role: string }): Promise<UserStats> => {
+    if (supabase) {
+      try {
+        const { data, error } = await supabase
+          .from('users')
+          .insert({
+            name: user.name,
+            email: user.email,
+            password_hash: user.passwordHash || '',
+            balance: user.balance,
+            total_orders: 0,
+            total_spent: 0.00,
+            status: 'Iniciante',
+            role: user.role
+          })
+          .select()
+          .single();
+
+        if (error) throw error;
+
+        return {
+          id: data.id,
+          name: data.name,
+          email: data.email,
+          balance: parseFloat(data.balance),
+          totalOrders: data.total_orders,
+          totalSpent: parseFloat(data.total_spent),
+          status: data.status,
+          role: data.role
+        };
+      } catch (err) {
+        console.error('Supabase adminCreateUser failed, fallback to local DB:', err);
+      }
+    }
+
+    const db = getLocalDb();
+    const newUser: UserStats = {
+      name: user.name,
+      email: user.email,
+      balance: user.balance,
+      totalOrders: 0,
+      totalSpent: 0.00,
+      status: 'Iniciante',
+      passwordHash: user.passwordHash,
+      role: user.role
+    };
+
+    if (!db.usersList) db.usersList = [];
+    db.usersList.push(newUser);
+    saveLocalDb(db);
+    return newUser;
+  },
+
   getUser: async (email?: string): Promise<UserStats> => {
     const targetEmail = email || 'admin@goobox.com';
     let u = await dbHelper.getUserByEmail(targetEmail);

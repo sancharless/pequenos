@@ -88,6 +88,24 @@ export default function Dashboard() {
   const [isAdjustingBalance, setIsAdjustingBalance] = useState(false);
   const [isSavingMarkup, setIsSavingMarkup] = useState(false);
 
+  const [adminMetrics, setAdminMetrics] = useState<{
+    totalBilling: number;
+    dailyBilling: number;
+    weeklyBilling: number;
+    monthlyBilling: number;
+    estimatedProfit: number;
+    totalOrders: number;
+    totalUsers: number;
+  } | null>(null);
+
+  // Form states for creating a user
+  const [createName, setCreateName] = useState('');
+  const [createEmail, setCreateEmail] = useState('');
+  const [createPassword, setCreatePassword] = useState('');
+  const [createBalance, setCreateBalance] = useState('0.00');
+  const [createRole, setCreateRole] = useState('user');
+  const [isCreatingUser, setIsCreatingUser] = useState(false);
+
   // Check auth session
   useEffect(() => {
     const savedSession = sessionStorage.getItem('goobox_session');
@@ -163,15 +181,18 @@ export default function Dashboard() {
     if (!isAuthenticated || user?.role !== 'admin') return;
     setAdminLoading(true);
     try {
-      const [usersRes, settingsRes] = await Promise.all([
+      const [usersRes, settingsRes, metricsRes] = await Promise.all([
         fetch('/api/admin/users'),
-        fetch('/api/admin/settings')
+        fetch('/api/admin/settings'),
+        fetch('/api/admin/metrics')
       ]);
-      if (usersRes.ok && settingsRes.ok) {
+      if (usersRes.ok && settingsRes.ok && metricsRes.ok) {
         const usersData = await usersRes.json();
         const settingsData = await settingsRes.json();
+        const metricsData = await metricsRes.json();
         setAdminUsers(usersData);
         setMarkupPercent(settingsData.serviceMarkupPercent);
+        setAdminMetrics(metricsData);
         if (settingsData.supportWhatsappNumber) {
           setWhatsappNumber(settingsData.supportWhatsappNumber);
         }
@@ -246,6 +267,77 @@ export default function Dashboard() {
       setAdminFeedback({ success: false, message: 'Erro de conexão.' });
     } finally {
       setIsAdjustingBalance(false);
+    }
+  };
+
+  const handleCreateUser = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setAdminFeedback(null);
+    setIsCreatingUser(true);
+    try {
+      const res = await fetch('/api/admin/users', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'create',
+          name: createName,
+          email: createEmail,
+          password: createPassword,
+          balance: parseFloat(createBalance) || 0,
+          role: createRole
+        })
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setAdminFeedback({ success: true, message: `Usuário ${createName} criado com sucesso!` });
+        setCreateName('');
+        setCreateEmail('');
+        setCreatePassword('');
+        setCreateBalance('0.00');
+        setCreateRole('user');
+        fetchAdminData();
+        fetchData();
+      } else {
+        setAdminFeedback({ success: false, message: data.error || 'Erro ao criar usuário.' });
+      }
+    } catch (err) {
+      console.error(err);
+      setAdminFeedback({ success: false, message: 'Erro de conexão ao criar usuário.' });
+    } finally {
+      setIsCreatingUser(false);
+    }
+  };
+
+  const handleDeleteUser = async (email: string) => {
+    if (email.toLowerCase() === 'admin@goobox.com') {
+      alert('Não é possível excluir o administrador principal.');
+      return;
+    }
+    if (!confirm(`Tem certeza que deseja excluir permanentemente o usuário ${email}?`)) {
+      return;
+    }
+    
+    setAdminFeedback(null);
+    try {
+      const res = await fetch('/api/admin/users', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'delete',
+          email
+        })
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setAdminFeedback({ success: true, message: 'Usuário excluído com sucesso!' });
+        fetchAdminData();
+        fetchData();
+      } else {
+        setAdminFeedback({ success: false, message: data.error || 'Erro ao excluir usuário.' });
+      }
+    } catch (err) {
+      console.error(err);
+      setAdminFeedback({ success: false, message: 'Erro de rede ao excluir usuário.' });
     }
   };
 
@@ -1198,6 +1290,45 @@ export default function Dashboard() {
 
         {activeTab === 'admin' && user?.role === 'admin' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+            {/* Metrics cards grid */}
+            <div className="widgets-grid" style={{ marginBottom: '0px' }}>
+              <div className="widget-card">
+                <div className="widget-icon" style={{ color: 'var(--primary)', backgroundColor: 'rgba(108, 37, 226, 0.15)' }}>💸</div>
+                <div className="widget-info">
+                  <span className="widget-title">Faturamento Pix (Total)</span>
+                  <span className="widget-value">R$ {adminMetrics?.totalBilling.toLocaleString('pt-BR', { minimumFractionDigits: 2 }) || '0,00'}</span>
+                  <small style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>Últimos 30 dias: R$ {adminMetrics?.monthlyBilling.toLocaleString('pt-BR', { minimumFractionDigits: 2 }) || '0,00'}</small>
+                </div>
+              </div>
+
+              <div className="widget-card">
+                <div className="widget-icon" style={{ color: 'var(--success)', backgroundColor: 'rgba(0, 191, 165, 0.15)' }}>📈</div>
+                <div className="widget-info">
+                  <span className="widget-title">Lucro Estimado</span>
+                  <span className="widget-value" style={{ color: 'var(--success)' }}>R$ {adminMetrics?.estimatedProfit.toLocaleString('pt-BR', { minimumFractionDigits: 2 }) || '0,00'}</span>
+                  <small style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>Calculado sobre markup global</small>
+                </div>
+              </div>
+
+              <div className="widget-card">
+                <div className="widget-icon" style={{ color: '#ff9800', backgroundColor: 'rgba(255, 152, 0, 0.15)' }}>📦</div>
+                <div className="widget-info">
+                  <span className="widget-title">Total de Pedidos SMM</span>
+                  <span className="widget-value">{adminMetrics?.totalOrders || 0}</span>
+                  <small style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>Realizados no painel</small>
+                </div>
+              </div>
+
+              <div className="widget-card">
+                <div className="widget-icon" style={{ color: '#ffd700', backgroundColor: 'rgba(255, 215, 0, 0.15)' }}>👥</div>
+                <div className="widget-info">
+                  <span className="widget-title">Total de Clientes</span>
+                  <span className="widget-value">{adminMetrics?.totalUsers || 0}</span>
+                  <small style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>Cadastrados na base</small>
+                </div>
+              </div>
+            </div>
+
             <div className="content-split">
               {/* Global settings card */}
               <div className="panel-card">
@@ -1314,6 +1445,111 @@ export default function Dashboard() {
               </div>
             </div>
 
+            <div className="content-split">
+              {/* Create User Card */}
+              <div className="panel-card">
+                <div className="panel-header secondary">
+                  <div className="panel-header-icon" style={{ backgroundColor: 'rgba(108, 37, 226, 0.15)', color: 'var(--primary)' }}>👤</div>
+                  <div className="panel-header-info">
+                    <h2>Cadastrar Novo Usuário</h2>
+                    <p>Crie um novo cliente ou administrador no sistema</p>
+                  </div>
+                </div>
+
+                {adminFeedback && adminFeedback.message.includes('cadastrado') && (
+                  <div className={`payment-status-banner ${adminFeedback.success ? 'approved' : 'pending'}`} style={{ marginBottom: '20px' }}>
+                    {adminFeedback.message}
+                  </div>
+                )}
+
+                <form onSubmit={handleCreateUser} style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '12px' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                    <div className="form-group">
+                      <label className="form-label">Nome Completo</label>
+                      <input
+                        type="text"
+                        className="form-input"
+                        value={createName}
+                        onChange={(e) => setCreateName(e.target.value)}
+                        placeholder="Ex: João Silva"
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label className="form-label">E-mail</label>
+                      <input
+                        type="email"
+                        className="form-input"
+                        value={createEmail}
+                        onChange={(e) => setCreateEmail(e.target.value)}
+                        placeholder="Ex: joao@gmail.com"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                    <div className="form-group">
+                      <label className="form-label">Senha</label>
+                      <input
+                        type="password"
+                        className="form-input"
+                        value={createPassword}
+                        onChange={(e) => setCreatePassword(e.target.value)}
+                        placeholder="Min 6 caracteres"
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label className="form-label">Saldo Inicial (BRL)</label>
+                      <input
+                        type="number"
+                        className="form-input"
+                        value={createBalance}
+                        onChange={(e) => setCreateBalance(e.target.value)}
+                        placeholder="Ex: 50.00"
+                        step="0.01"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Função / Tipo de Conta</label>
+                    <select
+                      className="form-select"
+                      value={createRole}
+                      onChange={(e) => setCreateRole(e.target.value)}
+                      required
+                    >
+                      <option value="user">Cliente Comum (user)</option>
+                      <option value="admin">Administrador (admin)</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" className="submit-btn" style={{ marginTop: '6px' }} disabled={isCreatingUser}>
+                    {isCreatingUser ? 'Criando Conta...' : 'Cadastrar Usuário'}
+                  </button>
+                </form>
+              </div>
+
+              {/* Admin Quick Guide Card */}
+              <div className="panel-card">
+                <div className="panel-header secondary">
+                  <div className="panel-header-icon" style={{ backgroundColor: 'rgba(255, 215, 0, 0.15)', color: '#ffd700' }}>💡</div>
+                  <div className="panel-header-info">
+                    <h2>Guia de Administração</h2>
+                    <p>Dicas rápidas para gerenciar seu painel SMM</p>
+                  </div>
+                </div>
+                <div style={{ color: 'var(--text-secondary)', fontSize: '13px', display: 'flex', flexDirection: 'column', gap: '14px', marginTop: '16px', lineHeight: 1.5 }}>
+                  <p>🔹 <strong>Markup dos Serviços:</strong> A porcentagem configurada calcula automaticamente a diferença entre o custo base do provedor e o preço cobrado dos seus clientes.</p>
+                  <p>🔹 <strong>Exclusão de Contas:</strong> Ao excluir um usuário, todos os dados associados a ele no Supabase são removidos permanentemente. O admin principal não pode ser excluído.</p>
+                  <p>🔹 <strong>Faturamento Real:</strong> Os valores de faturamento exibidos no painel refletem apenas as recargas Pix que foram de fato concluídas e pagas via Mercado Pago.</p>
+                </div>
+              </div>
+            </div>
+
             {/* Users table card */}
             <div className="panel-card">
               <div className="panel-header secondary">
@@ -1338,12 +1574,13 @@ export default function Dashboard() {
                         <th>Saldo</th>
                         <th>Pedidos Realizados</th>
                         <th>Total Gasto</th>
+                        <th style={{ textAlign: 'center' }}>Ações</th>
                       </tr>
                     </thead>
                     <tbody>
                       {adminUsers.length === 0 ? (
                         <tr>
-                          <td colSpan={7} style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '24px' }}>
+                          <td colSpan={8} style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '24px' }}>
                             Nenhum usuário cadastrado.
                           </td>
                         </tr>
@@ -1368,6 +1605,18 @@ export default function Dashboard() {
                             </td>
                             <td>{u.totalOrders}</td>
                             <td>R$ {u.totalSpent.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</td>
+                            <td style={{ textAlign: 'center' }}>
+                              {u.email.toLowerCase() !== 'admin@goobox.com' && u.email.toLowerCase() !== user?.email.toLowerCase() ? (
+                                <button
+                                  className="delete-user-btn"
+                                  onClick={() => handleDeleteUser(u.email)}
+                                >
+                                  Excluir
+                                </button>
+                              ) : (
+                                <span style={{ color: 'var(--text-secondary)', fontSize: '11px', fontStyle: 'italic' }}>Ativo (Principal)</span>
+                              )}
+                            </td>
                           </tr>
                         ))
                       )}

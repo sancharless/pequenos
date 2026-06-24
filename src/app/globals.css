@@ -563,6 +563,24 @@ html, body {
   background-color: var(--primary-hover);
 }
 
+.delete-user-btn {
+  background-color: rgba(255, 51, 102, 0.15);
+  color: var(--error);
+  border: 1px solid rgba(255, 51, 102, 0.2);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-user-btn:hover {
+  background-color: var(--error);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 51, 102, 0.2);
+}
+
 .payment-status-banner {
   padding: 16px;
   border-radius: 12px;
