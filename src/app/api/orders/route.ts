@@ -7,6 +7,45 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const email = searchParams.get('email') || undefined;
     const orders = await dbHelper.getOrders(email);
+
+    // Filter active orders to sync (Pendente or Processando)
+    const activeOrders = orders.filter(o => o.status === 'Pendente' || o.status === 'Processando');
+
+    if (activeOrders.length > 0) {
+      const orderIds = activeOrders.map(o => o.id);
+      try {
+        const statuses = await supplierClient.getOrderStatuses(orderIds);
+        
+        // Update database and in-memory list for changed statuses
+        for (const order of activeOrders) {
+          const supplierInfo = statuses[order.id];
+          if (supplierInfo && supplierInfo.status) {
+            let mappedStatus: 'Pendente' | 'Processando' | 'Concluido' | 'Cancelado' | 'Parcial' = order.status;
+            
+            const rawStatus = supplierInfo.status.toLowerCase();
+            if (rawStatus === 'pending') {
+              mappedStatus = 'Pendente';
+            } else if (rawStatus === 'processing' || rawStatus === 'in progress') {
+              mappedStatus = 'Processando';
+            } else if (rawStatus === 'completed') {
+              mappedStatus = 'Concluido';
+            } else if (rawStatus === 'canceled' || rawStatus === 'cancelled') {
+              mappedStatus = 'Cancelado';
+            } else if (rawStatus === 'partial') {
+              mappedStatus = 'Parcial';
+            }
+
+            if (mappedStatus !== order.status) {
+              await dbHelper.updateOrderStatus(order.id, mappedStatus);
+              order.status = mappedStatus; // update in memory for the response
+            }
+          }
+        }
+      } catch (syncErr) {
+        console.error('Error syncing order statuses with SMM supplier:', syncErr);
+      }
+    }
+
     return NextResponse.json(orders);
   } catch (error) {
     console.error('Error fetching orders:', error);

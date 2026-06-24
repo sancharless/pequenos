@@ -33,7 +33,7 @@ export interface Order {
   link: string;
   quantity: number;
   charge: number;
-  status: 'Pendente' | 'Processando' | 'Concluido' | 'Cancelado';
+  status: 'Pendente' | 'Processando' | 'Concluido' | 'Cancelado' | 'Parcial';
   createdAt: string;
   userEmail?: string;
 }
@@ -403,6 +403,28 @@ export const dbHelper = {
     db.orders.unshift(newOrder);
     saveLocalDb(db);
     return newOrder;
+  },
+
+  updateOrderStatus: async (id: string, status: string): Promise<void> => {
+    if (supabase) {
+      try {
+        const { error } = await supabase
+          .from('orders')
+          .update({ status: status })
+          .eq('id', id);
+
+        if (error) throw error;
+      } catch (err) {
+        console.error(`Supabase order status update failed for ${id}:`, err);
+      }
+    }
+
+    const db = getLocalDb();
+    const order = db.orders.find(o => o.id === id);
+    if (order) {
+      order.status = status as any;
+      saveLocalDb(db);
+    }
   },
 
   // Payments

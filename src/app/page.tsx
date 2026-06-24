@@ -32,7 +32,7 @@ interface Order {
   link: string;
   quantity: number;
   charge: number;
-  status: 'Pendente' | 'Processando' | 'Concluido' | 'Cancelado';
+  status: 'Pendente' | 'Processando' | 'Concluido' | 'Cancelado' | 'Parcial';
   createdAt: string;
 }
 
@@ -1129,7 +1129,7 @@ export default function Dashboard() {
                           R$ {ord.charge.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 5 })}
                         </td>
                         <td>
-                          <span className={`badge ${ord.status === 'Concluido' ? 'success' : ord.status === 'Cancelado' ? 'error' : 'processing'}`}>
+                          <span className={`badge ${ord.status === 'Concluido' ? 'success' : ord.status === 'Cancelado' ? 'error' : ord.status === 'Parcial' ? 'pending' : 'processing'}`}>
                             {ord.status}
                           </span>
                         </td>

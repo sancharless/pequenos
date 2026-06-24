@@ -102,5 +102,30 @@ export const supplierClient = {
       console.error('Error getting supplier order status:', error);
       return { error: 'Failed to query order status from SMM Supplier.' };
     }
+  },
+
+  getOrderStatuses: async (orderIds: string[]): Promise<Record<string, SupplierStatusResponse>> => {
+    try {
+      const res = await fetch(SUPPLIER_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          key: SUPPLIER_KEY,
+          action: 'status',
+          orders: orderIds.join(','),
+        })
+      });
+
+      if (!res.ok) {
+        throw new Error(`Failed to get order statuses from supplier: ${res.statusText}`);
+      }
+
+      return await res.json();
+    } catch (error) {
+      console.error('Error getting supplier order statuses:', error);
+      return {};
+    }
   }
 };
