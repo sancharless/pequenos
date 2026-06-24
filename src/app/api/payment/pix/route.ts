@@ -56,13 +56,14 @@ export async function POST(request: Request) {
       userEmail: userEmail || 'admin@goobox.com'
     };
 
-    // Save payment
-    await dbHelper.addPayment(newPayment);
-
     // Integridade com Mercado Pago Real (Opcional se houver token)
     const accessToken = process.env.MERCADO_PAGO_ACCESS_TOKEN;
     if (accessToken) {
       try {
+        const host = request.headers.get('host') || 'goobox.vercel.app';
+        const protocol = host.includes('localhost') ? 'http' : 'https';
+        const notificationUrl = `${protocol}://${host}/api/payment/webhook`;
+
         const mpResponse = await fetch('https://api.mercadopago.com/v1/payments', {
           method: 'POST',
           headers: {
@@ -74,8 +75,9 @@ export async function POST(request: Request) {
             transaction_amount: parseFloat(amount),
             description: 'Recarga Saldo SMM Panel',
             payment_method_id: 'pix',
+            notification_url: notificationUrl,
             payer: {
-              email: 'cliente@ggramclone.com',
+              email: userEmail || 'cliente@goobox.com',
               first_name: 'Cliente',
               last_name: 'SMM',
               identification: {
@@ -92,13 +94,17 @@ export async function POST(request: Request) {
           newPayment.id = mpData.id.toString();
           newPayment.qrCode = mpData.point_of_interaction.transaction_data.qr_code;
           newPayment.qrCodeBase64 = `data:image/png;base64,${mpData.point_of_interaction.transaction_data.qr_code_base64}`;
-          // Re-update database
-          // (We will write a simple flow or use this mp transaction)
+        } else {
+          const errText = await mpResponse.text();
+          console.warn('Mercado Pago API returned error response, falling back to mock payment:', errText);
         }
       } catch (err) {
         console.warn('Real Mercado Pago API call failed, using high-fidelity mock payment.', err);
       }
     }
+
+    // Save payment to database AFTER we have resolved the final ID (mock or real)
+    await dbHelper.addPayment(newPayment);
 
     return NextResponse.json({
       success: true,
