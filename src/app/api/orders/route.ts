@@ -64,13 +64,13 @@ export async function POST(request: Request) {
       );
     }
 
-    // Get live services from supplier to validate constraints
-    const liveServices = await supplierClient.getServices();
-    const service = liveServices.find(s => s.service.toString() === serviceId);
+    // Get services from our database to validate
+    const dbServices = await dbHelper.getServices();
+    const service = dbServices.find(s => s.id === serviceId);
     
     if (!service) {
       return NextResponse.json(
-        { error: 'Serviço não encontrado na API do fornecedor.' },
+        { error: 'Serviço não encontrado na base de dados.' },
         { status: 404 }
       );
     }
@@ -82,16 +82,11 @@ export async function POST(request: Request) {
       );
     }
 
-    const baseRate = parseFloat(service.rate);
-    const markupStr = await dbHelper.getSetting('service_markup_percent', '20');
-    const markupPercent = parseFloat(markupStr);
-    const sellingRate = baseRate * (1 + markupPercent / 100);
-    const charge = (sellingRate / 1000) * quantity;
+    // Since the rate in the database is the selling rate (calculated with markup or custom price),
+    // we use it directly.
+    const charge = (service.ratePer1000 / 1000) * quantity;
     const user = await dbHelper.getUser(userEmail || undefined);
 
-    // Verificação de saldo simulado do usuário (ou da sessão)
-    // O front-end gerencia a redução local do saldo do usuário logado na sessão também.
-    // Mas validamos no servidor pelo banco de dados central
     if (user.balance < charge) {
       return NextResponse.json(
         { error: 'Saldo insuficiente no painel. Recarregue via Pix.' },
@@ -99,15 +94,30 @@ export async function POST(request: Request) {
       );
     }
 
-    // Place actual order with the SMM Supplier
-    console.log(`Enviando pedido real para o fornecedor: Servico: ${serviceId}, Qtd: ${quantity}, Link: ${link}`);
-    const supplierRes = await supplierClient.placeOrder(serviceId, link, quantity);
+    let supplierOrderId: number | undefined = undefined;
 
-    if (supplierRes.error) {
-      return NextResponse.json(
-        { error: `Erro retornado pelo fornecedor: ${supplierRes.error}` },
-        { status: 400 }
-      );
+    // Check if the service is a real supplier service (its ID is numeric)
+    const isSupplierService = !isNaN(Number(serviceId));
+
+    if (isSupplierService) {
+      // Place actual order with the SMM Supplier
+      console.log(`Enviando pedido real para o fornecedor: Servico: ${serviceId}, Qtd: ${quantity}, Link: ${link}`);
+      const supplierRes = await supplierClient.placeOrder(serviceId, link, quantity);
+
+      if (supplierRes.error) {
+        return NextResponse.json(
+          { error: `Erro retornado pelo fornecedor: ${supplierRes.error}` },
+          { status: 400 }
+        );
+      }
+
+      if (supplierRes.order) {
+        supplierOrderId = supplierRes.order;
+      }
+    } else {
+      console.log(`Pedido de serviço customizado pulará API do fornecedor: Servico: ${serviceId}`);
+      // Simula ID de pedido do fornecedor aleatório
+      supplierOrderId = Math.floor(100000 + Math.random() * 900000);
     }
 
     // Deduct user balance in central db
@@ -115,6 +125,7 @@ export async function POST(request: Request) {
 
     // Save order in local database
     const newOrder = await dbHelper.addOrder({
+      id: supplierOrderId?.toString(),
       serviceId,
       serviceName: service.name,
       link,
@@ -123,16 +134,11 @@ export async function POST(request: Request) {
       userEmail: user.email
     });
 
-    // Subtitui ID local pelo ID do fornecedor se retornado
-    if (supplierRes.order) {
-      newOrder.id = supplierRes.order.toString();
-    }
-
     return NextResponse.json({
       success: true,
       message: 'Pedido enviado com sucesso para o fornecedor!',
       order: newOrder,
-      supplierOrderId: supplierRes.order,
+      supplierOrderId: supplierOrderId,
       newBalance: user.balance - charge
     });
   } catch (error) {

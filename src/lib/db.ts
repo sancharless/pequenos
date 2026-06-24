@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { supabase } from './supabase';
+import { supplierClient } from './supplier';
 
 const DB_PATH = path.join(process.cwd(), 'database.json');
 
@@ -719,5 +720,195 @@ export const dbHelper = {
     if (!db.settings) db.settings = {};
     db.settings[key] = value;
     saveLocalDb(db);
+  },
+
+  adminCreateService: async (service: Omit<Service, 'updatedAt'>): Promise<Service> => {
+    if (supabase) {
+      try {
+        const { data, error } = await supabase
+          .from('services')
+          .insert({
+            id: service.id,
+            name: service.name,
+            category: service.category,
+            rate_per_1000: service.ratePer1000,
+            min: service.min,
+            max: service.max,
+            description: service.description || ''
+          })
+          .select()
+          .single();
+
+        if (error) throw error;
+        return {
+          id: data.id,
+          name: data.name,
+          category: data.category,
+          ratePer1000: parseFloat(data.rate_per_1000),
+          min: data.min,
+          max: data.max,
+          description: data.description || ''
+        };
+      } catch (err) {
+        console.error('Supabase adminCreateService failed, fallback to local DB:', err);
+      }
+    }
+
+    const db = getLocalDb();
+    const newService: Service = {
+      id: service.id,
+      name: service.name,
+      category: service.category,
+      ratePer1000: service.ratePer1000,
+      min: service.min,
+      max: service.max,
+      description: service.description
+    };
+    db.services.push(newService);
+    saveLocalDb(db);
+    return newService;
+  },
+
+  adminUpdateService: async (id: string, service: Partial<Omit<Service, 'id'>>): Promise<Service | null> => {
+    if (supabase) {
+      try {
+        const updates: any = {};
+        if (service.name !== undefined) updates.name = service.name;
+        if (service.category !== undefined) updates.category = service.category;
+        if (service.ratePer1000 !== undefined) updates.rate_per_1000 = service.ratePer1000;
+        if (service.min !== undefined) updates.min = service.min;
+        if (service.max !== undefined) updates.max = service.max;
+        if (service.description !== undefined) updates.description = service.description;
+        updates.updated_at = new Date().toISOString();
+
+        const { data, error } = await supabase
+          .from('services')
+          .update(updates)
+          .eq('id', id)
+          .select()
+          .maybeSingle();
+
+        if (error) throw error;
+        if (data) {
+          return {
+            id: data.id,
+            name: data.name,
+            category: data.category,
+            ratePer1000: parseFloat(data.rate_per_1000),
+            min: data.min,
+            max: data.max,
+            description: data.description || ''
+          };
+        }
+      } catch (err) {
+        console.error('Supabase adminUpdateService failed, fallback to local DB:', err);
+      }
+    }
+
+    const db = getLocalDb();
+    const foundIndex = db.services.findIndex(s => s.id === id);
+    if (foundIndex !== -1) {
+      const updated = { ...db.services[foundIndex], ...service };
+      db.services[foundIndex] = updated;
+      saveLocalDb(db);
+      return updated;
+    }
+    return null;
+  },
+
+  adminDeleteService: async (id: string): Promise<boolean> => {
+    let deleted = false;
+    if (supabase) {
+      try {
+        const { error } = await supabase
+          .from('services')
+          .delete()
+          .eq('id', id);
+
+        if (error) throw error;
+        deleted = true;
+      } catch (err) {
+        console.error('Supabase adminDeleteService failed:', err);
+      }
+    }
+
+    const db = getLocalDb();
+    const originalLength = db.services.length;
+    db.services = db.services.filter(s => s.id !== id);
+    if (db.services.length !== originalLength) {
+      saveLocalDb(db);
+      deleted = true;
+    }
+    return deleted;
+  },
+
+  syncServicesFromSupplier: async (): Promise<Service[]> => {
+    try {
+      const rawServices = await supplierClient.getServices();
+      const markupStr = await dbHelper.getSetting('service_markup_percent', '20');
+      const markupPercent = parseFloat(markupStr) || 20;
+
+      const syncedServices: Service[] = [];
+
+      for (const srv of rawServices) {
+        const baseRate = parseFloat(srv.rate);
+        const sellingRate = baseRate * (1 + markupPercent / 100);
+        const serviceId = srv.service.toString();
+        const serviceName = srv.name;
+        const category = srv.category;
+        const min = srv.min;
+        const max = srv.max;
+        const description = `Serviço de alta velocidade de tipo: ${srv.type}. Pedido mínimo de ${srv.min} e máximo de ${srv.max} unidades.`;
+
+        syncedServices.push({
+          id: serviceId,
+          name: `${serviceName} - R$ ${sellingRate.toFixed(2)} por 1000`,
+          category: category,
+          ratePer1000: sellingRate,
+          min: min,
+          max: max,
+          description: description
+        });
+      }
+
+      if (supabase) {
+        try {
+          const dbRows = syncedServices.map(s => ({
+            id: s.id,
+            name: s.name,
+            category: s.category,
+            rate_per_1000: s.ratePer1000,
+            min: s.min,
+            max: s.max,
+            description: s.description,
+            updated_at: new Date().toISOString()
+          }));
+
+          const { error } = await supabase
+            .from('services')
+            .upsert(dbRows, { onConflict: 'id' });
+
+          if (error) throw error;
+        } catch (err) {
+          console.error('Supabase bulk upsert failed, syncing local JSON DB instead:', err);
+        }
+      }
+
+      const db = getLocalDb();
+      for (const s of syncedServices) {
+        const idx = db.services.findIndex(existing => existing.id === s.id);
+        if (idx !== -1) {
+          db.services[idx] = s;
+        } else {
+          db.services.push(s);
+        }
+      }
+      saveLocalDb(db);
+
+      return syncedServices;
+    } catch (err) {
+      console.error('syncServicesFromSupplier failed:', err);
+      return [];
+    }
   }
 };

@@ -106,6 +106,21 @@ export default function Dashboard() {
   const [createRole, setCreateRole] = useState('user');
   const [isCreatingUser, setIsCreatingUser] = useState(false);
 
+  // Service management states
+  const [adminServiceSearch, setAdminServiceSearch] = useState('');
+  const [adminServiceCategoryFilter, setAdminServiceCategoryFilter] = useState('');
+  const [isSyncingServices, setIsSyncingServices] = useState(false);
+  const [serviceModalOpen, setServiceModalOpen] = useState(false);
+  const [serviceModalMode, setServiceModalMode] = useState<'create' | 'edit'>('create');
+  const [serviceFormId, setServiceFormId] = useState('');
+  const [serviceFormName, setServiceFormName] = useState('');
+  const [serviceFormCategory, setServiceFormCategory] = useState('');
+  const [serviceFormRate, setServiceFormRate] = useState('');
+  const [serviceFormMin, setServiceFormMin] = useState('10');
+  const [serviceFormMax, setServiceFormMax] = useState('10000');
+  const [serviceFormDescription, setServiceFormDescription] = useState('');
+  const [isSavingService, setIsSavingService] = useState(false);
+
   // Check auth session
   useEffect(() => {
     const savedSession = sessionStorage.getItem('goobox_session');
@@ -340,6 +355,114 @@ export default function Dashboard() {
       setAdminFeedback({ success: false, message: 'Erro de rede ao excluir usuário.' });
     }
   };
+
+  const handleOpenServiceModal = (mode: 'create' | 'edit', service?: Service) => {
+    setServiceFormId(service?.id || '');
+    setServiceFormName(service?.name || '');
+    setServiceFormCategory(service?.category || '');
+    setServiceFormRate(service?.ratePer1000?.toString() || '');
+    setServiceFormMin(service?.min?.toString() || '10');
+    setServiceFormMax(service?.max?.toString() || '10000');
+    setServiceFormDescription(service?.description || '');
+    setServiceModalMode(mode);
+    setServiceModalOpen(true);
+  };
+
+  const handleServiceFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setAdminFeedback(null);
+    setIsSavingService(true);
+    try {
+      const res = await fetch('/api/admin/services', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: serviceModalMode,
+          id: serviceFormId,
+          name: serviceFormName,
+          category: serviceFormCategory,
+          ratePer1000: parseFloat(serviceFormRate) || 0,
+          min: parseInt(serviceFormMin) || 0,
+          max: parseInt(serviceFormMax) || 0,
+          description: serviceFormDescription
+        })
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setAdminFeedback({ success: true, message: data.message || 'Serviço salvo com sucesso!' });
+        setServiceModalOpen(false);
+        fetchData();
+      } else {
+        setAdminFeedback({ success: false, message: data.error || 'Erro ao salvar serviço.' });
+      }
+    } catch (err) {
+      console.error(err);
+      setAdminFeedback({ success: false, message: 'Erro de conexão ao salvar serviço.' });
+    } finally {
+      setIsSavingService(false);
+    }
+  };
+
+  const handleDeleteService = async (id: string) => {
+    if (!confirm(`Tem certeza que deseja excluir permanentemente o serviço de ID ${id}?`)) {
+      return;
+    }
+    setAdminFeedback(null);
+    try {
+      const res = await fetch('/api/admin/services', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'delete',
+          id
+        })
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setAdminFeedback({ success: true, message: 'Serviço excluído com sucesso!' });
+        fetchData();
+      } else {
+        setAdminFeedback({ success: false, message: data.error || 'Erro ao excluir serviço.' });
+      }
+    } catch (err) {
+      console.error(err);
+      setAdminFeedback({ success: false, message: 'Erro de conexão ao excluir serviço.' });
+    }
+  };
+
+  const handleSyncServices = async () => {
+    setAdminFeedback(null);
+    setIsSyncingServices(true);
+    try {
+      const res = await fetch('/api/admin/services', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'sync'
+        })
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setAdminFeedback({ success: true, message: data.message || 'Serviços sincronizados com sucesso!' });
+        fetchData();
+      } else {
+        setAdminFeedback({ success: false, message: data.error || 'Erro ao sincronizar serviços.' });
+      }
+    } catch (err) {
+      console.error(err);
+      setAdminFeedback({ success: false, message: 'Erro de conexão ao sincronizar serviços.' });
+    } finally {
+      setIsSyncingServices(false);
+    }
+  };
+
+  const filteredAdminServices = services.filter(srv => {
+    const matchesSearch = srv.id.toLowerCase().includes(adminServiceSearch.toLowerCase()) || 
+                          srv.name.toLowerCase().includes(adminServiceSearch.toLowerCase()) ||
+                          srv.category.toLowerCase().includes(adminServiceSearch.toLowerCase());
+    const matchesCategory = adminServiceCategoryFilter ? srv.category === adminServiceCategoryFilter : true;
+    return matchesSearch && matchesCategory;
+  });
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -1625,9 +1748,284 @@ export default function Dashboard() {
                 </div>
               )}
             </div>
+
+            {/* Services Management Card */}
+            <div className="panel-card" style={{ marginTop: '24px' }}>
+              <div className="panel-header secondary" style={{ justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div className="panel-header-icon" style={{ backgroundColor: 'rgba(0, 191, 165, 0.15)', color: 'var(--success)' }}>🛠️</div>
+                  <div className="panel-header-info">
+                    <h2>Gerenciamento de Serviços SMM</h2>
+                    <p>Adicione, edite, exclua ou sincronize serviços do painel</p>
+                  </div>
+                </div>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <button 
+                    type="button"
+                    className="submit-btn" 
+                    style={{ margin: 0, padding: '8px 16px', background: 'linear-gradient(135deg, var(--primary) 0%, #512da8 100%)', width: 'auto' }}
+                    onClick={() => handleOpenServiceModal('create')}
+                  >
+                    + Novo Serviço
+                  </button>
+                  <button 
+                    type="button"
+                    className="submit-btn" 
+                    style={{ margin: 0, padding: '8px 16px', background: 'linear-gradient(135deg, var(--success) 0%, #00897b 100%)', width: 'auto' }}
+                    onClick={handleSyncServices}
+                    disabled={isSyncingServices}
+                  >
+                    {isSyncingServices ? 'Sincronizando...' : '🔄 Sincronizar Provedor'}
+                  </button>
+                </div>
+              </div>
+
+              {adminFeedback && adminFeedback.message.includes('serviço') && (
+                <div className={`payment-status-banner ${adminFeedback.success ? 'approved' : 'pending'}`} style={{ marginTop: '20px' }}>
+                  {adminFeedback.message}
+                </div>
+              )}
+
+              {/* Filters */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '20px', marginBottom: '16px' }}>
+                <div className="form-group">
+                  <label className="form-label" style={{ marginBottom: '6px' }}>Buscar por Nome ou ID</label>
+                  <input
+                    type="text"
+                    className="form-input"
+                    placeholder="Ex: Instagram Seguidores..."
+                    value={adminServiceSearch}
+                    onChange={(e) => setAdminServiceSearch(e.target.value)}
+                  />
+                </div>
+                <div className="form-group">
+                  <label className="form-label" style={{ marginBottom: '6px' }}>Filtrar por Categoria</label>
+                  <select
+                    className="form-select"
+                    value={adminServiceCategoryFilter}
+                    onChange={(e) => setAdminServiceCategoryFilter(e.target.value)}
+                  >
+                    <option value="">Todas as categorias</option>
+                    {Array.from(new Set(services.map(s => s.category))).map(cat => (
+                      <option key={cat} value={cat}>{cat}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {/* Table */}
+              <div className="services-table-wrapper">
+                <table className="smm-table">
+                  <thead>
+                    <tr>
+                      <th style={{ width: '80px' }}>ID</th>
+                      <th>Nome do Serviço</th>
+                      <th>Categoria</th>
+                      <th style={{ width: '120px' }}>Preço / 1000</th>
+                      <th style={{ width: '120px' }}>Min / Max</th>
+                      <th style={{ width: '150px', textAlign: 'center' }}>Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {filteredAdminServices.length === 0 ? (
+                      <tr>
+                        <td colSpan={6} style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '24px' }}>
+                          Nenhum serviço encontrado.
+                        </td>
+                      </tr>
+                    ) : (
+                      filteredAdminServices.slice(0, 50).map((srv) => (
+                        <tr key={srv.id}>
+                          <td style={{ fontFamily: 'monospace', fontWeight: 'bold' }}>{srv.id}</td>
+                          <td style={{ fontWeight: '500' }}>{srv.name}</td>
+                          <td>
+                            <span className="badge" style={{ backgroundColor: 'rgba(108, 37, 226, 0.12)', color: 'var(--primary)' }}>
+                              {srv.category}
+                            </span>
+                          </td>
+                          <td style={{ color: 'var(--success)', fontWeight: 'bold' }}>
+                            R$ {srv.ratePer1000.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                          </td>
+                          <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                            {srv.min} / {srv.max}
+                          </td>
+                          <td style={{ textAlign: 'center' }}>
+                            <div style={{ display: 'flex', gap: '8px', justifyContent: 'center' }}>
+                              <button
+                                type="button"
+                                className="copy-btn"
+                                style={{ margin: 0, padding: '4px 10px', backgroundColor: 'var(--primary)', color: 'white', borderRadius: '6px', fontSize: '12px' }}
+                                onClick={() => handleOpenServiceModal('edit', srv)}
+                              >
+                                Editar
+                              </button>
+                              <button
+                                type="button"
+                                className="delete-user-btn"
+                                style={{ margin: 0, padding: '4px 10px', fontSize: '12px' }}
+                                onClick={() => handleDeleteService(srv.id)}
+                              >
+                                Excluir
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      ))
+                    )}
+                  </tbody>
+                </table>
+              </div>
+              {filteredAdminServices.length > 50 && (
+                <p style={{ color: 'var(--text-secondary)', fontSize: '11px', textAlign: 'center', marginTop: '12px', fontStyle: 'italic' }}>
+                  Exibindo os primeiros 50 serviços de {filteredAdminServices.length}. Use a busca ou filtros para refinar.
+                </p>
+              )}
+            </div>
           </div>
         )}
       </main>
+
+      {/* Service Modal */}
+      {serviceModalOpen && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0, 0, 0, 0.6)',
+          backdropFilter: 'blur(5px)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 9999,
+          padding: '16px'
+        }}>
+          <div className="panel-card" style={{ maxWidth: '600px', width: '100%', margin: 0, border: '1px solid var(--border-color)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
+            <div className="panel-header">
+              <div className="panel-header-icon" style={{ backgroundColor: 'rgba(108, 37, 226, 0.15)', color: 'var(--primary)' }}>
+                {serviceModalMode === 'create' ? '➕' : '✏️'}
+              </div>
+              <div className="panel-header-info">
+                <h2>{serviceModalMode === 'create' ? 'Adicionar Novo Serviço' : 'Editar Serviço'}</h2>
+                <p>{serviceModalMode === 'create' ? 'Crie um serviço manual ou customizado' : 'Ajuste valores, preço e limites do serviço'}</p>
+              </div>
+            </div>
+
+            <form onSubmit={handleServiceFormSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginTop: '16px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                <div className="form-group">
+                  <label className="form-label">ID do Serviço</label>
+                  <input
+                    type="text"
+                    className="form-input"
+                    value={serviceFormId}
+                    onChange={(e) => setServiceFormId(e.target.value)}
+                    placeholder="Ex: 1050 ou cust_curtidas"
+                    disabled={serviceModalMode === 'edit'}
+                    required
+                  />
+                  <small style={{ color: 'var(--text-secondary)', fontSize: '10px' }}>Use apenas números para serviços do provedor real.</small>
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Categoria</label>
+                  <input
+                    type="text"
+                    className="form-input"
+                    value={serviceFormCategory}
+                    onChange={(e) => setServiceFormCategory(e.target.value)}
+                    placeholder="Ex: Instagram Curtidas"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Nome do Serviço</label>
+                <input
+                  type="text"
+                  className="form-input"
+                  value={serviceFormName}
+                  onChange={(e) => setServiceFormName(e.target.value)}
+                  placeholder="Ex: Instagram Curtidas Brasileiras [Rápido]"
+                  required
+                />
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px' }}>
+                <div className="form-group">
+                  <label className="form-label">Preço por 1000 (R$)</label>
+                  <input
+                    type="number"
+                    className="form-input"
+                    value={serviceFormRate}
+                    onChange={(e) => setServiceFormRate(e.target.value)}
+                    placeholder="Ex: 5.50"
+                    step="0.01"
+                    min="0"
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Qtd Mínima</label>
+                  <input
+                    type="number"
+                    className="form-input"
+                    value={serviceFormMin}
+                    onChange={(e) => setServiceFormMin(e.target.value)}
+                    placeholder="Ex: 10"
+                    min="1"
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Qtd Máxima</label>
+                  <input
+                    type="number"
+                    className="form-input"
+                    value={serviceFormMax}
+                    onChange={(e) => setServiceFormMax(e.target.value)}
+                    placeholder="Ex: 10000"
+                    min="1"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Descrição</label>
+                <textarea
+                  className="form-input"
+                  value={serviceFormDescription}
+                  onChange={(e) => setServiceFormDescription(e.target.value)}
+                  placeholder="Descrição do serviço e prazos de entrega..."
+                  rows={3}
+                  style={{ resize: 'vertical', fontFamily: 'inherit' }}
+                />
+              </div>
+
+              <div style={{ display: 'flex', gap: '12px', justifyContent: 'flex-end', marginTop: '10px' }}>
+                <button 
+                  type="button" 
+                  className="copy-btn" 
+                  style={{ margin: 0, backgroundColor: 'transparent', border: '1px solid var(--border-color)', color: 'var(--text-primary)' }}
+                  onClick={() => setServiceModalOpen(false)}
+                >
+                  Cancelar
+                </button>
+                <button 
+                  type="submit" 
+                  className="submit-btn" 
+                  style={{ margin: 0, width: 'auto', padding: '10px 24px' }}
+                  disabled={isSavingService}
+                >
+                  {isSavingService ? 'Salvando...' : 'Salvar Serviço'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

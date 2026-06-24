@@ -41,6 +41,4209 @@
       "min": 50,
       "max": 50000,
       "description": "Visualizações qualificadas com retenção de 2 a 5 minutos."
+    },
+    {
+      "id": "457",
+      "name": "TikTok - Curtidas Brasileiras (Orgânico) | ⭐ | ⚡️ - R$ 24.00 por 1000",
+      "category": "Geral - Novos Servidores🗄️",
+      "ratePer1000": 24,
+      "min": 1,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "455",
+      "name": "TikTok - Seguidores Brasileiros (Orgânico) | ⭐ | ⚡️ - R$ 90.00 por 1000",
+      "category": "Geral - Novos Servidores🗄️",
+      "ratePer1000": 90,
+      "min": 1,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "3",
+      "name": "Seguidores Mundiais | ⚡️ | 🥈 - R$ 8.05 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 8.052,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "4",
+      "name": "Seguidores Mundiais | ⚡️ | ♻️R30 | 🥈 - R$ 8.40 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 8.4,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "5",
+      "name": "Seguidores Mundiais | ⚡️ | 🥇 - R$ 8.75 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 8.752,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "6",
+      "name": "Seguidores Mundiais | ⚡️ | ♻️R30 | 🥇 - R$ 9.10 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 9.1,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "7",
+      "name": "Seguidores Mundiais | ⚡️ | ⭐ - R$ 9.45 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 9.452,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "8",
+      "name": "Seguidores Mundiais | ⚡️ | ♻️R30 | ⭐ - R$ 9.80 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 9.8,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "9",
+      "name": "Seguidores Mundiais | ⚡️ | 💎 - R$ 10.15 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 10.152,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "10",
+      "name": "Seguidores Mundiais | ⚡️ | ♻️R30 | 💎 - R$ 10.50 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 10.5,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "11",
+      "name": "Visualizações em Vídeo | ⚡️ | 💎 - R$ 0.05 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 0.048,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "12",
+      "name": "Visualizações em Vídeo | ⚡️ | ⭐ - R$ 0.04 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 0.04,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "13",
+      "name": "Visualizações em Vídeo | ⚡️ | 🥇 - R$ 0.04 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 0.036,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "14",
+      "name": "Visualizações em Vídeo | ⚡️ | 🥈 - R$ 0.03 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 0.032,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "15",
+      "name": "Seguidores Brasileiros | ❄️ | ⭐ - R$ 20.06 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 20.056,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "16",
+      "name": "Seguidores Brasileiros | ❄️ | ♻️R30 | ⭐ - R$ 20.93 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 20.928,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "17",
+      "name": "Seguidores Brasileiros | ⚡️ | ⭐ - R$ 23.54 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 23.544,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "18",
+      "name": "Seguidores Brasileiros | ⚡️ | ♻️R30 | ⭐ - R$ 24.42 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 24.416,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "19",
+      "name": "Seguidores Brasileiros | 🥇 | ⚡️ - R$ 21.80 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 21.8,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "20",
+      "name": "Seguidores Brasileiros | ⚡️ | ♻️R30 | 🥇 - R$ 22.67 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 22.672,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "21",
+      "name": "Seguidores Brasileiros | ⚡️ | 🥈 - R$ 19.71 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 19.712,
+      "min": 100,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 50000 unidades."
+    },
+    {
+      "id": "22",
+      "name": "Seguidores Brasileiros | ⚡️ | 🥉 - R$ 12.58 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 12.584,
+      "min": 100,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 500000 unidades."
+    },
+    {
+      "id": "23",
+      "name": "Curtidas | ⚡️ | ⭐ - R$ 1.58 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 1.58,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "24",
+      "name": "Curtidas | ⚡️ | 🥇 - R$ 1.48 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 1.476,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "25",
+      "name": "Curtidas | ❄️ | 🥈 - R$ 1.42 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 1.416,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "26",
+      "name": "Curtidas Brasileiras | ⚡️ | ⭐ - R$ 6.75 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 6.752,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "27",
+      "name": "Curtidas Brasileiras | ⚡️ | ♻️R30 | ⭐ - R$ 7.00 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 7,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "28",
+      "name": "Curtidas Brasileiras | ❄️ | 🥇 - R$ 6.25 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 6.252,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "29",
+      "name": "Curtidas Brasileiras | ❄️ | ♻️R30 | 🥇 - R$ 6.50 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 6.5,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "30",
+      "name": "Curtidas Brasileiras | ⚡️ | 🥈 - R$ 3.22 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 3.22,
+      "min": 100,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 500000 unidades."
+    },
+    {
+      "id": "31",
+      "name": "Curtidas Brasileiras | ⚡️ | ♻️R30 | 🥈 - R$ 3.36 por 1000",
+      "category": "Instagram - Promoção Especial🎁",
+      "ratePer1000": 3.36,
+      "min": 100,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 500000 unidades."
+    },
+    {
+      "id": "33",
+      "name": "Seguidores Brasileiros | ⚡️ | ⭐ - R$ 22.40 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 22.4,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "34",
+      "name": "Seguidores Brasileiros | ⚡️ | ♻️R30 | ⭐ - R$ 22.67 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 22.672,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "35",
+      "name": "Seguidores Brasileiros | ⚡️ | ♻️AR30 | ⭐ - R$ 31.36 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 31.36,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "36",
+      "name": "Seguidores Brasileiros | ⚡️ | 🥇 - R$ 20.61 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 20.608,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "37",
+      "name": "Seguidores Brasileiros | ⚡️ | ♻️R30 | 🥇 - R$ 21.50 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 21.504,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "32",
+      "name": "Seguidores Brasileiros (Orgânico) | ⚡️ | ⭐ - R$ 100.00 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 100,
+      "min": 50,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "466",
+      "name": "Seguidores Brasileiros (Orgânico) | ⭐ |  ♻️R30 | ⚡️ - R$ 120.00 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 120,
+      "min": 50,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "38",
+      "name": "Seguidores Brasileiros | ⚡️ | 🥈 - R$ 19.71 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 19.712,
+      "min": 100,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 50000 unidades."
+    },
+    {
+      "id": "39",
+      "name": "Seguidores Brasileiros | ⚡️ | 🥉 - R$ 12.58 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 12.584,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "40",
+      "name": "Curtidas Brasileiras | ⚡️ | ⭐ - R$ 6.75 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 6.752,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "41",
+      "name": "Curtidas Brasileiras | ⚡️ | ♻️R30 | ⭐ - R$ 7.00 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 7,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "42",
+      "name": "Curtidas Brasileiras | ⚡️ | 🥇 - R$ 6.25 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 6.252,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "43",
+      "name": "Curtidas Brasileiras | ⚡️ | ♻️R30 | 🥇 - R$ 6.50 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 6.5,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "44",
+      "name": "Curtidas Brasileiras | ⚡️ | ♻️R30 | 🥈 - R$ 3.36 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 3.36,
+      "min": 100,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 500000 unidades."
+    },
+    {
+      "id": "45",
+      "name": "Curtidas Brasileiras | ⚡️ | 🥈 - R$ 3.22 por 1000",
+      "category": "Instagram - Serviços Brasileiros✨",
+      "ratePer1000": 3.22,
+      "min": 100,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 500000 unidades."
+    },
+    {
+      "id": "46",
+      "name": "Seguidores Mundiais |⚡️| 🆕 - R$ 8.05 por 1000",
+      "category": "Instagram - Seguidores Mundiais🌎",
+      "ratePer1000": 8.052,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "52",
+      "name": "Seguidores Mundiais | ⚡️ | 🥉 - R$ 7.70 por 1000",
+      "category": "Instagram - Seguidores Mundiais🌎",
+      "ratePer1000": 7.7,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "51",
+      "name": "Seguidores Mundiais | ⚡️ | 🥈 - R$ 8.05 por 1000",
+      "category": "Instagram - Seguidores Mundiais🌎",
+      "ratePer1000": 8.052,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "47",
+      "name": "Seguidores Mundiais | ⚡️ | 🥇 - R$ 8.40 por 1000",
+      "category": "Instagram - Seguidores Mundiais🌎",
+      "ratePer1000": 8.4,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "48",
+      "name": "Seguidores Mundiais | ⚡️ | ♻️ R30 | 🥇 - R$ 9.45 por 1000",
+      "category": "Instagram - Seguidores Mundiais🌎",
+      "ratePer1000": 9.452,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "49",
+      "name": "Seguidores Mundiais | ⚡️ | ⭐ - R$ 9.45 por 1000",
+      "category": "Instagram - Seguidores Mundiais🌎",
+      "ratePer1000": 9.452,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "50",
+      "name": "Seguidores Mundiais | ⚡️ | 💎 - R$ 10.15 por 1000",
+      "category": "Instagram - Seguidores Mundiais🌎",
+      "ratePer1000": 10.152,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "53",
+      "name": "Seguidores Mundiais | ⚡️ | ♻️ R365 | ⭐ - R$ 14.00 por 1000",
+      "category": "Instagram - Seguidores Mundiais🌎",
+      "ratePer1000": 14,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "54",
+      "name": "Seguidores Mundiais | ⚡️ | ♻️ AR120 | 🥇 - R$ 13.65 por 1000",
+      "category": "Instagram - Seguidores Mundiais🌎",
+      "ratePer1000": 13.652,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "55",
+      "name": "Seguidores Mundiais | ⚡️ | ♻️ AR60 | 🥇 - R$ 12.60 por 1000",
+      "category": "Instagram - Seguidores Mundiais🌎",
+      "ratePer1000": 12.6,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "56",
+      "name": "Seguidores Mundiais | ⚡️ | ♻️ R30 | 🥇 - R$ 9.45 por 1000",
+      "category": "Instagram - Seguidores Mundiais🌎",
+      "ratePer1000": 9.452,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "67",
+      "name": "Curtidas | ⚡️ | 🥇 - R$ 1.42 por 1000",
+      "category": "Instagram - Curtidas Mundiais🌎",
+      "ratePer1000": 1.416,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "65",
+      "name": "Curtidas | ⚡️ | ♻️ R30 | 🥇 - R$ 1.48 por 1000",
+      "category": "Instagram - Curtidas Mundiais🌎",
+      "ratePer1000": 1.476,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "64",
+      "name": "Curtidas | ⚡️ | ♻️ R60 | 🥇 - R$ 1.54 por 1000",
+      "category": "Instagram - Curtidas Mundiais🌎",
+      "ratePer1000": 1.54,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "62",
+      "name": "Curtidas | ⚡️ | ♻️ R90 | 🥇 - R$ 1.60 por 1000",
+      "category": "Instagram - Curtidas Mundiais🌎",
+      "ratePer1000": 1.6,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "63",
+      "name": "Curtidas | ⚡️ | ♻️ R120 | 🥇 - R$ 2.70 por 1000",
+      "category": "Instagram - Curtidas Mundiais🌎",
+      "ratePer1000": 2.7,
+      "min": 10,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "66",
+      "name": "Curtidas | ⚡️ | ♻️ AR30 | 🥇 - R$ 1.72 por 1000",
+      "category": "Instagram - Curtidas Mundiais🌎",
+      "ratePer1000": 1.724,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "57",
+      "name": "Curtidas | ⚡️ | ♻️ R30 | ⭐ - R$ 1.78 por 1000",
+      "category": "Instagram - Curtidas Mundiais🌎",
+      "ratePer1000": 1.784,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "58",
+      "name": "Curtidas | ⚡️ | ♻️ R60 | ⭐ - R$ 1.85 por 1000",
+      "category": "Instagram - Curtidas Mundiais🌎",
+      "ratePer1000": 1.848,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "59",
+      "name": "Curtidas | ⚡️ | ♻️ R365 | ⭐ - R$ 2.15 por 1000",
+      "category": "Instagram - Curtidas Mundiais🌎",
+      "ratePer1000": 2.152,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "61",
+      "name": "Curtidas no Story | ⚡️ | 🥇 - R$ 4.91 por 1000",
+      "category": "Instagram - Curtidas Mundiais🌎",
+      "ratePer1000": 4.912,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "60",
+      "name": "Curtidas automáticas | ⚡️ | ➖ | ⭐ - R$ 4.52 por 1000",
+      "category": "Instagram - Curtidas Mundiais🌎",
+      "ratePer1000": 4.516,
+      "min": 10,
+      "max": 80000,
+      "description": "Serviço de alta velocidade de tipo: Subscriptions. Pedido mínimo de 10 e máximo de 80000 unidades."
+    },
+    {
+      "id": "68",
+      "name": "Visualizações em Vídeo | ⚡️ | ⭐ - R$ 0.05 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 0.048,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "69",
+      "name": "Visualizações em Vídeo | ⚡️ | 🥇 - R$ 0.04 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 0.04,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "70",
+      "name": "Visualizações em Vídeo | ⚡️ | 🥈 - R$ 0.04 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 0.036,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "71",
+      "name": "Visualizações em Reels (Ajuda na recomendação) | ⚡️ | 💧 | ⭐ - R$ 0.77 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 0.772,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "72",
+      "name": "Visualizações em Reels (Aparece no explorar) | ⚡️ | 💧 | ⭐ - R$ 1.27 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 1.268,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "73",
+      "name": "Visualizações no Reels Brasileiras + 10% de Curtidas | ⭐ | - R$ 2.26 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 2.256,
+      "min": 200,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 200 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "74",
+      "name": "Visualizações no Reels Brasileiras + 20% de Curtidas | ⚡️ | ⭐ - R$ 4.51 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 4.508,
+      "min": 100,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "75",
+      "name": "Visualizações no Reels Brasileiras + 30% de Curtidas | ⚡️ | ⭐ - R$ 6.76 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 6.764,
+      "min": 100,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "76",
+      "name": "Visualizações no Reels Brasileiras + 40% de Curtidas | ⚡️ | ⭐ - R$ 9.25 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 9.248,
+      "min": 100,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "77",
+      "name": "Visualizações no Reels Brasileiras + 50% de Curtidas | ⚡️ | ⭐ - R$ 11.50 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 11.5,
+      "min": 100,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "78",
+      "name": "Visualizações Brasileiras nos Storys | ⚡️ | ⭐ - R$ 6.07 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 6.072,
+      "min": 50,
+      "max": 30000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 30000 unidades."
+    },
+    {
+      "id": "79",
+      "name": "Visualizações nos Storys | ⚡️ | ⭐ - R$ 2.38 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 2.376,
+      "min": 50,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 200000 unidades."
+    },
+    {
+      "id": "80",
+      "name": "Visualizações nos Storys | ⚡️ | 🥇 - R$ 2.38 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 2.376,
+      "min": 50,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 200000 unidades."
+    },
+    {
+      "id": "81",
+      "name": "Visualizações nos Storys | ⚡️ | 🥈 - R$ 2.38 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 2.376,
+      "min": 50,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 200000 unidades."
+    },
+    {
+      "id": "440",
+      "name": "Votos em Enquete | Opção 1 | 💧 | 🥇 | ⚡️ - R$ 19.27 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 19.272,
+      "min": 100,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "441",
+      "name": "Votos em Enquete | Opção 2 | 💧 | 🥇 | ⚡️ - R$ 19.27 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 19.272,
+      "min": 100,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "442",
+      "name": "Votos em Enquete | Opção 3 | 💧 | 🥇 | ⚡️ - R$ 19.27 por 1000",
+      "category": "Instagram - Visualizações♾️",
+      "ratePer1000": 19.272,
+      "min": 100,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "82",
+      "name": "Curtidas em Comentários | ⚡️⚡️ | ➖ | ⭐ - R$ 89.01 por 1000",
+      "category": "Instagram - Comentários 💭",
+      "ratePer1000": 89.012,
+      "min": 5,
+      "max": 20000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 5 e máximo de 20000 unidades."
+    },
+    {
+      "id": "83",
+      "name": "Curtidas em Comentários | ❄️ | ➖ | ⭐ - R$ 89.01 por 1000",
+      "category": "Instagram - Comentários 💭",
+      "ratePer1000": 89.012,
+      "min": 5,
+      "max": 20000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 5 e máximo de 20000 unidades."
+    },
+    {
+      "id": "84",
+      "name": "Comentários Aleatórios | ⚡️ | 🥇 - R$ 7.12 por 1000",
+      "category": "Instagram - Comentários 💭",
+      "ratePer1000": 7.124,
+      "min": 10,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000 unidades."
+    },
+    {
+      "id": "85",
+      "name": "Comentários Personalizados | ⚡️ | 🥇 - R$ 7.12 por 1000",
+      "category": "Instagram - Comentários 💭",
+      "ratePer1000": 7.124,
+      "min": 10,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 10 e máximo de 10000 unidades."
+    },
+    {
+      "id": "87",
+      "name": "Comentários de Emojis Negativos | ⚡️ | 🥇 - R$ 64.08 por 1000",
+      "category": "Instagram - Comentários 💭",
+      "ratePer1000": 64.08,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "88",
+      "name": "Comentários Brasileiros | Aleatórios | ⚡️ | 🥇 - R$ 92.00 por 1000",
+      "category": "Instagram - Comentários 💭",
+      "ratePer1000": 92,
+      "min": 1,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1 e máximo de 50000 unidades."
+    },
+    {
+      "id": "89",
+      "name": "Comentários Brasileiros | Personalizados | 🥇 | ⚡️ - R$ 92.00 por 1000",
+      "category": "Instagram - Comentários 💭",
+      "ratePer1000": 92,
+      "min": 1,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 1 e máximo de 50000 unidades."
+    },
+    {
+      "id": "90",
+      "name": "Comentários Brasileiros Personalizados | 🚹Masculino | ⚡️ | 🥇 - R$ 92.00 por 1000",
+      "category": "Instagram - Comentários 💭",
+      "ratePer1000": 92,
+      "min": 1,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 1 e máximo de 100000 unidades."
+    },
+    {
+      "id": "91",
+      "name": "Comentários Brasileiros Personalizados | 🚺Feminino | ⚡️ | 🥇 - R$ 92.00 por 1000",
+      "category": "Instagram - Comentários 💭",
+      "ratePer1000": 92,
+      "min": 1,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 1 e máximo de 100000 unidades."
+    },
+    {
+      "id": "92",
+      "name": "Curtidas Portuguesas | ⚡️ | 🥇 - R$ 7.67 por 1000",
+      "category": "Instagram - Serviços por País🏳️",
+      "ratePer1000": 7.668,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "93",
+      "name": "Visualizações Americanas | ⚡️ | 💧 | ♻️R07 | ⭐ - R$ 2.21 por 1000",
+      "category": "Instagram - Serviços por País🏳️",
+      "ratePer1000": 2.208,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "94",
+      "name": "Visualizações Brasileiras | ⚡️ | 💧 | ⭐ - R$ 0.03 por 1000",
+      "category": "Instagram - Serviços por País🏳️",
+      "ratePer1000": 0.032,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "95",
+      "name": "Visualizações Turcas | ⚡️ | 💧 | ⭐ - R$ 0.15 por 1000",
+      "category": "Instagram - Serviços por País🏳️",
+      "ratePer1000": 0.152,
+      "min": 100,
+      "max": 100000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000000 unidades."
+    },
+    {
+      "id": "96",
+      "name": "Visualizações Indonesia | ⚡️ | 💧 | ⭐ - R$ 0.15 por 1000",
+      "category": "Instagram - Serviços por País🏳️",
+      "ratePer1000": 0.152,
+      "min": 100,
+      "max": 100000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000000 unidades."
+    },
+    {
+      "id": "97",
+      "name": "Visualizações Russas | ⚡️ | 💧 | ⭐ - R$ 0.15 por 1000",
+      "category": "Instagram - Serviços por País🏳️",
+      "ratePer1000": 0.152,
+      "min": 100,
+      "max": 100000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000000 unidades."
+    },
+    {
+      "id": "98",
+      "name": "Visualizações Portuguesas | ⚡️ | 💧 | ⭐ - R$ 0.15 por 1000",
+      "category": "Instagram - Serviços por País🏳️",
+      "ratePer1000": 0.152,
+      "min": 100,
+      "max": 100000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000000 unidades."
+    },
+    {
+      "id": "99",
+      "name": "Curtidas | 🚺Feminino | ⚡️ | 💧 | ♻️R30 | 🥇 - R$ 13.87 por 1000",
+      "category": "Instagram - Entrega Automática🔁",
+      "ratePer1000": 13.868,
+      "min": 10,
+      "max": 300000,
+      "description": "Serviço de alta velocidade de tipo: Subscriptions. Pedido mínimo de 10 e máximo de 300000 unidades."
+    },
+    {
+      "id": "100",
+      "name": "Curtidas | ⚡️ | 💧 | 🥇 - R$ 5.51 por 1000",
+      "category": "Instagram - Entrega Automática🔁",
+      "ratePer1000": 5.512,
+      "min": 10,
+      "max": 300000,
+      "description": "Serviço de alta velocidade de tipo: Subscriptions. Pedido mínimo de 10 e máximo de 300000 unidades."
+    },
+    {
+      "id": "101",
+      "name": "Curtidas | ⚡️ | 💧 | ♻️R30 | 🥇 - R$ 3.56 por 1000",
+      "category": "Instagram - Entrega Automática🔁",
+      "ratePer1000": 3.564,
+      "min": 50,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Subscriptions. Pedido mínimo de 50 e máximo de 50000 unidades."
+    },
+    {
+      "id": "102",
+      "name": "Curtidas | ⚡️ | 💧 | ♻️R60 | 🥇 - R$ 3.56 por 1000",
+      "category": "Instagram - Entrega Automática🔁",
+      "ratePer1000": 3.564,
+      "min": 50,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Subscriptions. Pedido mínimo de 50 e máximo de 50000 unidades."
+    },
+    {
+      "id": "103",
+      "name": "Curtidas | ⚡️ | 💧 | ♻️R120 | 🥇 - R$ 3.56 por 1000",
+      "category": "Instagram - Entrega Automática🔁",
+      "ratePer1000": 3.564,
+      "min": 50,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Subscriptions. Pedido mínimo de 50 e máximo de 50000 unidades."
+    },
+    {
+      "id": "104",
+      "name": "Visualizações em Vídeo | ⚡️ | 💧 | 🥇 - R$ 0.04 por 1000",
+      "category": "Instagram - Entrega Automática🔁",
+      "ratePer1000": 0.036,
+      "min": 100,
+      "max": 100000000,
+      "description": "Serviço de alta velocidade de tipo: Subscriptions. Pedido mínimo de 100 e máximo de 100000000 unidades."
+    },
+    {
+      "id": "468",
+      "name": "Curtidas Brasileiras│⭐Premium│⚡️│♻️R30│ - R$ 11.04 por 1000",
+      "category": "Instagram - Entrega Automática🔁",
+      "ratePer1000": 11.04,
+      "min": 10,
+      "max": 250000,
+      "description": "Serviço de alta velocidade de tipo: Subscriptions. Pedido mínimo de 10 e máximo de 250000 unidades."
+    },
+    {
+      "id": "105",
+      "name": "Impressões + Alcance + Visitas ao perfil  | ⚡️ | 🥇 - R$ 0.62 por 1000",
+      "category": "Instagram - Métricas📊",
+      "ratePer1000": 0.624,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "106",
+      "name": "Visitas ao perfil (Link de Post) | ⚡️ | 🥇 - R$ 0.57 por 1000",
+      "category": "Instagram - Métricas📊",
+      "ratePer1000": 0.572,
+      "min": 100,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 500000 unidades."
+    },
+    {
+      "id": "107",
+      "name": "Impressões | ⚡️ | 🥇 - R$ 0.62 por 1000",
+      "category": "Instagram - Métricas📊",
+      "ratePer1000": 0.624,
+      "min": 100,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "108",
+      "name": "Compartilhamento | ⚡️ | 🥇 - R$ 0.19 por 1000",
+      "category": "Instagram - Métricas📊",
+      "ratePer1000": 0.192,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "109",
+      "name": "Compartilhamento | ⚡️ | 🥇 - R$ 0.19 por 1000",
+      "category": "Instagram - Métricas📊",
+      "ratePer1000": 0.192,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "110",
+      "name": "Salvo | ⚡️ | ♻️R30 | 🥇 - R$ 1.24 por 1000",
+      "category": "Instagram - Métricas📊",
+      "ratePer1000": 1.244,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "111",
+      "name": "Impressões + Alcance | ⚡️ | 🥇 - R$ 0.50 por 1000",
+      "category": "Instagram - Métricas📊",
+      "ratePer1000": 0.496,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "112",
+      "name": "Compartilhamento | ⚡️ | ♻️R90 | 🥇 - R$ 0.19 por 1000",
+      "category": "Instagram - Métricas📊",
+      "ratePer1000": 0.192,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "444",
+      "name": "Membros Brasileiros em Canal | 🥇 | ⚡️ - R$ 12.41 por 1000",
+      "category": "Instagram - Membros em Canal 🎯​",
+      "ratePer1000": 12.412,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "469",
+      "name": "Seguidores Brasileiros | Feminino | ⭐ | ♻️R30 | ⚡️ - R$ 61.18 por 1000",
+      "category": "Instagram - Serviços por Gênero👫",
+      "ratePer1000": 61.18,
+      "min": 10,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000 unidades."
+    },
+    {
+      "id": "470",
+      "name": "Seguidores Brasileiros | Masculino | ⭐ | ♻️R30 | ⚡️ - R$ 61.18 por 1000",
+      "category": "Instagram - Serviços por Gênero👫",
+      "ratePer1000": 61.18,
+      "min": 10,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000 unidades."
+    },
+    {
+      "id": "471",
+      "name": "Curtidas Brasileiras | Masculino | ⭐ | ♻️R30 | ⚡️ - R$ 32.20 por 1000",
+      "category": "Instagram - Serviços por Gênero👫",
+      "ratePer1000": 32.2,
+      "min": 10,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000 unidades."
+    },
+    {
+      "id": "472",
+      "name": "Curtidas Brasileiras | Feminino | ⭐ | ♻️R30 | ⚡️ - R$ 32.20 por 1000",
+      "category": "Instagram - Serviços por Gênero👫",
+      "ratePer1000": 32.2,
+      "min": 10,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000 unidades."
+    },
+    {
+      "id": "113",
+      "name": "Denuncia no Instagram em Perfil🚫 - R$ 27.32 por 1000",
+      "category": "Denuncias",
+      "ratePer1000": 27.324,
+      "min": 1000,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "114",
+      "name": "Denuncia no Instagram em Post🚫 - R$ 40.20 por 1000",
+      "category": "Denuncias",
+      "ratePer1000": 40.204,
+      "min": 1000,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "115",
+      "name": "Denuncia no Youtube em Vídeo🚫 - R$ 26.40 por 1000",
+      "category": "Denuncias",
+      "ratePer1000": 26.404,
+      "min": 1000,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "116",
+      "name": "Denuncia no Youtube em Canal🚫 - R$ 36.52 por 1000",
+      "category": "Denuncias",
+      "ratePer1000": 36.524,
+      "min": 1000,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "117",
+      "name": "Denuncia no Tiktok em Perfil🚫 - R$ 42.28 por 1000",
+      "category": "Denuncias",
+      "ratePer1000": 42.276,
+      "min": 1000,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "118",
+      "name": "Denuncia no Tiktok em Vídeo🚫 - R$ 37.90 por 1000",
+      "category": "Denuncias",
+      "ratePer1000": 37.904,
+      "min": 1000,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "119",
+      "name": "Denuncia no Facebook em Post🚫 - R$ 51.70 por 1000",
+      "category": "Denuncias",
+      "ratePer1000": 51.704,
+      "min": 1000,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "120",
+      "name": "Denuncia no Facebook em Perfil🚫 - R$ 60.90 por 1000",
+      "category": "Denuncias",
+      "ratePer1000": 60.904,
+      "min": 1000,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "121",
+      "name": "Denuncia no Kwai em Perfil🚫 - R$ 38.82 por 1000",
+      "category": "Denuncias",
+      "ratePer1000": 38.824,
+      "min": 1000,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "122",
+      "name": "Denuncia no Kwai em Post🚫 - R$ 38.82 por 1000",
+      "category": "Denuncias",
+      "ratePer1000": 38.824,
+      "min": 1000,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "123",
+      "name": "Seguidores | ⚡️ | ♻️R30 | ⭐ - R$ 63.25 por 1000",
+      "category": "Tiktok - Seguidores",
+      "ratePer1000": 63.252,
+      "min": 10,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "124",
+      "name": "Seguidores | ⚡️ | 🥇 - R$ 45.52 por 1000",
+      "category": "Tiktok - Seguidores",
+      "ratePer1000": 45.524,
+      "min": 10,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "125",
+      "name": "Seguidores | ⚡️ | ♻️R07 | 🥇 - R$ 47.80 por 1000",
+      "category": "Tiktok - Seguidores",
+      "ratePer1000": 47.796,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "126",
+      "name": "Seguidores | ⚡️ | ♻️R15 | 🥇 - R$ 47.63 por 1000",
+      "category": "Tiktok - Seguidores",
+      "ratePer1000": 47.628,
+      "min": 10,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "127",
+      "name": "Seguidores | ⚡️ | ♻️R30 | 🥇 - R$ 49.96 por 1000",
+      "category": "Tiktok - Seguidores",
+      "ratePer1000": 49.96,
+      "min": 10,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "130",
+      "name": "Seguidores Brasileiros (Orgânico) | ⭐ | ⚡️ - R$ 90.00 por 1000",
+      "category": "Tiktok - Seguidores",
+      "ratePer1000": 90,
+      "min": 1,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "489",
+      "name": "Seguidores Brasileiros (Orgânico) | ⭐ | ♻️R30 | ⚡️ - R$ 120.00 por 1000",
+      "category": "Tiktok - Seguidores",
+      "ratePer1000": 120,
+      "min": 1,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "490",
+      "name": "Seguidores Brasileiros | 🥇 | ⚡️ - R$ 58.20 por 1000",
+      "category": "Tiktok - Seguidores",
+      "ratePer1000": 58.2,
+      "min": 1,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "131",
+      "name": "Seguidores Brasileiros | ⚡️ | ♻️R30 | 🥇 - R$ 73.42 por 1000",
+      "category": "Tiktok - Seguidores",
+      "ratePer1000": 73.42,
+      "min": 1,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "134",
+      "name": "Curtidas | ⚡️ | 🥇 - R$ 6.11 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 6.108,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "135",
+      "name": "Curtidas | ⚡️ | ♻️R30 | 🥇 - R$ 6.36 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 6.364,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "136",
+      "name": "Curtidas | ⚡️ | 🥈 - R$ 6.11 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 6.108,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "137",
+      "name": "Curtidas | ⚡️ | ♻️R30 | 🥈 - R$ 5.85 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 5.852,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "133",
+      "name": "Curtidas | ⚡️ | ♻️R365 | ⭐ - R$ 6.62 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 6.616,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "138",
+      "name": "Curtidas | ⚡️ | 🥉 - R$ 5.85 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 5.852,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "456",
+      "name": "Curtidas Brasileiras (Orgânico) | ⭐ | ⚡️ - R$ 24.00 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 24,
+      "min": 1,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "139",
+      "name": "Curtidas brasileiras | ⚡️ | ➖ | 🥇 - R$ 4.88 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 4.876,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "140",
+      "name": "Curtidas brasileiras | ⚡️ | ➖ | ♻️R30 | 🥇 - R$ 5.25 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 5.252,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "141",
+      "name": "Curtidas brasileiras | ⚡️ | 🥈 - R$ 5.85 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 5.852,
+      "min": 100,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 500000 unidades."
+    },
+    {
+      "id": "142",
+      "name": "Curtidas brasileiras | ⚡️ | ♻️R30 | 🥈 - R$ 7.64 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 7.636,
+      "min": 100,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 500000 unidades."
+    },
+    {
+      "id": "143",
+      "name": "Curtidas na Live | ⚡️ | 🥇 - R$ 0.48 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 0.476,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "144",
+      "name": "Curtidas + Visualizações | ⚡️ | 🥇 - R$ 3.26 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 3.256,
+      "min": 10,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "145",
+      "name": "Curtidas Brasileiras no Story | ⚡️ | 💧 | ⭐ - R$ 3.70 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 3.704,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "146",
+      "name": "Curtidas nos Stories | ⚡️ | 🥈 - R$ 6.20 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 6.204,
+      "min": 50,
+      "max": 30000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 30000 unidades."
+    },
+    {
+      "id": "147",
+      "name": "Curtidas em Comentários | ⚡️ | 💧 | ♻️R30 | ⭐ - R$ 3.56 por 1000",
+      "category": "Tiktok - Curtidas",
+      "ratePer1000": 3.564,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Comment Likes. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "148",
+      "name": "Visualizações | ⚡️ | 🥈 - R$ 1.15 por 1000",
+      "category": "Tiktok - Visualizações",
+      "ratePer1000": 1.152,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "149",
+      "name": "Visualizações | ⚡️ | 🥇 - R$ 2.86 por 1000",
+      "category": "Tiktok - Visualizações",
+      "ratePer1000": 2.86,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "150",
+      "name": "Visualizações nos Stories | ⚡️ | 🥇 - R$ 4.96 por 1000",
+      "category": "Tiktok - Visualizações",
+      "ratePer1000": 4.964,
+      "min": 100,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 50000 unidades."
+    },
+    {
+      "id": "151",
+      "name": "Visualizações Brasileiras | ⚡️ | 💧 | ➖ | ⭐ - R$ 1.05 por 1000",
+      "category": "Tiktok - Visualizações",
+      "ratePer1000": 1.052,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "152",
+      "name": "Espectadores ao vivo | 15M | ⚡️ | 🥇 - R$ 13.11 por 1000",
+      "category": "Tiktok - Visualizações",
+      "ratePer1000": 13.112,
+      "min": 50,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 100000 unidades."
+    },
+    {
+      "id": "153",
+      "name": "Espectadores ao vivo | 30M | ⚡️ | 🥇 - R$ 26.22 por 1000",
+      "category": "Tiktok - Visualizações",
+      "ratePer1000": 26.216,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "154",
+      "name": "Espectadores ao vivo | 1H | ⚡️ | 🥇 - R$ 52.44 por 1000",
+      "category": "Tiktok - Visualizações",
+      "ratePer1000": 52.44,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "155",
+      "name": "Espectadores ao vivo | 1:30H | ⚡️ | 🥇 - R$ 78.62 por 1000",
+      "category": "Tiktok - Visualizações",
+      "ratePer1000": 78.616,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "156",
+      "name": "Espectadores ao vivo | 2H | ⚡️ | 🥇 - R$ 104.84 por 1000",
+      "category": "Tiktok - Visualizações",
+      "ratePer1000": 104.836,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "157",
+      "name": "Espectadores ao vivo | 2:30H | 🥇 | ⚡️ - R$ 157.23 por 1000",
+      "category": "Tiktok - Visualizações",
+      "ratePer1000": 157.228,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "158",
+      "name": "Espectadores ao vivo | 4H | ⚡️ | 🥇 - R$ 209.62 por 1000",
+      "category": "Tiktok - Visualizações",
+      "ratePer1000": 209.624,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "159",
+      "name": "Comentários Aleatórios | ⚡️ | 🥇 - R$ 22.55 por 1000",
+      "category": "Tiktok - Métricas e Outros",
+      "ratePer1000": 22.548,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "160",
+      "name": "Comentários Personalizado | ⚡️ | 🥇 - R$ 32.25 por 1000",
+      "category": "Tiktok - Métricas e Outros",
+      "ratePer1000": 32.248,
+      "min": 1,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 1 e máximo de 100000 unidades."
+    },
+    {
+      "id": "161",
+      "name": "Comentários de Emoji | ⚡️ | 🥇 - R$ 32.25 por 1000",
+      "category": "Tiktok - Métricas e Outros",
+      "ratePer1000": 32.248,
+      "min": 1,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1 e máximo de 100000 unidades."
+    },
+    {
+      "id": "162",
+      "name": "Comentários de Emoji em Live | ⚡️ | 🥇 - R$ 19.35 por 1000",
+      "category": "Tiktok - Métricas e Outros",
+      "ratePer1000": 19.348,
+      "min": 10,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000 unidades."
+    },
+    {
+      "id": "163",
+      "name": "Comentários Aleatorios em Live | ⚡️ | 🥇 - R$ 19.35 por 1000",
+      "category": "Tiktok - Métricas e Outros",
+      "ratePer1000": 19.348,
+      "min": 10,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000 unidades."
+    },
+    {
+      "id": "164",
+      "name": "Comentários Personalizados em Live | ⚡️ | 🥇 - R$ 19.33 por 1000",
+      "category": "Tiktok - Métricas e Outros",
+      "ratePer1000": 19.332,
+      "min": 10,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 10 e máximo de 10000 unidades."
+    },
+    {
+      "id": "445",
+      "name": "Comentários Brasileiros Reais de Elogios  | 🥇 | ⚡️ - R$ 92.00 por 1000",
+      "category": "Tiktok - Métricas e Outros",
+      "ratePer1000": 92,
+      "min": 1,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1 e máximo de 50000 unidades."
+    },
+    {
+      "id": "446",
+      "name": "Comentários Brasileiros Personalizados  | 🥇 | ⚡️ - R$ 92.00 por 1000",
+      "category": "Tiktok - Métricas e Outros",
+      "ratePer1000": 92,
+      "min": 1,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 1 e máximo de 50000 unidades."
+    },
+    {
+      "id": "165",
+      "name": "Compartilhamento | ⚡️ | 🥇 - R$ 1.48 por 1000",
+      "category": "Tiktok - Métricas e Outros",
+      "ratePer1000": 1.476,
+      "min": 10,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "166",
+      "name": "Compartilhamento | ⚡️ | 🥈 - R$ 1.48 por 1000",
+      "category": "Tiktok - Métricas e Outros",
+      "ratePer1000": 1.476,
+      "min": 10,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "167",
+      "name": "Não tenho interesse | ⚡️ | 🥇 - R$ 1.00 por 1000",
+      "category": "Tiktok - Métricas e Outros",
+      "ratePer1000": 0.996,
+      "min": 50,
+      "max": 20000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 20000 unidades."
+    },
+    {
+      "id": "168",
+      "name": "Salvos | ⚡️ | 🥇 - R$ 1.49 por 1000",
+      "category": "Tiktok - Métricas e Outros",
+      "ratePer1000": 1.492,
+      "min": 10,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "169",
+      "name": "Pontos de Batalha | ⚡️ | 🥇 - R$ 3.85 por 1000",
+      "category": "Tiktok - Métricas e Outros",
+      "ratePer1000": 3.848,
+      "min": 100,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "170",
+      "name": "Inscritos Brasileiros | ⚡️ | ♻️R30 | ➖ | ⭐ - R$ 685.31 por 1000",
+      "category": "Youtube - Inscritos",
+      "ratePer1000": 685.308,
+      "min": 100,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 10000 unidades."
+    },
+    {
+      "id": "171",
+      "name": "Inscritos | ⚡️ | ♻️R07 | ❄️ | 🥇 - R$ 548.24 por 1000",
+      "category": "Youtube - Inscritos",
+      "ratePer1000": 548.244,
+      "min": 100,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 10000 unidades."
+    },
+    {
+      "id": "172",
+      "name": "Inscritos | ⚡️ | ♻️R60 | ❄️ | 🥇 - R$ 571.09 por 1000",
+      "category": "Youtube - Inscritos",
+      "ratePer1000": 571.088,
+      "min": 100,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 10000 unidades."
+    },
+    {
+      "id": "173",
+      "name": "Inscritos | ⚡️ | 🥇 - R$ 525.40 por 1000",
+      "category": "Youtube - Inscritos",
+      "ratePer1000": 525.404,
+      "min": 100,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 10000 unidades."
+    },
+    {
+      "id": "174",
+      "name": "Inscritos | ⚡️ | 🥉 - R$ 261.30 por 1000",
+      "category": "Youtube - Inscritos",
+      "ratePer1000": 261.296,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "175",
+      "name": "Curtidas | ⚡️ | ♻️R30 | 🥇 - R$ 42.66 por 1000",
+      "category": "Youtube - Curtidas",
+      "ratePer1000": 42.656,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "176",
+      "name": "Curtidas | ⚡️ | ♻️R30 | 🥈 - R$ 42.66 por 1000",
+      "category": "Youtube - Curtidas",
+      "ratePer1000": 42.656,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "177",
+      "name": "Curtidas | ⚡️ | ♻️R30 | ➖ | ⭐ - R$ 42.66 por 1000",
+      "category": "Youtube - Curtidas",
+      "ratePer1000": 42.656,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "179",
+      "name": "Curtidas Brasileiras | ⚡️ | ♻️R30 | 🥇 - R$ 94.93 por 1000",
+      "category": "Youtube - Curtidas",
+      "ratePer1000": 94.928,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "180",
+      "name": "Curtidas Brasileiras | ⚡️ | ♻️R30 | ⭐ - R$ 95.77 por 1000",
+      "category": "Youtube - Curtidas",
+      "ratePer1000": 95.772,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "181",
+      "name": "Curtidas para Shorts | ⚡️ | ♻️R30 | 🥇 - R$ 84.79 por 1000",
+      "category": "Youtube - Curtidas",
+      "ratePer1000": 84.788,
+      "min": 100,
+      "max": 300000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 300000 unidades."
+    },
+    {
+      "id": "182",
+      "name": "Curtidas nos Comentários | ⚡️ | ♻️R30 | ❄️ | 🥇 - R$ 23.74 por 1000",
+      "category": "Youtube - Curtidas",
+      "ratePer1000": 23.736,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "183",
+      "name": "Curtidas nos Comentários | ⚡️ | 🥇 - R$ 3.56 por 1000",
+      "category": "Youtube - Curtidas",
+      "ratePer1000": 3.564,
+      "min": 10,
+      "max": 20000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 20000 unidades."
+    },
+    {
+      "id": "184",
+      "name": "Curtidas nos Comentários | ⚡️ | 💧Drip-Feed | 🥇 - R$ 3.56 por 1000",
+      "category": "Youtube - Curtidas",
+      "ratePer1000": 3.564,
+      "min": 10,
+      "max": 20000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 20000 unidades."
+    },
+    {
+      "id": "186",
+      "name": "Curtidas na Comunidade | ⚡️ | 💧 | 🥇 - R$ 204.41 por 1000",
+      "category": "Youtube - Curtidas",
+      "ratePer1000": 204.408,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "187",
+      "name": "Curtidas em Lives | ⚡️ | 🥇 - R$ 107.32 por 1000",
+      "category": "Youtube - Curtidas",
+      "ratePer1000": 107.316,
+      "min": 50,
+      "max": 250000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 250000 unidades."
+    },
+    {
+      "id": "188",
+      "name": "Visualizações | ❄️ | ⭐ - R$ 54.70 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 54.7,
+      "min": 100,
+      "max": 50000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 50000000 unidades."
+    },
+    {
+      "id": "189",
+      "name": "Visualizações | ⚡️ | ⭐ - R$ 20.06 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 20.056,
+      "min": 100,
+      "max": 50000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 50000000 unidades."
+    },
+    {
+      "id": "190",
+      "name": "Visualizações | ⚡️ | 🥇 - R$ 20.06 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 20.056,
+      "min": 100,
+      "max": 50000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 50000000 unidades."
+    },
+    {
+      "id": "191",
+      "name": "Visualizações | ⚡️ | ♻️R30 | 🥇 - R$ 20.06 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 20.056,
+      "min": 100,
+      "max": 50000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 50000000 unidades."
+    },
+    {
+      "id": "192",
+      "name": "Visualizações em Shorts | ⚡️ | 🥇 - R$ 18.02 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 18.016,
+      "min": 100,
+      "max": 100000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000000 unidades."
+    },
+    {
+      "id": "193",
+      "name": "Visualizações em Shorts | ⚡️ | ♻️R30 | 🥇 - R$ 18.02 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 18.016,
+      "min": 100,
+      "max": 100000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000000 unidades."
+    },
+    {
+      "id": "194",
+      "name": "Visualizações via ADS | ⚡️ | ➖ | 🥇 - R$ 33.35 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 33.352,
+      "min": 100,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "195",
+      "name": "Espectadores ao vivo | 15M | ⚡️| 🥇 - R$ 0.93 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 0.928,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "196",
+      "name": "Espectadores ao vivo | 30M | ⚡️| 🥇 - R$ 1.85 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 1.852,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "197",
+      "name": "Espectadores ao vivo | 1H | ⚡️| 🥇 - R$ 3.70 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 3.7,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "198",
+      "name": "Espectadores ao vivo | 1:30H | ⚡️ | 🥇 - R$ 5.55 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 5.548,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "199",
+      "name": "Espectadores ao vivo | 2H | ⚡️ | 🥇 - R$ 7.40 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 7.396,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "200",
+      "name": "Espectadores ao vivo | 4H | ⚡️ | 🥇 - R$ 20.24 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 20.244,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "202",
+      "name": "Espectadores ao vivo | 12H | ⚡️ | 🥇 - R$ 44.36 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 44.364,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "203",
+      "name": "Espectadores ao vivo | 24H | ⚡️ | 🥇 - R$ 88.72 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 88.724,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "204",
+      "name": "Espectadores ao vivo | 7D | ⚡️ | 🥇 - R$ 652.84 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 652.836,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "205",
+      "name": "Espectadores ao vivo | 30D | ⚡️ | 🥇 - R$ 2797.86 por 1000",
+      "category": "Youtube - Visualizações",
+      "ratePer1000": 2797.864,
+      "min": 50,
+      "max": 5000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 5000000 unidades."
+    },
+    {
+      "id": "448",
+      "name": "Horas em Exibição | ⭐ | 15+ Min de Vídeo | ♻️R30 | LEIA A DESCRIÇÃO | - R$ 284.74 por 1000",
+      "category": "Youtube - Métricas e Outros",
+      "ratePer1000": 284.736,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "449",
+      "name": "Horas em Exibição | ⭐ | 30+ Min de Vídeo | ♻️R30 | LEIA A DESCRIÇÃO | - R$ 367.78 por 1000",
+      "category": "Youtube - Métricas e Outros",
+      "ratePer1000": 367.784,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "207",
+      "name": "Horas em Exibição | ⭐ | 60+ Min de Vídeo | ♻️R30 | LEIA A DESCRIÇÃO | - R$ 515.56 por 1000",
+      "category": "Youtube - Métricas e Outros",
+      "ratePer1000": 515.564,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "209",
+      "name": "Comentários personalizados | ⚡️ | ⭐ - R$ 47.47 por 1000",
+      "category": "Youtube - Métricas e Outros",
+      "ratePer1000": 47.472,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "210",
+      "name": "Comentários Brasileiros | ⚡️ | 🥇 - R$ 954.91 por 1000",
+      "category": "Youtube - Métricas e Outros",
+      "ratePer1000": 954.908,
+      "min": 10,
+      "max": 250,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 10 e máximo de 250 unidades."
+    },
+    {
+      "id": "211",
+      "name": "Comentários Personalizados Brasileiros | ⚡️ | 💧 | ⭐ - R$ 1038.45 por 1000",
+      "category": "Youtube - Métricas e Outros",
+      "ratePer1000": 1038.452,
+      "min": 10,
+      "max": 250,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 10 e máximo de 250 unidades."
+    },
+    {
+      "id": "212",
+      "name": "Comentários Personalizados Brasileiros em Lives | ⚡️ | ⭐ - R$ 46.80 por 1000",
+      "category": "Youtube - Métricas e Outros",
+      "ratePer1000": 46.8,
+      "min": 5,
+      "max": 7500,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 5 e máximo de 7500 unidades."
+    },
+    {
+      "id": "213",
+      "name": "Seguidores Brasileiros | ⚡ | ⏳100K/D | ♻️R365 | ⭐ - R$ 15.56 por 1000",
+      "category": "Kwai - Seguidores",
+      "ratePer1000": 15.56,
+      "min": 10,
+      "max": 600000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 600000 unidades."
+    },
+    {
+      "id": "214",
+      "name": "Seguidores | ⚡️ | ♻️R30 | 🥇 - R$ 15.08 por 1000",
+      "category": "Kwai - Seguidores",
+      "ratePer1000": 15.08,
+      "min": 100,
+      "max": 600000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 600000 unidades."
+    },
+    {
+      "id": "215",
+      "name": "Seguidores Brasileiros | ⚡ | ⏳100K/D | ♻️R30 | 🥈 - R$ 14.72 por 1000",
+      "category": "Kwai - Seguidores",
+      "ratePer1000": 14.72,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "216",
+      "name": "Seguidores | ⚡️ | ♻️R30 | 🥈 - R$ 15.08 por 1000",
+      "category": "Kwai - Seguidores",
+      "ratePer1000": 15.08,
+      "min": 100,
+      "max": 600000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 600000 unidades."
+    },
+    {
+      "id": "217",
+      "name": "Seguidores Brasileiros | ⚡️ | 🥇 - R$ 14.20 por 1000",
+      "category": "Kwai - Seguidores",
+      "ratePer1000": 14.2,
+      "min": 10,
+      "max": 600000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 600000 unidades."
+    },
+    {
+      "id": "218",
+      "name": "Seguidores Brasileiros | ⚡️ | ♻️R30 | 🥇 - R$ 15.48 por 1000",
+      "category": "Kwai - Seguidores",
+      "ratePer1000": 15.48,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "219",
+      "name": "Seguidores Brasileiros | ⚡️ | ♻️R30 | 🚹Masculino | 🥇 - R$ 27.56 por 1000",
+      "category": "Kwai - Seguidores",
+      "ratePer1000": 27.56,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "220",
+      "name": "Seguidores Brasileiros | ⚡️ | ♻️R30 | 🚺Feminino | 🥇 - R$ 27.56 por 1000",
+      "category": "Kwai - Seguidores",
+      "ratePer1000": 27.56,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "221",
+      "name": "Seguidores para Lojas | ⚡ | ♻️R365 | ⭐ - R$ 22.20 por 1000",
+      "category": "Kwai - Seguidores",
+      "ratePer1000": 22.2,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "222",
+      "name": "Curtidas Brasileiras | ⚡️ | 🥇 - R$ 8.44 por 1000",
+      "category": "Kwai - Curtidas",
+      "ratePer1000": 8.44,
+      "min": 10,
+      "max": 600000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 600000 unidades."
+    },
+    {
+      "id": "223",
+      "name": "Curtidas Brasileiras | ⚡️ | ♻️R30 | 🥇 - R$ 9.76 por 1000",
+      "category": "Kwai - Curtidas",
+      "ratePer1000": 9.76,
+      "min": 10,
+      "max": 600000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 600000 unidades."
+    },
+    {
+      "id": "224",
+      "name": "Curtidas Brasileiras | ⚡️ | ♻️R30 | 🚹Masculino | 🥇 - R$ 17.00 por 1000",
+      "category": "Kwai - Curtidas",
+      "ratePer1000": 17,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "225",
+      "name": "Curtidas Brasileiras | ⚡️ | ♻️R30 | 🚺Feminino | 🥇 - R$ 17.00 por 1000",
+      "category": "Kwai - Curtidas",
+      "ratePer1000": 17,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "226",
+      "name": "Curtidas em Comentários | ⚡️ | 💧 | ♻️R30 | ➖ | ⭐ - R$ 39.08 por 1000",
+      "category": "Kwai - Curtidas",
+      "ratePer1000": 39.08,
+      "min": 100,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Comment Likes. Pedido mínimo de 100 e máximo de 500000 unidades."
+    },
+    {
+      "id": "227",
+      "name": "Curtidas em Live | ⚡️ | ➖ | ⭐ - R$ 29.00 por 1000",
+      "category": "Kwai - Curtidas",
+      "ratePer1000": 29,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "228",
+      "name": "Curtidas + Visualizações Brasileiras | ⚡️ | ♻️R30 | 🥇 - R$ 15.00 por 1000",
+      "category": "Kwai - Curtidas",
+      "ratePer1000": 15,
+      "min": 10,
+      "max": 600000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 600000 unidades."
+    },
+    {
+      "id": "229",
+      "name": "Dislike | ⚡️ | ♻️R30 | 🥇 - R$ 6.52 por 1000",
+      "category": "Kwai - Curtidas",
+      "ratePer1000": 6.52,
+      "min": 100,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 500000 unidades."
+    },
+    {
+      "id": "230",
+      "name": "Visualização Brasileiras + Bônus | ⚡️ | 🥇 - R$ 8.76 por 1000",
+      "category": "Kwai - Visualizações",
+      "ratePer1000": 8.76,
+      "min": 10,
+      "max": 600000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 600000 unidades."
+    },
+    {
+      "id": "231",
+      "name": "Espectadores ao vivo | 15M | ⚡️ | ♻️R30 | 🥇 - R$ 19.52 por 1000",
+      "category": "Kwai - Visualizações",
+      "ratePer1000": 19.52,
+      "min": 50,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 10000 unidades."
+    },
+    {
+      "id": "232",
+      "name": "Espectadores ao vivo | 30M | ⚡️ | ♻️R30 | 🥇 - R$ 37.04 por 1000",
+      "category": "Kwai - Visualizações",
+      "ratePer1000": 37.04,
+      "min": 50,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 10000 unidades."
+    },
+    {
+      "id": "233",
+      "name": "Espectadores ao vivo | 1H | ⚡️ | ♻️R30 | 🥇 - R$ 74.96 por 1000",
+      "category": "Kwai - Visualizações",
+      "ratePer1000": 74.96,
+      "min": 50,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 10000 unidades."
+    },
+    {
+      "id": "234",
+      "name": "Espectadores ao vivo | 1:30H | ⚡️ | ♻️R30 | 🥇 - R$ 87.96 por 1000",
+      "category": "Kwai - Visualizações",
+      "ratePer1000": 87.96,
+      "min": 50,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 10000 unidades."
+    },
+    {
+      "id": "235",
+      "name": "Espectadores ao vivo | 2H | ⚡️ | ♻️R30 | 🥇 - R$ 145.44 por 1000",
+      "category": "Kwai - Visualizações",
+      "ratePer1000": 145.44,
+      "min": 50,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 10000 unidades."
+    },
+    {
+      "id": "236",
+      "name": "Espectadores ao vivo | 2:30H | ⚡️ | ♻️R30 | 🥇 - R$ 172.32 por 1000",
+      "category": "Kwai - Visualizações",
+      "ratePer1000": 172.32,
+      "min": 50,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 10000 unidades."
+    },
+    {
+      "id": "237",
+      "name": "Espectadores ao vivo | 3H | ⚡️ | ♻️R30 | 🥇 - R$ 204.24 por 1000",
+      "category": "Kwai - Visualizações",
+      "ratePer1000": 204.24,
+      "min": 50,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 10000 unidades."
+    },
+    {
+      "id": "238",
+      "name": "Espectadores ao vivo | 6H | ⚡️ | ♻️R30 | 🥇 - R$ 391.08 por 1000",
+      "category": "Kwai - Visualizações",
+      "ratePer1000": 391.08,
+      "min": 50,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 10000 unidades."
+    },
+    {
+      "id": "239",
+      "name": "Espectadores ao vivo | 12H | ⚡️ | ♻️R30 | 🥇 - R$ 750.20 por 1000",
+      "category": "Kwai - Visualizações",
+      "ratePer1000": 750.2,
+      "min": 50,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 10000 unidades."
+    },
+    {
+      "id": "240",
+      "name": "Espectadores ao vivo | 1D | ⚡️ | ♻️R30 | 🥇 - R$ 1376.88 por 1000",
+      "category": "Kwai - Visualizações",
+      "ratePer1000": 1376.88,
+      "min": 50,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 10000 unidades."
+    },
+    {
+      "id": "241",
+      "name": "Comentários Aleatórios | ⚡️ | 🥇 - R$ 27.40 por 1000",
+      "category": "Kwai - Métricas e Outros",
+      "ratePer1000": 27.4,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "242",
+      "name": "Comentários Personalizados | ⚡️ | 🥇 - R$ 30.72 por 1000",
+      "category": "Kwai - Métricas e Outros",
+      "ratePer1000": 30.72,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "243",
+      "name": "Comentários Aleatório em Live | ⚡️ | 🥇 - R$ 37.00 por 1000",
+      "category": "Kwai - Métricas e Outros",
+      "ratePer1000": 37,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "244",
+      "name": "Comentários Personalizados em Live | ⚡️ | 🥇 - R$ 67.00 por 1000",
+      "category": "Kwai - Métricas e Outros",
+      "ratePer1000": 67,
+      "min": 100,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 100 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "245",
+      "name": "Comentários de Emoji | ❤️🙏🏼😂😍😃🤩 | ⚡️ | ♻️R30 | 🥇 - R$ 19.52 por 1000",
+      "category": "Kwai - Métricas e Outros",
+      "ratePer1000": 19.52,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "246",
+      "name": "Comentários de Emoji | 💩🤬👿🤢🤮🙄 | ⚡️ | ♻️R30 | 🥇 - R$ 19.52 por 1000",
+      "category": "Kwai - Métricas e Outros",
+      "ratePer1000": 19.52,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "247",
+      "name": "Compartilhamentos Brasileiros | ⚡️ | 🥇 - R$ 5.00 por 1000",
+      "category": "Kwai - Métricas e Outros",
+      "ratePer1000": 5,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "248",
+      "name": "Baixar Vídeo | ⚡️ | ♻️R30 | 🥇 - R$ 16.88 por 1000",
+      "category": "Kwai - Métricas e Outros",
+      "ratePer1000": 16.88,
+      "min": 100,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 500000 unidades."
+    },
+    {
+      "id": "249",
+      "name": "Impressão em Vídeo | ⚡️ | ♻️R30 | 🥇 - R$ 7.52 por 1000",
+      "category": "Kwai - Métricas e Outros",
+      "ratePer1000": 7.52,
+      "min": 100,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 500000 unidades."
+    },
+    {
+      "id": "250",
+      "name": "Monetização | 60K Minutos | ⚡️ | ♻️R30 | 🥇 - R$ 68.47 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 68.472,
+      "min": 1000,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 1000 unidades."
+    },
+    {
+      "id": "251",
+      "name": "Seguidores no Perfil | ⚡️ | 🥇 - R$ 5.21 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 5.212,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "252",
+      "name": "Seguidores no Perfil | ⚡️⚡️ | ♻️R30 | 🥇 - R$ 5.21 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 5.212,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "253",
+      "name": "Seguidores em Página | ⚡️ | ⭐ - R$ 19.70 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 19.7,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "254",
+      "name": "Seguidores em Página | ⚡️ | ♻️R30 | ⭐ - R$ 14.43 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 14.432,
+      "min": 100,
+      "max": 300000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 300000 unidades."
+    },
+    {
+      "id": "255",
+      "name": "Curtidas e Seguidores em Página | ⚡️ | ♻️R60 | 🥇 - R$ 13.53 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 13.532,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "256",
+      "name": "Curtidas ou Seguidores em Página | ⚡️ | ♻️R30 | 🥇AQ - R$ 10.30 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 10.304,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "257",
+      "name": "Curtidas Brasileiras em Post | ⚡️ | ♻️R60 | 🥇 - R$ 95.56 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 95.56,
+      "min": 25,
+      "max": 500,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 25 e máximo de 500 unidades."
+    },
+    {
+      "id": "259",
+      "name": "Curtidas em Comentários | ⚡️ | ➖ | 💧 | ⭐ - R$ 29.79 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 29.792,
+      "min": 10,
+      "max": 5000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 5000 unidades."
+    },
+    {
+      "id": "260",
+      "name": "Comentários Personalizados | ⚡️ | 🥇 - R$ 54.34 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 54.34,
+      "min": 100,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 100 e máximo de 50000 unidades."
+    },
+    {
+      "id": "261",
+      "name": "Comentários Brasileiros Personalizados | ⚡️ | 🥇 - R$ 1638.53 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 1638.532,
+      "min": 10,
+      "max": 250,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 10 e máximo de 250 unidades."
+    },
+    {
+      "id": "262",
+      "name": "Comentários Brasileiros Aleatórios | ⚡️ | 🥇 - R$ 1092.36 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 1092.356,
+      "min": 10,
+      "max": 250,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 250 unidades."
+    },
+    {
+      "id": "263",
+      "name": "Visualizações | ⚡️⚡️ | 🥇 - R$ 0.40 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 0.404,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "264",
+      "name": "Visualizações | ⚡️ | 🥇 - R$ 8.32 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 8.324,
+      "min": 500,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 500 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "265",
+      "name": "Visualizações em Reels | ⚡️ | 🥇 - R$ 0.41 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 0.412,
+      "min": 100,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "266",
+      "name": "Espectadores ao vivo | 15M | 🥇 - R$ 10.92 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 10.924,
+      "min": 20,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 20 e máximo de 10000 unidades."
+    },
+    {
+      "id": "267",
+      "name": "Espectadores ao vivo | 30M | 🥇 - R$ 21.85 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 21.848,
+      "min": 20,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 20 e máximo de 10000 unidades."
+    },
+    {
+      "id": "268",
+      "name": "Espectadores ao vivo | 1H | 🥇 - R$ 43.70 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 43.696,
+      "min": 20,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 20 e máximo de 10000 unidades."
+    },
+    {
+      "id": "269",
+      "name": "Espectadores ao vivo | 1:30H | 🥇 - R$ 65.54 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 65.544,
+      "min": 20,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 20 e máximo de 10000 unidades."
+    },
+    {
+      "id": "270",
+      "name": "Espectadores ao vivo | 2H | 🥇 - R$ 87.40 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 87.396,
+      "min": 20,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 20 e máximo de 10000 unidades."
+    },
+    {
+      "id": "271",
+      "name": "Espectadores ao vivo | 2:30H | 🥇 - R$ 109.24 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 109.244,
+      "min": 20,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 20 e máximo de 10000 unidades."
+    },
+    {
+      "id": "272",
+      "name": "Espectadores ao vivo | 3H | 🥇 - R$ 131.10 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 131.096,
+      "min": 20,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 20 e máximo de 10000 unidades."
+    },
+    {
+      "id": "273",
+      "name": "Espectadores ao vivo | 6H | 🥇 - R$ 262.18 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 262.184,
+      "min": 20,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 20 e máximo de 10000 unidades."
+    },
+    {
+      "id": "274",
+      "name": "👍 Like em post | ⚡️ | ♻️R30 | 🥇 - R$ 1.94 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 1.936,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "275",
+      "name": "❤️ Amei | ⚡️ | ♻️R30 | 🥇 - R$ 1.94 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 1.936,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "276",
+      "name": "😲 Uau | ⚡️ | ♻️R30 | 🥇 - R$ 1.94 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 1.936,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "277",
+      "name": "😂 Haha | ⚡️ | ♻️R30 | 🥇 - R$ 1.94 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 1.936,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "278",
+      "name": "😢 Triste | ⚡️ | ♻️R30 | 🥇 - R$ 1.94 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 1.936,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "279",
+      "name": "😡 Raiva | ⚡️ | ♻️R30 | 🥇 - R$ 1.94 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 1.936,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "280",
+      "name": "🥰 Apaixonado | ⚡️ | ♻️R30 | 🥇 - R$ 1.94 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 1.936,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "473",
+      "name": "Curtidas em Post | 🥇 | ⚡️ - R$ 3.79 por 1000",
+      "category": "Serviços para Facebook",
+      "ratePer1000": 3.792,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "281",
+      "name": "Membros de Canal/Grupo | ⚡️ | ➖ | ⭐ - R$ 7.11 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 7.112,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "282",
+      "name": "Membros de Grupo e de Canal | ⚡️ | ♻️R30 | 🥇 - R$ 7.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 7.684,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "283",
+      "name": "Membros de Grupo e de Canal | ⚡️ | ♻️R90 | 🥇 - R$ 8.20 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 8.204,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "284",
+      "name": "Membros de Grupo e de Canal | ⚡️ | 🥇 - R$ 6.29 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 6.292,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "285",
+      "name": "Membros no Canal Público | ⚡️ | 🥇 - R$ 23.44 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 23.444,
+      "min": 100,
+      "max": 49999,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 49999 unidades."
+    },
+    {
+      "id": "286",
+      "name": "Visualizações Nas 5 Últimas Postagens - R$ 0.04 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 0.036,
+      "min": 10,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "287",
+      "name": "Visualizações nas 10 Últimas Postagens - R$ 0.16 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 0.164,
+      "min": 10,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "288",
+      "name": "Visualizações nas 50 Últimas Postagens - R$ 0.33 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 0.328,
+      "min": 10,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "289",
+      "name": "Visualizações nas 100 Últimas Postagens - R$ 0.49 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 0.488,
+      "min": 10,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "290",
+      "name": "Visualizações nas 500 Últimas postagens - R$ 0.65 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 0.652,
+      "min": 10,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "291",
+      "name": "Visualizações em Postagens Futuras e Passadas (Configurável) - R$ 0.07 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 0.072,
+      "min": 10,
+      "max": 399999,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 399999 unidades."
+    },
+    {
+      "id": "292",
+      "name": "Reações Negativas | 👎💩 🤮😢 😱 | +Visualizações - R$ 0.72 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 0.72,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "293",
+      "name": "Reações Positivas | 👍 ❤️ 🔥 🎉🤩 😁 | +Visualizações - R$ 0.32 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 0.324,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "294",
+      "name": "Reações Positivas Premium | 👌 😍 ❤️ 🤡 👍 🐳 | +Visualizações - R$ 2.48 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 2.484,
+      "min": 50,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "295",
+      "name": "Reações Automáticas em 50 Posts Futuros | 👍 ❤️ 🔥 🎉 😁  | 💧 | - R$ 118.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 118.684,
+      "min": 20,
+      "max": 2000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 20 e máximo de 2000000 unidades."
+    },
+    {
+      "id": "296",
+      "name": "Reações em Postagens [🐳] + Visualizações - R$ 1.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.676,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "297",
+      "name": "Reações em Postagens [💯] + Visualizações - R$ 1.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.676,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "298",
+      "name": "Reações em Postagens [❤️‍🔥] + Visualizações - R$ 1.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.676,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "299",
+      "name": "Reações em Postagens [🤡] + Visualizações - R$ 1.67 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.672,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "300",
+      "name": "Reações em Postagens [⚡️] + Visualizações - R$ 1.67 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.672,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "301",
+      "name": "Reações em Postagens [🏆] + Visualizações - R$ 1.90 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.904,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "302",
+      "name": "Reações em Postagens [🍓] + Visualizações - R$ 1.90 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.904,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "303",
+      "name": "Reações em Postagens [🎃] + Visualizações - R$ 1.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.676,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "304",
+      "name": "Reações em Postagens [🍾] + Visualizações - R$ 1.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.676,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "305",
+      "name": "Reações em Postagens [💋] + Visualizações - R$ 1.90 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.904,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "306",
+      "name": "Reações em Postagens [🥱] + Visualizações - R$ 1.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.676,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "307",
+      "name": "Reações em Postagens [🥴] + Visualizações - R$ 1.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.676,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "308",
+      "name": "Reações em Postagens [🍌] + Visualizações - R$ 2.30 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 2.3,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "309",
+      "name": "Reações em Postagens [💔] + Visualizações - R$ 2.30 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 2.3,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "310",
+      "name": "Reações em Postagens [😈] + Visualizações - R$ 1.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.676,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "311",
+      "name": "Reações em Postagens [🌚] + Visualizações - R$ 1.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.676,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "312",
+      "name": "Reações em Postagens [😴] + Visualizações - R$ 1.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.676,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "313",
+      "name": "Reações em Postagens [🤓] + Visualizações - R$ 1.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.676,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "314",
+      "name": "Reações em Postagens [👨] + Visualizações - R$ 1.68 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.676,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "474",
+      "name": "Visualizações nas 30 Últimas postagens - R$ 0.98 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 0.976,
+      "min": 10,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "475",
+      "name": "Visualizações nas 50 Últimas postagens - R$ 1.62 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 1.624,
+      "min": 10,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "476",
+      "name": "Visualizações nas 100 Últimas postagens - R$ 3.24 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 3.244,
+      "min": 10,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "477",
+      "name": "Visualizações nas 200 Últimas postagens - R$ 6.48 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 6.484,
+      "min": 10,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "478",
+      "name": "Visualizações nas 500 Últimas postagens - R$ 16.21 por 1000",
+      "category": "Serviços para Telegram",
+      "ratePer1000": 16.208,
+      "min": 10,
+      "max": 2147483647,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 2147483647 unidades."
+    },
+    {
+      "id": "453",
+      "name": "Seguidores Brasileiros | 🥇| ⚡️ - R$ 40.33 por 1000",
+      "category": "Serviços para X/Twitter",
+      "ratePer1000": 40.328,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "315",
+      "name": "Seguidores | ⚡️ | 🥇 - R$ 22.52 por 1000",
+      "category": "Serviços para X/Twitter",
+      "ratePer1000": 22.524,
+      "min": 50,
+      "max": 20000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 20000 unidades."
+    },
+    {
+      "id": "316",
+      "name": "Seguidores | ⚡️ | 💎 - R$ 201.75 por 1000",
+      "category": "Serviços para X/Twitter",
+      "ratePer1000": 201.748,
+      "min": 5,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 5 e máximo de 100000 unidades."
+    },
+    {
+      "id": "317",
+      "name": "Retweet | ⚡️ | 🥇 - R$ 35.74 por 1000",
+      "category": "Serviços para X/Twitter",
+      "ratePer1000": 35.744,
+      "min": 50,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 50000 unidades."
+    },
+    {
+      "id": "318",
+      "name": "Retweet | ⚡️ | ♻️R365 | 🥇 - R$ 62.16 por 1000",
+      "category": "Serviços para X/Twitter",
+      "ratePer1000": 62.16,
+      "min": 50,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 50000 unidades."
+    },
+    {
+      "id": "319",
+      "name": "Visualizações em Vídeo | ⚡️ | 🥇 - R$ 0.11 por 1000",
+      "category": "Serviços para X/Twitter",
+      "ratePer1000": 0.112,
+      "min": 100,
+      "max": 100000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000000 unidades."
+    },
+    {
+      "id": "320",
+      "name": "Seguidores | ⚡️ | ♻️R30 | ⭐ - R$ 37.80 por 1000",
+      "category": "Serviços para Bluesky",
+      "ratePer1000": 37.8,
+      "min": 10,
+      "max": 200000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 200000 unidades."
+    },
+    {
+      "id": "321",
+      "name": "Curtidas | ⚡️ | ♻️R30 | ⭐ - R$ 30.48 por 1000",
+      "category": "Serviços para Bluesky",
+      "ratePer1000": 30.48,
+      "min": 10,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000 unidades."
+    },
+    {
+      "id": "322",
+      "name": "Retweet | ⚡️ | ♻️R30 | ⭐ - R$ 32.00 por 1000",
+      "category": "Serviços para Bluesky",
+      "ratePer1000": 32,
+      "min": 10,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000 unidades."
+    },
+    {
+      "id": "323",
+      "name": "Comentário Personalizado | ⚡️ | ♻️R30 | ⭐ - R$ 80.56 por 1000",
+      "category": "Serviços para Bluesky",
+      "ratePer1000": 80.56,
+      "min": 10,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 10 e máximo de 10000 unidades."
+    },
+    {
+      "id": "324",
+      "name": "Comentário Aleatório | ⚡️ | ♻️R30 | ⭐ - R$ 360.36 por 1000",
+      "category": "Serviços para Bluesky",
+      "ratePer1000": 360.36,
+      "min": 10,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000 unidades."
+    },
+    {
+      "id": "325",
+      "name": "Seguidores | ⚡️ | 🥇 - R$ 30.20 por 1000",
+      "category": "Serviços para Pinterest",
+      "ratePer1000": 30.2,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "326",
+      "name": "Seguidores | ⚡️ | ♻️R30 | 🥇 - R$ 38.20 por 1000",
+      "category": "Serviços para Pinterest",
+      "ratePer1000": 38.2,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "327",
+      "name": "Curtidas | ⚡️ | 🥇 - R$ 21.84 por 1000",
+      "category": "Serviços para Pinterest",
+      "ratePer1000": 21.84,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "328",
+      "name": "Curtidas | ⚡️ | ♻️R30 | 🥇 - R$ 25.84 por 1000",
+      "category": "Serviços para Pinterest",
+      "ratePer1000": 25.84,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "329",
+      "name": "Repin | ⚡️ | 🥇 - R$ 24.88 por 1000",
+      "category": "Serviços para Pinterest",
+      "ratePer1000": 24.88,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "330",
+      "name": "Repin | ⚡️ | ♻️R30 | 🥇 - R$ 28.88 por 1000",
+      "category": "Serviços para Pinterest",
+      "ratePer1000": 28.88,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "331",
+      "name": "Avaliações Personalizadas no Google Maps | ⭐⭐⭐⭐⭐ - R$ 24000.00 por 1000",
+      "category": "Serviços para Google",
+      "ratePer1000": 24000,
+      "min": 1,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 1 e máximo de 100000 unidades."
+    },
+    {
+      "id": "460",
+      "name": "Avaliações Personalizadas no Trust Pilot | ✅✅✅✅✅ - R$ 20000.00 por 1000",
+      "category": "Serviços para Trustpilot",
+      "ratePer1000": 20000,
+      "min": 1,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 1 e máximo de 1000 unidades."
+    },
+    {
+      "id": "332",
+      "name": "Seguidores | ⚡️ | 💧 | 🥇 - R$ 37.29 por 1000",
+      "category": "Serviços para Threads",
+      "ratePer1000": 37.292,
+      "min": 100,
+      "max": 20000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 20000 unidades."
+    },
+    {
+      "id": "333",
+      "name": "Seguidores | ⚡️ | ♻️R30 | 💧 | 🥇 - R$ 37.28 por 1000",
+      "category": "Serviços para Threads",
+      "ratePer1000": 37.276,
+      "min": 100,
+      "max": 20000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 20000 unidades."
+    },
+    {
+      "id": "334",
+      "name": "Seguidores | ⚡️ | ➖ | 🥇 - R$ 92.78 por 1000",
+      "category": "Serviços para Threads",
+      "ratePer1000": 92.784,
+      "min": 100,
+      "max": 10000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 10000 unidades."
+    },
+    {
+      "id": "335",
+      "name": "Rethreads | ⚡️ | ♻️R30 | 🥇 - R$ 118.66 por 1000",
+      "category": "Serviços para Threads",
+      "ratePer1000": 118.656,
+      "min": 1,
+      "max": 5000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1 e máximo de 5000 unidades."
+    },
+    {
+      "id": "336",
+      "name": "Membros Brasileiros em Canal | ⚡️ | 🥇 - R$ 130.45 por 1000",
+      "category": "Serviços para Whatsapp",
+      "ratePer1000": 130.448,
+      "min": 10,
+      "max": 5000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 5000 unidades."
+    },
+    {
+      "id": "337",
+      "name": "Reações Aleatório em Canal | 👍❤️😂😲😥🙏 | ⚡️ | 🥇 - R$ 49.70 por 1000",
+      "category": "Serviços para Whatsapp",
+      "ratePer1000": 49.696,
+      "min": 10,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000 unidades."
+    },
+    {
+      "id": "338",
+      "name": "Reação em Canal | 👍 | ⚡️ | 🥇 - R$ 49.70 por 1000",
+      "category": "Serviços para Whatsapp",
+      "ratePer1000": 49.696,
+      "min": 10,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000 unidades."
+    },
+    {
+      "id": "339",
+      "name": "Reação em Canal | ❤️ | ⚡️ | 🥇 - R$ 49.70 por 1000",
+      "category": "Serviços para Whatsapp",
+      "ratePer1000": 49.696,
+      "min": 10,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000 unidades."
+    },
+    {
+      "id": "340",
+      "name": "Reação em Canal | 😂 | ⚡️ | 🥇 - R$ 49.70 por 1000",
+      "category": "Serviços para Whatsapp",
+      "ratePer1000": 49.696,
+      "min": 10,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000 unidades."
+    },
+    {
+      "id": "341",
+      "name": "Reação em Canal | 😲 | ⚡️ | 🥇 - R$ 49.70 por 1000",
+      "category": "Serviços para Whatsapp",
+      "ratePer1000": 49.696,
+      "min": 10,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000 unidades."
+    },
+    {
+      "id": "342",
+      "name": "Reação em Canal | 😥 | ⚡️ | 🥇 - R$ 49.70 por 1000",
+      "category": "Serviços para Whatsapp",
+      "ratePer1000": 49.696,
+      "min": 10,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000 unidades."
+    },
+    {
+      "id": "343",
+      "name": "Reação em Canal | 🙏 | ⚡️ | 🥇 - R$ 49.70 por 1000",
+      "category": "Serviços para Whatsapp",
+      "ratePer1000": 49.696,
+      "min": 10,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000 unidades."
+    },
+    {
+      "id": "461",
+      "name": "Seguidores | 🥇 | ⚡️ - R$ 18.20 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 18.2,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "462",
+      "name": "Seguidores | 🥇 | ♻️R30 | ⚡️ - R$ 19.00 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 19,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "463",
+      "name": "Seguidores | 🥇 | ♻️R60 | ⚡️ - R$ 20.88 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 20.88,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "464",
+      "name": "Seguidores | 🥇 | ♻️R90 | ⚡️ - R$ 26.20 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 26.2,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "465",
+      "name": "Seguidores | 🥇 | ♻️R365 | ⚡️ - R$ 32.20 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 32.2,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "479",
+      "name": "Membros em Comunidade | 🥇 | ⚡️ - R$ 29.04 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 29.04,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "480",
+      "name": "Membros em Comunidade | 🥇 | ♻️R30 | ⚡️ - R$ 31.44 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 31.44,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "481",
+      "name": "Membros em Comunidade | 🥇 | ♻️R60 | ⚡️ - R$ 33.84 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 33.84,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "482",
+      "name": "Membros em Comunidade | 🥇 | ♻️R90 | ⚡️ - R$ 36.24 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 36.24,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "483",
+      "name": "Membros em Comunidade | 🥇 | ♻️R365 | ⚡️ - R$ 38.64 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 38.64,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "484",
+      "name": "Favoritar Jogos | 🥇 | ⚡️ - R$ 27.92 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 27.92,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "485",
+      "name": "Favoritar Jogos | 🥇 | ♻️R30 | ⚡️ - R$ 28.72 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 28.72,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "486",
+      "name": "Favoritar Jogos | 🥇 | ♻️R60 | ⚡️ - R$ 29.52 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 29.52,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "487",
+      "name": "Favoritar Jogos | 🥇 | ♻️R90 | ⚡️ - R$ 30.32 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 30.32,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "488",
+      "name": "Favoritar Jogos | 🥇 | ♻️R365 | ⚡️ - R$ 31.12 por 1000",
+      "category": "Serviços para Roblox",
+      "ratePer1000": 31.12,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "344",
+      "name": "Seguidores | ⚡️ | ♻️R30 | 🥇 - R$ 30.24 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 30.24,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "345",
+      "name": "Seguidores brasileiros | ⚡️ | ♻️R30 | 🥇 - R$ 35.52 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 35.52,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "346",
+      "name": "Seguidores 🚹Masculino | ⚡️ | ♻️R30 | 🥇 - R$ 67.08 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 67.08,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "347",
+      "name": "Seguidores 🚺Feminino | ⚡️ | ♻️R30 | 🥇 - R$ 67.08 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 67.08,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "348",
+      "name": "Curtidas | ⚡️ | ♻️R30 | 🥇 - R$ 23.56 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 23.56,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "349",
+      "name": "Curtidas brasileiras | ⚡️ | ♻️R30 | 🥇 - R$ 27.56 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 27.56,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "350",
+      "name": "Curtidas 🚹Masculino | ⚡️ | ♻️R30 | 🥇 - R$ 37.76 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 37.76,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "351",
+      "name": "Curtidas 🚺Feminino | ⚡️ | ♻️R30 | 🥇 - R$ 37.76 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 37.76,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "352",
+      "name": "Comentários | ⚡️ | ♻️R30 | 🥇 - R$ 27.72 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 27.72,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "353",
+      "name": "Comentários Personalizados | ⚡️ | ♻️R30 | 🥇 - R$ 39.52 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 39.52,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "354",
+      "name": "Comentários Positivos | ⚡️ | ♻️R30 | 🥇 - R$ 28.48 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 28.48,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "355",
+      "name": "Comentários Negativos | ⚡️ | ♻️R30 | 🥇 - R$ 28.48 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 28.48,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "356",
+      "name": "Favoritos | ⚡️ | ♻️R30 | 🥇 - R$ 18.64 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 18.64,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "357",
+      "name": "Visualizações | ⚡️ | ♻️R30 | 🥇 - R$ 17.32 por 1000",
+      "category": "Serviços para Topick",
+      "ratePer1000": 17.32,
+      "min": 15,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 15 e máximo de 500000 unidades."
+    },
+    {
+      "id": "358",
+      "name": "Seguidores | ⚡️⚡️ | ♻️R365 | ⭐ | ➖ - R$ 50.00 por 1000",
+      "category": "Serviços para Twitch",
+      "ratePer1000": 50,
+      "min": 50,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 100000 unidades."
+    },
+    {
+      "id": "359",
+      "name": "Visualizações em Vídeos | ⚡️ | 🥇 - R$ 1.90 por 1000",
+      "category": "Serviços para Twitch",
+      "ratePer1000": 1.9,
+      "min": 10,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "360",
+      "name": "Visualizações em Clipes | ⚡️ | 🥇 - R$ 1.90 por 1000",
+      "category": "Serviços para Twitch",
+      "ratePer1000": 1.9,
+      "min": 10,
+      "max": 10000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 10000000 unidades."
+    },
+    {
+      "id": "361",
+      "name": "Espectadores em Live | 60 min | ⚡️ | 🥇 - R$ 36.86 por 1000",
+      "category": "Serviços para Twitch",
+      "ratePer1000": 36.856,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "362",
+      "name": "Espectadores em Live | 120 min | ⚡️ | 🥇 - R$ 71.25 por 1000",
+      "category": "Serviços para Twitch",
+      "ratePer1000": 71.248,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "363",
+      "name": "Espectadores em Live | 180 min | ⚡️ | 🥇 - R$ 97.52 por 1000",
+      "category": "Serviços para Twitch",
+      "ratePer1000": 97.524,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "364",
+      "name": "Espectadores em Live | 240 min | ⚡️ | 🥇 - R$ 132.60 por 1000",
+      "category": "Serviços para Twitch",
+      "ratePer1000": 132.596,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "365",
+      "name": "Espectadores em Live | 360 min | ⚡️ | 🥇 - R$ 199.08 por 1000",
+      "category": "Serviços para Twitch",
+      "ratePer1000": 199.08,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "366",
+      "name": "Espectadores em Live | 720 min | ⚡️ | 🥇 - R$ 397.79 por 1000",
+      "category": "Serviços para Twitch",
+      "ratePer1000": 397.788,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "367",
+      "name": "Espectadores em Live | 24 horas | ⚡️ | 🥇AQ - R$ 795.57 por 1000",
+      "category": "Serviços para Twitch",
+      "ratePer1000": 795.568,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "368",
+      "name": "Espectadores em Live | 7 dias | ⚡️ | 🥇 - R$ 5020.00 por 1000",
+      "category": "Serviços para Twitch",
+      "ratePer1000": 5020,
+      "min": 5,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 5 e máximo de 1000 unidades."
+    },
+    {
+      "id": "369",
+      "name": "Espectadores em Live | 1 mês | ⚡️ | 🥇 - R$ 11064.00 por 1000",
+      "category": "Serviços para Twitch",
+      "ratePer1000": 11064,
+      "min": 5,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 5 e máximo de 1000 unidades."
+    },
+    {
+      "id": "370",
+      "name": "Seguidores | ⚡️⚡️ | ♻️R365 | ⭐ | ➖ - R$ 27.08 por 1000",
+      "category": "Serviços para Kick",
+      "ratePer1000": 27.08,
+      "min": 10,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 100000 unidades."
+    },
+    {
+      "id": "371",
+      "name": "Espectadores em Live | 15 min | ⚡️ | 🥇 - R$ 1.74 por 1000",
+      "category": "Serviços para Kick",
+      "ratePer1000": 1.74,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "372",
+      "name": "Espectadores em Live | 30 min | ⚡️ | 🥇 - R$ 3.48 por 1000",
+      "category": "Serviços para Kick",
+      "ratePer1000": 3.48,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "373",
+      "name": "Espectadores em Live | 60 min | ⚡️ | 🥇 - R$ 6.65 por 1000",
+      "category": "Serviços para Kick",
+      "ratePer1000": 6.648,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "374",
+      "name": "Espectadores em Live | 120 min | ⚡️ | 🥇 - R$ 13.29 por 1000",
+      "category": "Serviços para Kick",
+      "ratePer1000": 13.292,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "375",
+      "name": "Espectadores em Live | 240 min | ⚡️ | 🥇 - R$ 26.58 por 1000",
+      "category": "Serviços para Kick",
+      "ratePer1000": 26.584,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "376",
+      "name": "Espectadores em Live | 360 min | ⚡️ | 🥇 - R$ 28.48 por 1000",
+      "category": "Serviços para Kick",
+      "ratePer1000": 28.484,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "378",
+      "name": "Espectadores em Live | 720 min | ⚡️ | 🥇 - R$ 68.36 por 1000",
+      "category": "Serviços para Kick",
+      "ratePer1000": 68.356,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "379",
+      "name": "Espectadores em Live | 1440 min | ⚡️ | 🥇 - R$ 136.71 por 1000",
+      "category": "Serviços para Kick",
+      "ratePer1000": 136.712,
+      "min": 10,
+      "max": 50000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 50000 unidades."
+    },
+    {
+      "id": "458",
+      "name": "Comentários Aleatórios em Live | ⭐ | ⚡️ - R$ 138.20 por 1000",
+      "category": "Serviços para Kick",
+      "ratePer1000": 138.2,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "459",
+      "name": "Comentários Personalizados em Live | ⭐ | ⚡️ - R$ 170.68 por 1000",
+      "category": "Serviços para Kick",
+      "ratePer1000": 170.68,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "380",
+      "name": "50-75 Visualizações  por 1 Hora - R$ 91.54 por 1000",
+      "category": "Serviços para Trovo",
+      "ratePer1000": 91.54,
+      "min": 1,
+      "max": 1,
+      "description": "Serviço de alta velocidade de tipo: Package. Pedido mínimo de 1 e máximo de 1 unidades."
+    },
+    {
+      "id": "381",
+      "name": "50-75 Visualizações por 2 horas - R$ 137.54 por 1000",
+      "category": "Serviços para Trovo",
+      "ratePer1000": 137.54,
+      "min": 1,
+      "max": 1,
+      "description": "Serviço de alta velocidade de tipo: Package. Pedido mínimo de 1 e máximo de 1 unidades."
+    },
+    {
+      "id": "382",
+      "name": "50-75 Visualizações por 3 horas - R$ 183.54 por 1000",
+      "category": "Serviços para Trovo",
+      "ratePer1000": 183.54,
+      "min": 1,
+      "max": 1,
+      "description": "Serviço de alta velocidade de tipo: Package. Pedido mínimo de 1 e máximo de 1 unidades."
+    },
+    {
+      "id": "383",
+      "name": "100-150 Visualizações por 1 hora - R$ 137.54 por 1000",
+      "category": "Serviços para Trovo",
+      "ratePer1000": 137.54,
+      "min": 1,
+      "max": 1,
+      "description": "Serviço de alta velocidade de tipo: Package. Pedido mínimo de 1 e máximo de 1 unidades."
+    },
+    {
+      "id": "384",
+      "name": "100-150 Visualizações por 3 horas - R$ 229.54 por 1000",
+      "category": "Serviços para Trovo",
+      "ratePer1000": 229.54,
+      "min": 1,
+      "max": 1,
+      "description": "Serviço de alta velocidade de tipo: Package. Pedido mínimo de 1 e máximo de 1 unidades."
+    },
+    {
+      "id": "385",
+      "name": "450-500 Visualizações por 1 hora - R$ 229.54 por 1000",
+      "category": "Serviços para Trovo",
+      "ratePer1000": 229.54,
+      "min": 1,
+      "max": 1,
+      "description": "Serviço de alta velocidade de tipo: Package. Pedido mínimo de 1 e máximo de 1 unidades."
+    },
+    {
+      "id": "386",
+      "name": "450-500 Visualizações por 2 horas - R$ 367.54 por 1000",
+      "category": "Serviços para Trovo",
+      "ratePer1000": 367.54,
+      "min": 1,
+      "max": 1,
+      "description": "Serviço de alta velocidade de tipo: Package. Pedido mínimo de 1 e máximo de 1 unidades."
+    },
+    {
+      "id": "387",
+      "name": "450-500 Visualizações por 3 horas - R$ 459.54 por 1000",
+      "category": "Serviços para Trovo",
+      "ratePer1000": 459.54,
+      "min": 1,
+      "max": 1,
+      "description": "Serviço de alta velocidade de tipo: Package. Pedido mínimo de 1 e máximo de 1 unidades."
+    },
+    {
+      "id": "388",
+      "name": "Seguidores em Perfil | ⚡️ | 🥇 - R$ 615.24 por 1000",
+      "category": "Serviços para Tidal",
+      "ratePer1000": 615.24,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "389",
+      "name": "Seguidores em Playlists | ⚡️ | 🥇 - R$ 615.24 por 1000",
+      "category": "Serviços para Tidal",
+      "ratePer1000": 615.24,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "390",
+      "name": "Curtidas Premium | ⚡️ | 🥇 - R$ 1794.44 por 1000",
+      "category": "Serviços para Tidal",
+      "ratePer1000": 1794.444,
+      "min": 100,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 100000 unidades."
+    },
+    {
+      "id": "391",
+      "name": "Ouvintes Únicos | ⚡️ | 🥇 - R$ 461.43 por 1000",
+      "category": "Serviços para Tidal",
+      "ratePer1000": 461.428,
+      "min": 1000,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 100000 unidades."
+    },
+    {
+      "id": "392",
+      "name": "Plays em Vídeos | ⚡️ | 🥇 - R$ 273.67 por 1000",
+      "category": "Serviços para Tidal",
+      "ratePer1000": 273.668,
+      "min": 1000,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "393",
+      "name": "Plays em Playlist | ⚡️ | 🥇 - R$ 230.72 por 1000",
+      "category": "Serviços para Tidal",
+      "ratePer1000": 230.716,
+      "min": 10000,
+      "max": 100000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10000 e máximo de 100000 unidades."
+    },
+    {
+      "id": "394",
+      "name": "Seguidores | ⚡️ | ♻️R30 | ⭐ - R$ 23.68 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 23.68,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "395",
+      "name": "Seguidores Brasileiros 🚹Masculino | ⚡️ | ♻️R30 | ⭐ - R$ 25.52 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 25.52,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "396",
+      "name": "Seguidores Brasileiros 🚺Feminino | ⚡️ | ♻️R30 | ⭐ - R$ 25.52 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 25.52,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "397",
+      "name": "Curtidas | ⚡️ | ♻️R30 | ⭐ - R$ 13.52 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 13.52,
+      "min": 10,
+      "max": 600000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 600000 unidades."
+    },
+    {
+      "id": "398",
+      "name": "Curtidas + Visualizações | ⚡️ | ♻️R30 | ⭐ - R$ 17.00 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 17,
+      "min": 10,
+      "max": 600000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 600000 unidades."
+    },
+    {
+      "id": "399",
+      "name": "Curtidas Brasileiras 🚹Masculino | ⚡️ | ♻️R30 | ⭐ - R$ 25.52 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 25.52,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "400",
+      "name": "Curtidas Brasileiras 🚺Feminino | ⚡️ | ♻️R30 | ⭐ - R$ 25.52 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 25.52,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "401",
+      "name": "Comentários Aleatórios | ⚡️ | ♻️R30 | ⭐ - R$ 21.52 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 21.52,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "402",
+      "name": "Comentários Positivos | ⚡️ | ♻️R30 | ⭐ - R$ 25.52 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 25.52,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "403",
+      "name": "Comentários Negativos | ⚡️ | ♻️R30 | ⭐ - R$ 25.52 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 25.52,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "404",
+      "name": "Comentários Personalizados | ⚡️ | ♻️R30 | ⭐ - R$ 33.00 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 33,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "405",
+      "name": "Comentários Aleatórios em Transmissão | ⚡️ | ♻️R30 | ⭐ - R$ 35.60 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 35.6,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "406",
+      "name": "Comentários Personalizados em Transmissão | ⚡️ | ♻️R30 | ⭐ - R$ 39.24 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 39.24,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "407",
+      "name": "Curtidas em Transmissão | ⚡️ | ♻️R30 | ⭐ - R$ 28.20 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 28.2,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "408",
+      "name": "Compartilhamentos em Transmissão | ⚡️ | ♻️R30 | ⭐ - R$ 34.64 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 34.64,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "409",
+      "name": "Compartilhamentos | ⚡️ | ♻️R30 | ⭐ - R$ 14.20 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 14.2,
+      "min": 10,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 1000000 unidades."
+    },
+    {
+      "id": "410",
+      "name": "Baixamentos | ⚡️ | ♻️R30 | ⭐ - R$ 11.92 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 11.92,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "411",
+      "name": "Descurtidas | ⚡️ | ♻️R30 | ⭐ - R$ 12.52 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 12.52,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "412",
+      "name": "Curtidas em Comentários | ⚡️ | ♻️R30 | ⭐ - R$ 36.56 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 36.56,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Comment Likes. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "413",
+      "name": "Salvamentos | ⚡️ | ♻️R30 | ⭐ - R$ 28.52 por 1000",
+      "category": "Serviços para SnackVideo",
+      "ratePer1000": 28.52,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "414",
+      "name": "Seguidores em Perfil | ⚡️ | 🥇 - R$ 1992.44 por 1000",
+      "category": "Serviços para Linkedin",
+      "ratePer1000": 1992.444,
+      "min": 5,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 5 e máximo de 1000 unidades."
+    },
+    {
+      "id": "415",
+      "name": "Curtidas em Publicações | ⚡️ | ♻️R30 | 🥇 - R$ 1106.10 por 1000",
+      "category": "Serviços para Linkedin",
+      "ratePer1000": 1106.1,
+      "min": 10,
+      "max": 6500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 6500000 unidades."
+    },
+    {
+      "id": "417",
+      "name": "Comentários | ⚡️ | 🥇 - R$ 1086.79 por 1000",
+      "category": "Serviços para Linkedin",
+      "ratePer1000": 1086.788,
+      "min": 5,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 5 e máximo de 1000 unidades."
+    },
+    {
+      "id": "418",
+      "name": "Inscritos | ⚡️ | ♻️R30 | 🥇 - R$ 19.88 por 1000",
+      "category": "Serviços para Reddit",
+      "ratePer1000": 19.884,
+      "min": 100,
+      "max": 4500,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 4500 unidades."
+    },
+    {
+      "id": "419",
+      "name": "Visualizações | ⚡️ | ♻️R30 | 🥇 - R$ 106.81 por 1000",
+      "category": "Serviços para Reddit",
+      "ratePer1000": 106.812,
+      "min": 100,
+      "max": 15000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 15000 unidades."
+    },
+    {
+      "id": "420",
+      "name": "Compartilhamento | ⚡️ | ♻️R30 | 🥇 - R$ 83.08 por 1000",
+      "category": "Serviços para Reddit",
+      "ratePer1000": 83.076,
+      "min": 100,
+      "max": 4500,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 4500 unidades."
+    },
+    {
+      "id": "421",
+      "name": "Seguidores | ⚡️ | ➖ | 💧 | 🥇 - R$ 14.84 por 1000",
+      "category": "Serviços para Dribble",
+      "ratePer1000": 14.836,
+      "min": 50,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 1000 unidades."
+    },
+    {
+      "id": "422",
+      "name": "Curtidas | ⚡️ | ➖ | 💧 | 🥇 - R$ 14.84 por 1000",
+      "category": "Serviços para Dribble",
+      "ratePer1000": 14.836,
+      "min": 50,
+      "max": 1000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 50 e máximo de 1000 unidades."
+    },
+    {
+      "id": "423",
+      "name": "Visualizações | ⚡️ | 💧 | 🥇 - R$ 16.62 por 1000",
+      "category": "Serviços para Rumble",
+      "ratePer1000": 16.616,
+      "min": 1000,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 500000 unidades."
+    },
+    {
+      "id": "424",
+      "name": "Visualizações Americanas | ⚡️ | 💧 | 🥇 - R$ 16.62 por 1000",
+      "category": "Serviços para Rumble",
+      "ratePer1000": 16.616,
+      "min": 1000,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 500000 unidades."
+    },
+    {
+      "id": "425",
+      "name": "Visualizações Brasileiras | ⚡️ | 💧 | 🥇 - R$ 16.62 por 1000",
+      "category": "Serviços para Rumble",
+      "ratePer1000": 16.616,
+      "min": 1000,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 500000 unidades."
+    },
+    {
+      "id": "426",
+      "name": "Visualizações Russas | ⚡️ | 💧 | 🥇 - R$ 16.62 por 1000",
+      "category": "Serviços para Rumble",
+      "ratePer1000": 16.616,
+      "min": 1000,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 500000 unidades."
+    },
+    {
+      "id": "427",
+      "name": "Visualizações Latam | ⚡️ | 💧 | 🥇 - R$ 16.62 por 1000",
+      "category": "Serviços para Rumble",
+      "ratePer1000": 16.616,
+      "min": 1000,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 1000 e máximo de 500000 unidades."
+    },
+    {
+      "id": "428",
+      "name": "Seguidores em Crypto | ⚡️ | ⭐ - R$ 31.52 por 1000",
+      "category": "Serviços para Coinmarketcap",
+      "ratePer1000": 31.52,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "429",
+      "name": "Seguidores em Crypto | ⚡️ | ♻️R30 | ⭐ - R$ 33.76 por 1000",
+      "category": "Serviços para Coinmarketcap",
+      "ratePer1000": 33.76,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "430",
+      "name": "Seguidores em Perfil | ⚡️ | ⭐ - R$ 31.52 por 1000",
+      "category": "Serviços para Coinmarketcap",
+      "ratePer1000": 31.52,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "431",
+      "name": "Seguidores em Perfil | ⚡️ | ♻️R30 | ⭐ - R$ 33.76 por 1000",
+      "category": "Serviços para Coinmarketcap",
+      "ratePer1000": 33.76,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "432",
+      "name": "Seguidores em Perfil | ⚡️ | ♻️R30 | ⭐ - R$ 23.56 por 1000",
+      "category": "Serviços para Coinmarketcap",
+      "ratePer1000": 23.56,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "433",
+      "name": "Curtidas | ⚡️ | ⭐ - R$ 25.76 por 1000",
+      "category": "Serviços para Coinmarketcap",
+      "ratePer1000": 25.76,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "434",
+      "name": "Comentários Aleatórios | ⚡️ | ⭐ - R$ 41.80 por 1000",
+      "category": "Serviços para Coinmarketcap",
+      "ratePer1000": 41.8,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "435",
+      "name": "Comentários Customizados | ⚡️ | ⭐ - R$ 49.80 por 1000",
+      "category": "Serviços para Coinmarketcap",
+      "ratePer1000": 49.8,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Custom Comments. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "436",
+      "name": "Reposts | ⚡️ | ⭐ - R$ 28.88 por 1000",
+      "category": "Serviços para Coinmarketcap",
+      "ratePer1000": 28.88,
+      "min": 10,
+      "max": 500000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 10 e máximo de 500000 unidades."
+    },
+    {
+      "id": "437",
+      "name": "Tráfego Brasileiro do Google - R$ 9.50 por 1000",
+      "category": "Tráfego para Site",
+      "ratePer1000": 9.496,
+      "min": 100,
+      "max": 1000000,
+      "description": "Serviço de alta velocidade de tipo: Default. Pedido mínimo de 100 e máximo de 1000000 unidades."
     }
   ],
   "orders": [],
