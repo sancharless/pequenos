@@ -207,6 +207,37 @@ export const dbHelper = {
     return found ? { ...found, role: found.role || 'user' } : null;
   },
 
+  updateUserPassword: async (email: string, passwordHash: string): Promise<boolean> => {
+    if (supabase) {
+      try {
+        const { error } = await supabase
+          .from('users')
+          .update({ password_hash: passwordHash })
+          .eq('email', email);
+        if (error) throw error;
+      } catch (err) {
+        console.error('Supabase password update failed:', err);
+      }
+    }
+    
+    const db = getLocalDb();
+    if (db.user.email.toLowerCase() === email.toLowerCase()) {
+      db.user.passwordHash = passwordHash;
+      saveLocalDb(db);
+      return true;
+    }
+    if (db.usersList) {
+      const idx = db.usersList.findIndex(u => u.email.toLowerCase() === email.toLowerCase());
+      if (idx !== -1) {
+        db.usersList[idx].passwordHash = passwordHash;
+        saveLocalDb(db);
+        return true;
+      }
+    }
+    return false;
+  },
+
+
   createUser: async (user: Omit<UserStats, 'totalOrders' | 'totalSpent' | 'status'>): Promise<UserStats> => {
     const startingBalance = 0.00; // Users start with 0.00 balance
     const role = user.email.toLowerCase() === 'admin@goobox.com' ? 'admin' : 'user';

@@ -4260,5 +4260,31 @@
   ],
   "coupons": [],
   "couponUses": [],
-  "paymentCoupons": []
+  "paymentCoupons": [],
+  "usersList": [
+    {
+      "name": "Administrador",
+      "email": "admin@goobox.com",
+      "balance": 0,
+      "totalOrders": 0,
+      "totalSpent": 0,
+      "status": "Iniciante",
+      "passwordHash": "6dce6d00dd1ce788de1da3269be3152f:6b5201136bfc34679936d8637756b65dc757d1a39c974555becb6bbefcef5ae754d1a3c44ce0ffc39512144a836333141849416f3fba20bca75947ce9d165ea7",
+      "role": "admin"
+    },
+    {
+      "name": "Test Admin",
+      "email": "admin2@goobox.com",
+      "balance": 0,
+      "totalOrders": 0,
+      "totalSpent": 0,
+      "status": "Iniciante",
+      "passwordHash": "89ee5c793354af64d55a4661d2d00bcd:feeacc16c09a1bdb96afebbc36e6c87d16a80da77f07728172bb7562656a9e0646039a00f2a3a21f539af783e7917dc22a551ca3adc3853cd293bf729b8b1359",
+      "role": "user"
+    }
+  ],
+  "settings": {
+    "service_markup_percent": "20",
+    "support_whatsapp_number": "5511999999999"
+  }
 }

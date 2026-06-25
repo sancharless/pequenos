@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 
-type Tab = 'novo-pedido' | 'servicos' | 'adicionar-saldo' | 'pedidos' | 'api' | 'admin';
-type AuthScreen = 'login' | 'register';
+type Tab = 'dashboard' | 'novo-pedido' | 'servicos' | 'adicionar-saldo' | 'pedidos' | 'api' | 'admin';
+type AuthScreen = 'login' | 'register' | 'recover';
 
 interface UserStats {
   name: string;
@@ -66,7 +66,15 @@ export default function Dashboard() {
   const [authPassword, setAuthPassword] = useState('');
   const [authFeedback, setAuthFeedback] = useState<string | null>(null);
 
-  const [activeTab, setActiveTab] = useState<Tab>('novo-pedido');
+  // Recovery Form states
+  const [recoveryEmail, setRecoveryEmail] = useState('');
+  const [recoveryStep, setRecoveryStep] = useState<'email' | 'reset'>('email');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  const [activeTab, setActiveTab] = useState<Tab>('dashboard');
   const [user, setUser] = useState<UserStats | null>(null);
   const [services, setServices] = useState<Service[]>([]);
   const [orders, setOrders] = useState<Order[]>([]);
@@ -164,6 +172,16 @@ export default function Dashboard() {
       }
     }
     setLoading(false);
+  }, []);
+
+  // Monitor mobile screen size
+  useEffect(() => {
+    const checkSize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkSize();
+    window.addEventListener('resize', checkSize);
+    return () => window.removeEventListener('resize', checkSize);
   }, []);
 
   // Fetch initial SMM data after auth
@@ -608,6 +626,66 @@ export default function Dashboard() {
     }
   };
 
+  const handleRecoverySubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setAuthFeedback(null);
+
+    if (!recoveryEmail) {
+      setAuthFeedback('Por favor, informe seu e-mail.');
+      return;
+    }
+
+    if (recoveryStep === 'email') {
+      try {
+        const res = await fetch('/api/auth/recover', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: recoveryEmail })
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          setAuthFeedback(data.error || 'Erro ao verificar e-mail.');
+          return;
+        }
+        setRecoveryStep('reset');
+        setAuthFeedback(null);
+      } catch (err) {
+        console.error(err);
+        setAuthFeedback('Erro de conexão ao verificar e-mail.');
+      }
+    } else {
+      if (!newPassword || !confirmPassword) {
+        setAuthFeedback('Preencha os campos de nova senha.');
+        return;
+      }
+      if (newPassword !== confirmPassword) {
+        setAuthFeedback('As senhas não coincidem.');
+        return;
+      }
+      try {
+        const res = await fetch('/api/auth/recover', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: recoveryEmail, password: newPassword })
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          setAuthFeedback(data.error || 'Erro ao redefinir a senha.');
+          return;
+        }
+        setAuthFeedback('Senha redefinida com sucesso! Faça login.');
+        setAuthScreen('login');
+        setRecoveryEmail('');
+        setRecoveryStep('email');
+        setNewPassword('');
+        setConfirmPassword('');
+      } catch (err) {
+        console.error(err);
+        setAuthFeedback('Erro de conexão ao redefinir a senha.');
+      }
+    }
+  };
+
   const handleLogout = () => {
     sessionStorage.removeItem('goobox_session');
     setIsAuthenticated(false);
@@ -959,7 +1037,9 @@ export default function Dashboard() {
               </div>
               <span className="login-logo-text">Goobox</span>
               <p className="login-subtitle">
-                {authScreen === 'login' ? 'Impulsione sua presença digital com o painel SMM do futuro.' : 'Crie sua conta em segundos para começar a impulsionar suas redes sociais!'}
+                {authScreen === 'login' ? 'Impulsione sua presença digital com o painel SMM do futuro.' : 
+                 authScreen === 'register' ? 'Crie sua conta em segundos para começar a impulsionar suas redes sociais!' :
+                 'Esqueceu sua senha? Recupere o acesso à sua conta informando seu e-mail corporativo.'}
               </p>
             </div>
 
@@ -969,66 +1049,141 @@ export default function Dashboard() {
               </div>
             )}
 
-            <form onSubmit={handleAuthSubmit} autoComplete="off">
-              {authScreen === 'register' && (
+            {authScreen === 'recover' ? (
+              <form onSubmit={handleRecoverySubmit} autoComplete="off">
+                {recoveryStep === 'email' ? (
+                  <>
+                    <div className="login-input-group">
+                      <label className="form-label">E-mail de recuperação</label>
+                      <input
+                        type="email"
+                        className="login-input-field"
+                        placeholder="exemplo@goobox.com"
+                        value={recoveryEmail}
+                        onChange={(e) => setRecoveryEmail(e.target.value)}
+                        required
+                        autoComplete="off"
+                      />
+                    </div>
+                    <button type="submit" className="login-btn-premium">
+                      Verificar E-mail
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <div style={{ color: '#00bfa5', fontSize: '13px', marginBottom: '16px', fontWeight: 600, textAlign: 'center' }}>
+                      ✓ E-mail verificado! Digite sua nova senha abaixo.
+                    </div>
+                    <div className="login-input-group">
+                      <label className="form-label">Nova senha</label>
+                      <input
+                        type="password"
+                        className="login-input-field"
+                        placeholder="Mínimo 6 caracteres"
+                        value={newPassword}
+                        onChange={(e) => setNewPassword(e.target.value)}
+                        required
+                        autoComplete="new-password"
+                      />
+                    </div>
+                    <div className="login-input-group">
+                      <label className="form-label">Confirme a nova senha</label>
+                      <input
+                        type="password"
+                        className="login-input-field"
+                        placeholder="Mínimo 6 caracteres"
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        required
+                        autoComplete="new-password"
+                      />
+                    </div>
+                    <button type="submit" className="login-btn-premium">
+                      Redefinir Senha e Entrar
+                    </button>
+                  </>
+                )}
+              </form>
+            ) : (
+              <form onSubmit={handleAuthSubmit} autoComplete="off">
+                {authScreen === 'register' && (
+                  <div className="login-input-group">
+                    <label className="form-label">Nome Completo</label>
+                    <input
+                      type="text"
+                      className="login-input-field"
+                      placeholder="Seu nome completo"
+                      value={authName}
+                      onChange={(e) => setAuthName(e.target.value)}
+                      required
+                      autoComplete="off"
+                    />
+                  </div>
+                )}
+
                 <div className="login-input-group">
-                  <label className="form-label">Nome Completo</label>
+                  <label className="form-label">E-mail corporativo</label>
                   <input
-                    type="text"
+                    type="email"
                     className="login-input-field"
-                    placeholder="Seu nome completo"
-                    value={authName}
-                    onChange={(e) => setAuthName(e.target.value)}
+                    placeholder="exemplo@goobox.com"
+                    value={authEmail}
+                    onChange={(e) => setAuthEmail(e.target.value)}
                     required
                     autoComplete="off"
                   />
                 </div>
-              )}
 
-              <div className="login-input-group">
-                <label className="form-label">E-mail corporativo</label>
-                <input
-                  type="email"
-                  className="login-input-field"
-                  placeholder="exemplo@goobox.com"
-                  value={authEmail}
-                  onChange={(e) => setAuthEmail(e.target.value)}
-                  required
-                  autoComplete="off"
-                />
-              </div>
+                <div className="login-input-group">
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', marginBottom: '6px' }}>
+                    <label className="form-label" style={{ marginBottom: 0 }}>Senha de acesso</label>
+                    {authScreen === 'login' && (
+                      <span 
+                        className="login-toggle-link" 
+                        style={{ fontSize: '12px', fontWeight: 500, color: 'var(--primary)' }}
+                        onClick={() => { setAuthScreen('recover'); setAuthFeedback(null); setRecoveryStep('email'); }}
+                      >
+                        Esqueceu a senha?
+                      </span>
+                    )}
+                  </div>
+                  <input
+                    type="password"
+                    className="login-input-field"
+                    placeholder="••••••••"
+                    value={authPassword}
+                    onChange={(e) => setAuthPassword(e.target.value)}
+                    required
+                    autoComplete="new-password"
+                  />
+                </div>
 
-              <div className="login-input-group">
-                <label className="form-label">Senha de acesso</label>
-                <input
-                  type="password"
-                  className="login-input-field"
-                  placeholder="••••••••"
-                  value={authPassword}
-                  onChange={(e) => setAuthPassword(e.target.value)}
-                  required
-                  autoComplete="new-password"
-                />
-              </div>
-
-              <button type="submit" className="login-btn-premium">
-                {authScreen === 'login' ? 'Entrar no Dashboard' : 'Começar Agora - Grátis'}
-              </button>
-            </form>
+                <button type="submit" className="login-btn-premium">
+                  {authScreen === 'login' ? 'Entrar no Dashboard' : 'Começar Agora - Grátis'}
+                </button>
+              </form>
+            )}
 
             <div className="login-toggle">
               {authScreen === 'login' ? (
                 <>
-                  Novo na Goobox? 
+                  Novo na Goobox?{' '}
                   <span className="login-toggle-link" onClick={() => { setAuthScreen('register'); setAuthFeedback(null); }}>
                     Crie sua conta
                   </span>
                 </>
-              ) : (
+              ) : authScreen === 'register' ? (
                 <>
-                  Já tem cadastro? 
+                  Já tem cadastro?{' '}
                   <span className="login-toggle-link" onClick={() => { setAuthScreen('login'); setAuthFeedback(null); }}>
                     Entrar
+                  </span>
+                </>
+              ) : (
+                <>
+                  Voltar para o{' '}
+                  <span className="login-toggle-link" onClick={() => { setAuthScreen('login'); setAuthFeedback(null); setRecoveryStep('email'); }}>
+                    Login
                   </span>
                 </>
               )}
@@ -1043,6 +1198,12 @@ export default function Dashboard() {
     <div className="app-container">
       {/* Mobile Bottom Navigation */}
       <nav className="mobile-nav">
+        <div className={`mobile-nav-item ${activeTab === 'dashboard' ? 'active' : ''}`} onClick={() => setActiveTab('dashboard')}>
+          <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          <span>Painel</span>
+        </div>
         <div className={`mobile-nav-item ${activeTab === 'novo-pedido' ? 'active' : ''}`} onClick={() => setActiveTab('novo-pedido')}>
           <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <rect width="7" height="9" x="3" y="3" rx="1"/>
@@ -1077,21 +1238,12 @@ export default function Dashboard() {
           </svg>
           <span>API</span>
         </div>
-        {user?.role === 'admin' && (
-          <div className={`mobile-nav-item ${activeTab === 'admin' ? 'active' : ''}`} onClick={() => setActiveTab('admin')}>
-            <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
-              <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
-            </svg>
-            <span>Admin</span>
-          </div>
-        )}
       </nav>
 
       {/* Sidebar */}
       <aside className="sidebar">
         <div>
-          <div className="logo-section">
+          <div className="logo-section" onClick={() => setActiveTab('dashboard')} style={{ cursor: 'pointer' }}>
             {/* Box SVG logo */}
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#6c25e2' }}>
               <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
@@ -1102,6 +1254,12 @@ export default function Dashboard() {
           </div>
 
           <ul className="menu-list">
+            <li className={`menu-item ${activeTab === 'dashboard' ? 'active' : ''}`} onClick={() => setActiveTab('dashboard')}>
+              <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+              <span>Dashboard</span>
+            </li>
             <li className={`menu-item ${activeTab === 'novo-pedido' ? 'active' : ''}`} onClick={() => setActiveTab('novo-pedido')}>
               <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <rect width="7" height="9" x="3" y="3" rx="1"/>
@@ -1179,20 +1337,22 @@ export default function Dashboard() {
 
         {/* Widgets Panel */}
         <section className="widgets-grid">
-          <div className="widget-card">
-            <div className="widget-icon">
+          <div className="widget-card" style={{ borderLeft: '4px solid var(--primary)' }}>
+            <div className="widget-icon" style={{ color: 'var(--primary)', backgroundColor: 'var(--primary-glow)', border: '1px solid rgba(124, 58, 237, 0.2)' }}>
               <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
               </svg>
             </div>
             <div className="widget-info">
               <span className="widget-title">Total pedidos</span>
-              <span className="widget-value">{user?.totalOrders.toLocaleString('pt-BR') || 0}</span>
+              <span className="widget-value" style={{ textShadow: '0 0 8px rgba(124, 58, 237, 0.2)' }}>
+                {user?.totalOrders.toLocaleString('pt-BR') || 0}
+              </span>
             </div>
           </div>
 
-          <div className="widget-card">
-            <div className="widget-icon" style={{ color: '#00bfa5', backgroundColor: 'rgba(0, 191, 165, 0.15)' }}>
+          <div className="widget-card" style={{ borderLeft: '4px solid var(--success)' }}>
+            <div className="widget-icon" style={{ color: 'var(--success)', backgroundColor: 'var(--success-glow)', border: '1px solid rgba(16, 185, 129, 0.2)' }}>
               <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
                 <path d="M16 11V7a4 4 0 00-8 0v4"/>
@@ -1200,36 +1360,166 @@ export default function Dashboard() {
             </div>
             <div className="widget-info">
               <span className="widget-title">Seu saldo</span>
-              <span className="widget-value" style={{ color: '#00bfa5' }}>
+              <span className="widget-value" style={{ color: 'var(--success)', textShadow: '0 0 8px rgba(16, 185, 129, 0.3)' }}>
                 R$ {user?.balance.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 5 }) || '0,00'}
               </span>
             </div>
           </div>
 
-          <div className="widget-card">
-            <div className="widget-icon">
+          <div className="widget-card" style={{ borderLeft: '4px solid var(--accent-pink)' }}>
+            <div className="widget-icon" style={{ color: 'var(--accent-pink)', backgroundColor: 'var(--pink-glow)', border: '1px solid rgba(236, 72, 153, 0.2)' }}>
               <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
               </svg>
             </div>
             <div className="widget-info">
               <span className="widget-title">Total gasto</span>
-              <span className="widget-value">R$ {user?.totalSpent.toLocaleString('pt-BR', { minimumFractionDigits: 2 }) || '0,00'}</span>
+              <span className="widget-value" style={{ color: 'var(--accent-pink)', textShadow: '0 0 8px rgba(236, 72, 153, 0.3)' }}>
+                R$ {user?.totalSpent.toLocaleString('pt-BR', { minimumFractionDigits: 2 }) || '0,00'}
+              </span>
             </div>
           </div>
 
-          <div className="widget-card">
-            <div className="widget-icon" style={{ color: '#ffd700', backgroundColor: 'rgba(255, 215, 0, 0.15)' }}>
+          <div className="widget-card" style={{ borderLeft: '4px solid #ffd700' }}>
+            <div className="widget-icon" style={{ color: '#ffd700', backgroundColor: 'rgba(255, 215, 0, 0.12)', border: '1px solid rgba(255, 215, 0, 0.2)' }}>
               <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
             </div>
             <div className="widget-info">
               <span className="widget-title">Status</span>
-              <span className="widget-value" style={{ color: '#ffd700' }}>{user?.status || 'Membro'}</span>
+              <span className="widget-value" style={{ color: '#ffd700', textShadow: '0 0 8px rgba(255, 215, 0, 0.3)' }}>
+                {user?.status || 'Membro'}
+              </span>
             </div>
           </div>
         </section>
+
+        {/* Dynamic Panels */}
+        {activeTab === 'dashboard' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+            {/* Welcome banner */}
+            <div className="panel-card" style={{ background: 'linear-gradient(135deg, rgba(124, 58, 237, 0.08) 0%, rgba(236, 72, 153, 0.05) 100%)', border: '1px solid rgba(124, 58, 237, 0.15)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '20px', padding: '10px' }}>
+                <div style={{ fontSize: '40px' }}>👋</div>
+                <div>
+                  <h2 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '6px', color: '#ffffff' }}>Olá, {user?.name || 'Cliente'}!</h2>
+                  <p style={{ color: '#98a2b3', fontSize: '14px', margin: 0 }}>
+                    Bem-vindo de volta à Goobox. Impulsione suas redes sociais instantaneamente e escale seu engajamento!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Content split grid: Quick Actions on the left, Recent orders summary on the right */}
+            <div className="content-split">
+              {/* Quick Actions Panel */}
+              <div className="panel-card">
+                <div className="panel-header">
+                  <div className="panel-header-icon">⚡</div>
+                  <div className="panel-header-info">
+                    <h2>Ações Rápidas</h2>
+                    <p>Atalhos rápidos para gerenciar sua conta.</p>
+                  </div>
+                </div>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', marginTop: '10px' }}>
+                  <button 
+                    onClick={() => setActiveTab('novo-pedido')}
+                    className="login-btn-premium" 
+                    style={{ padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', height: 'auto', background: 'rgba(124, 58, 237, 0.12)', border: '1px solid rgba(124, 58, 237, 0.3)', color: '#ffffff' }}
+                  >
+                    <span style={{ fontSize: '24px' }}>🛒</span>
+                    <span style={{ fontSize: '14px', fontWeight: 700 }}>Novo Pedido</span>
+                  </button>
+
+                  <button 
+                    onClick={() => { setActiveTab('adicionar-saldo'); setGeneratedPix(null); setPixFeedback(null); }}
+                    className="login-btn-premium" 
+                    style={{ padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', height: 'auto', background: 'rgba(16, 185, 129, 0.12)', border: '1px solid rgba(16, 185, 129, 0.3)', color: '#ffffff' }}
+                  >
+                    <span style={{ fontSize: '24px' }}>💵</span>
+                    <span style={{ fontSize: '14px', fontWeight: 700 }}>Adicionar Saldo</span>
+                  </button>
+
+                  <button 
+                    onClick={() => setActiveTab('servicos')}
+                    className="login-btn-premium" 
+                    style={{ padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', height: 'auto', background: 'rgba(6, 182, 212, 0.12)', border: '1px solid rgba(6, 182, 212, 0.3)', color: '#ffffff' }}
+                  >
+                    <span style={{ fontSize: '24px' }}>📋</span>
+                    <span style={{ fontSize: '14px', fontWeight: 700 }}>Ver Serviços</span>
+                  </button>
+
+                  <button 
+                    onClick={() => setActiveTab('pedidos')}
+                    className="login-btn-premium" 
+                    style={{ padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', height: 'auto', background: 'rgba(236, 72, 153, 0.12)', border: '1px solid rgba(236, 72, 153, 0.3)', color: '#ffffff' }}
+                  >
+                    <span style={{ fontSize: '24px' }}>📦</span>
+                    <span style={{ fontSize: '14px', fontWeight: 700 }}>Meus Pedidos</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Recent Orders Overview */}
+              <div className="panel-card">
+                <div className="panel-header">
+                  <div className="panel-header-icon">📦</div>
+                  <div className="panel-header-info">
+                    <h2>Últimos Pedidos</h2>
+                    <p>Seus pedidos feitos recentemente.</p>
+                  </div>
+                </div>
+
+                <div style={{ marginTop: '10px' }}>
+                  {orders.length === 0 ? (
+                    <div style={{ padding: '40px 20px', textAlign: 'center', color: '#98a2b3', fontSize: '14px' }}>
+                      Nenhum pedido realizado ainda. 
+                      <span onClick={() => setActiveTab('novo-pedido')} style={{ color: 'var(--primary)', cursor: 'pointer', marginLeft: '6px', fontWeight: 600, textDecoration: 'underline' }}>
+                        Faça seu primeiro pedido!
+                      </span>
+                    </div>
+                  ) : (
+                    <div className="services-table-wrapper" style={{ margin: 0, padding: 0 }}>
+                      <table className="smm-table" style={{ width: '100%' }}>
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>Serviço</th>
+                            <th>Qtd</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {orders.slice(0, 5).map(o => (
+                            <tr key={o.id}>
+                              <td style={{ fontWeight: 700 }}>#{o.id}</td>
+                              <td style={{ maxWidth: '150px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={o.serviceName}>
+                                {o.serviceName}
+                              </td>
+                              <td>{o.quantity}</td>
+                              <td>
+                                <span className={`badge ${
+                                  o.status === 'Concluido' ? 'success' :
+                                  o.status === 'Pendente' ? 'pending' :
+                                  o.status === 'Cancelado' ? 'error' :
+                                  'pending'
+                                }`}>
+                                  {o.status}
+                                </span>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Dynamic Panels */}
         {activeTab === 'novo-pedido' && (
@@ -1323,7 +1613,7 @@ export default function Dashboard() {
             {/* Right Info Description */}
             <div className="panel-card">
               <div className="panel-header secondary">
-                <div className="panel-header-icon" style={{ backgroundColor: 'rgba(108, 37, 226, 0.1)' }}>💬</div>
+                <div className="panel-header-icon" style={{ color: 'var(--primary)', backgroundColor: 'var(--primary-glow)', borderColor: 'rgba(124, 58, 237, 0.2)' }}>💬</div>
                 <div className="panel-header-info">
                   <h2>Leia a descrição</h2>
                   <p>Detalhes importantes sobre o serviço ativo</p>
@@ -1482,7 +1772,7 @@ export default function Dashboard() {
               {/* Direct coupon redemption card */}
               <div className="panel-card" style={{ margin: 0 }}>
                 <div className="panel-header secondary">
-                  <div className="panel-header-icon" style={{ backgroundColor: 'rgba(108, 37, 226, 0.15)', color: 'var(--primary)' }}>🎁</div>
+                  <div className="panel-header-icon" style={{ backgroundColor: 'var(--primary-glow)', color: 'var(--primary)', borderColor: 'rgba(124, 58, 237, 0.2)' }}>🎁</div>
                   <div className="panel-header-info">
                     <h2>Resgatar Saldo Grátis</h2>
                     <p>Tem um código promocional de resgate de saldo? Utilize-o aqui.</p>
@@ -1745,7 +2035,19 @@ export default function Dashboard() {
         )}
 
         {activeTab === 'admin' && user?.role === 'admin' && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          isMobile ? (
+            <div className="panel-card" style={{ textAlign: 'center', padding: '60px 24px', background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.05)', borderRadius: '24px' }}>
+              <div style={{ fontSize: '64px', marginBottom: '20px' }}>💻</div>
+              <h2 style={{ fontSize: '22px', fontWeight: 800, color: '#ffffff', marginBottom: '12px' }}>Acesso Restrito ao Desktop</h2>
+              <p style={{ color: '#98a2b3', fontSize: '14px', maxWidth: '400px', margin: '0 auto 24px auto', lineHeight: '1.6' }}>
+                A área do administrador (Gestão Master) está disponível apenas em computadores (Desktop).
+              </p>
+              <div style={{ display: 'inline-block', padding: '8px 16px', background: 'rgba(124, 58, 237, 0.15)', border: '1px solid rgba(124, 58, 237, 0.3)', borderRadius: '20px', fontSize: '12px', color: 'var(--primary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                Disponível apenas em computadores
+              </div>
+            </div>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             {/* Metrics cards grid */}
             <div className="widgets-grid" style={{ marginBottom: '0px' }}>
               <div className="widget-card">
@@ -1905,7 +2207,7 @@ export default function Dashboard() {
               {/* Create User Card */}
               <div className="panel-card">
                 <div className="panel-header secondary">
-                  <div className="panel-header-icon" style={{ backgroundColor: 'rgba(108, 37, 226, 0.15)', color: 'var(--primary)' }}>👤</div>
+                  <div className="panel-header-icon" style={{ backgroundColor: 'var(--primary-glow)', color: 'var(--primary)', borderColor: 'rgba(124, 58, 237, 0.2)' }}>👤</div>
                   <div className="panel-header-info">
                     <h2>Cadastrar Novo Usuário</h2>
                     <p>Crie um novo cliente ou administrador no sistema</p>
@@ -1992,7 +2294,7 @@ export default function Dashboard() {
               {/* Admin Quick Guide Card */}
               <div className="panel-card">
                 <div className="panel-header secondary">
-                  <div className="panel-header-icon" style={{ backgroundColor: 'rgba(255, 215, 0, 0.15)', color: '#ffd700' }}>💡</div>
+                  <div className="panel-header-icon" style={{ backgroundColor: 'rgba(255, 215, 0, 0.12)', color: '#ffd700', borderColor: 'rgba(255, 215, 0, 0.2)' }}>💡</div>
                   <div className="panel-header-info">
                     <h2>Guia de Administração</h2>
                     <p>Dicas rápidas para gerenciar seu painel SMM</p>
@@ -2050,8 +2352,9 @@ export default function Dashboard() {
                             </td>
                             <td>
                               <span className="badge" style={{ 
-                                backgroundColor: u.role === 'admin' ? 'rgba(255, 51, 102, 0.15)' : 'rgba(108, 37, 226, 0.15)',
-                                color: u.role === 'admin' ? 'var(--error)' : 'var(--primary)'
+                                backgroundColor: u.role === 'admin' ? 'rgba(239, 68, 68, 0.1)' : 'rgba(124, 58, 237, 0.1)',
+                                color: u.role === 'admin' ? '#f87171' : '#a78bfa',
+                                borderColor: u.role === 'admin' ? 'rgba(239, 68, 68, 0.2)' : 'rgba(124, 58, 237, 0.2)'
                               }}>
                                 {u.role === 'admin' ? 'Administrador' : 'Cliente'}
                               </span>
@@ -2086,7 +2389,7 @@ export default function Dashboard() {
             <div className="panel-card" style={{ marginTop: '24px' }}>
               <div className="panel-header secondary" style={{ justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div className="panel-header-icon" style={{ backgroundColor: 'rgba(0, 191, 165, 0.15)', color: 'var(--success)' }}>🛠️</div>
+                  <div className="panel-header-icon" style={{ backgroundColor: 'var(--success-glow)', color: 'var(--success)', borderColor: 'rgba(16, 185, 129, 0.2)' }}>🛠️</div>
                   <div className="panel-header-info">
                     <h2>Gerenciamento de Serviços SMM</h2>
                     <p>Adicione, edite, exclua ou sincronize serviços do painel</p>
@@ -2218,7 +2521,7 @@ export default function Dashboard() {
             {/* Coupons Management Card */}
             <div className="panel-card" style={{ marginTop: '24px' }}>
               <div className="panel-header secondary">
-                <div className="panel-header-icon" style={{ backgroundColor: 'rgba(108, 37, 226, 0.15)', color: 'var(--primary)' }}>🎁</div>
+                <div className="panel-header-icon" style={{ backgroundColor: 'var(--primary-glow)', color: 'var(--primary)', borderColor: 'rgba(124, 58, 237, 0.2)' }}>🎁</div>
                 <div className="panel-header-info">
                   <h2>Gerenciamento de Cupons de Desconto</h2>
                   <p>Crie cupons promocionais para bônus de recarga Pix ou resgate de saldo grátis</p>
@@ -2365,7 +2668,8 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+          )
         )}
       </main>
 
