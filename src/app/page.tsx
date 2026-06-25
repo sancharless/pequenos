@@ -149,6 +149,7 @@ export default function Dashboard() {
   const [directCouponInput, setDirectCouponInput] = useState('');
   const [directCouponFeedback, setDirectCouponFeedback] = useState<{ success: boolean; message: string } | null>(null);
   const [isRedeemingDirect, setIsRedeemingDirect] = useState(false);
+  const [refillLoading, setRefillLoading] = useState<string | null>(null);
 
   // Check auth session
   useEffect(() => {
@@ -893,6 +894,34 @@ export default function Dashboard() {
     }
   };
 
+  const handleRequestRefill = async (orderId: string) => {
+    if (!user) return;
+    
+    if (!confirm('Deseja solicitar a reposição (refil) para este pedido?')) {
+      return;
+    }
+
+    setRefillLoading(orderId);
+    try {
+      const res = await fetch('/api/orders/refill', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ orderId, userEmail: user.email })
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        alert(data.error || 'Erro ao solicitar a reposição.');
+      } else {
+        alert(data.message || 'Reposição solicitada com sucesso!');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Erro de conexão ao solicitar a reposição.');
+    } finally {
+      setRefillLoading(null);
+    }
+  };
+
   const selectedService = services.find(s => s.id === selectedServiceId);
   const categories = Array.from(new Set(services.map(s => s.category)));
 
@@ -1597,12 +1626,13 @@ export default function Dashboard() {
                     <th>Valor Cobrado</th>
                     <th>Status</th>
                     <th>Data</th>
+                    <th>Ações</th>
                   </tr>
                 </thead>
                 <tbody>
                   {orders.length === 0 ? (
                     <tr>
-                      <td colSpan={7} style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '24px' }}>
+                      <td colSpan={8} style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '24px' }}>
                         Nenhum pedido realizado ainda.
                       </td>
                     </tr>
@@ -1629,6 +1659,30 @@ export default function Dashboard() {
                         </td>
                         <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
                           {new Date(ord.createdAt).toLocaleString('pt-BR')}
+                        </td>
+                        <td>
+                          {ord.status === 'Concluido' && !isNaN(Number(ord.serviceId)) ? (
+                            <button
+                              className="copy-btn"
+                              style={{
+                                margin: 0,
+                                padding: '4px 10px',
+                                fontSize: '11px',
+                                whiteSpace: 'nowrap',
+                                borderRadius: '6px',
+                                background: 'rgba(108, 37, 226, 0.1)',
+                                color: 'var(--primary)',
+                                border: '1px solid rgba(108, 37, 226, 0.2)',
+                                cursor: 'pointer'
+                              }}
+                              onClick={() => handleRequestRefill(ord.id)}
+                              disabled={refillLoading === ord.id}
+                            >
+                              {refillLoading === ord.id ? 'Processando...' : 'Solicitar Refil'}
+                            </button>
+                          ) : (
+                            <span style={{ color: 'var(--text-muted)', fontSize: '12px' }}>-</span>
+                          )}
                         </td>
                       </tr>
                     ))

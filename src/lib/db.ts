@@ -487,6 +487,39 @@ export const dbHelper = {
     return db.orders;
   },
 
+  getOrderById: async (id: string): Promise<Order | null> => {
+    if (supabase) {
+      try {
+        const { data, error } = await supabase
+          .from('orders')
+          .select('*')
+          .eq('id', id)
+          .maybeSingle();
+
+        if (error) throw error;
+        if (!data) return null;
+
+        return {
+          id: data.id,
+          serviceId: data.service_id,
+          serviceName: data.service_name,
+          link: data.link,
+          quantity: data.quantity,
+          charge: parseFloat(data.charge),
+          status: data.status as any,
+          createdAt: data.created_at,
+          userEmail: data.user_email
+        };
+      } catch (err) {
+        console.error(`Supabase fetch order by ID failed for ${id}:`, err);
+      }
+    }
+
+    const db = getLocalDb();
+    const found = db.orders.find(o => o.id === id);
+    return found || null;
+  },
+
   addOrder: async (order: Omit<Order, 'id' | 'createdAt' | 'status'> & { id?: string }): Promise<Order> => {
     const orderId = order.id || Math.floor(100000 + Math.random() * 900000).toString();
     const createdAt = new Date().toISOString();

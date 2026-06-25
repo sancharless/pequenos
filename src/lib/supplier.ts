@@ -127,5 +127,30 @@ export const supplierClient = {
       console.error('Error getting supplier order statuses:', error);
       return {};
     }
+  },
+
+  refillOrder: async (orderId: string): Promise<{ refill?: string; error?: string }> => {
+    try {
+      const res = await fetch(SUPPLIER_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          key: SUPPLIER_KEY,
+          action: 'refill',
+          order: orderId,
+        })
+      });
+
+      if (!res.ok) {
+        throw new Error(`Failed to request refill from supplier: ${res.statusText}`);
+      }
+
+      return await res.json();
+    } catch (error) {
+      console.error('Error requesting supplier refill:', error);
+      return { error: 'Connection failed with SMM Supplier API.' };
+    }
   }
 };
