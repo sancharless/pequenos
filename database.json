@@ -4286,5 +4286,25 @@
   "settings": {
     "service_markup_percent": "20",
     "support_whatsapp_number": "5511999999999"
-  }
+  },
+  "metaReports": [
+    {
+      "id": "0owftvw",
+      "name": "Empresa Alfa",
+      "period": "Junho de 2026",
+      "budget": 1500,
+      "conversions": 85,
+      "reach": 45000,
+      "impressions": 68000,
+      "clicks": 2300,
+      "platforms": "{\"facebook\":true,\"instagram\":true,\"whatsapp\":true,\"messenger\":false}",
+      "revenue": 4800,
+      "targetCpa": 20,
+      "targetConversions": 100,
+      "logoUrl": null,
+      "weeklyConversions": "[15,25,20,25]",
+      "compareData": "{\"budget\":1200,\"revenue\":3100,\"conversions\":60}",
+      "createdAt": "30/06/2026"
+    }
+  ]
 }
