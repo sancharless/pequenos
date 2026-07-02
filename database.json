@@ -4284,8 +4284,10 @@
     }
   ],
   "settings": {
-    "service_markup_percent": "20",
-    "support_whatsapp_number": "5511999999999"
+    "whatsappNumber": "5581999999999",
+    "instagramUrl": "https://instagram.com/pequenosestilosos",
+    "mercadoPagoToken": "",
+    "shippingFee": 15
   },
   "metaReports": [
     {
@@ -4305,6 +4307,95 @@
       "weeklyConversions": "[15,25,20,25]",
       "compareData": "{\"budget\":1200,\"revenue\":3100,\"conversions\":60}",
       "createdAt": "30/06/2026"
+    }
+  ],
+  "adminUser": {
+    "email": "admin@pequenosestilosos.com.br",
+    "name": "Admin Pequenos Estilosos",
+    "passwordHash": "3f08f7c816bb6835a890948b4e68cf4e:4ed42c3f99ce50ce6f8faa9c9a06c25437579257eec4b164f33a348a1f05b0e1ffaa138162562c035136475505cbabd83e22aafd42ff39e40f76125f83d093e1",
+    "role": "admin"
+  },
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "Vestido Floral Primavera Sol",
+      "description": "Lindo vestido infantil com estampa floral, confeccionado em algodão 100% hipoalergênico. Ideal para dias ensolarados e passeios em família. Confortável e fresquinho.",
+      "price": 89.9,
+      "category": "Menina",
+      "sizes": [
+        "P",
+        "M",
+        "G",
+        "1",
+        "2",
+        "4"
+      ],
+      "images": [
+        "/images/vestido-floral.png"
+      ],
+      "stock": 12,
+      "featured": true,
+      "createdAt": "2026-07-02T12:12:17.259Z"
+    },
+    {
+      "id": "prod-2",
+      "name": "Conjunto Moletom Dinossauro Aventura",
+      "description": "Conjunto infantil super quentinho e confortável de moletom com estampa de dinossauro. Inclui blusa com capuz e calça com punho. Perfeito para brincar nos dias mais frios.",
+      "price": 119.9,
+      "category": "Menino",
+      "sizes": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "images": [
+        "/images/moletom-dinossauro.png"
+      ],
+      "stock": 8,
+      "featured": true,
+      "createdAt": "2026-07-02T12:12:17.260Z"
+    },
+    {
+      "id": "prod-3",
+      "name": "Jardineira Jeans Estilosa Unissex",
+      "description": "Clássica jardineira jeans com lavagem moderna e alças reguláveis. Tecido com elastano que garante a liberdade de movimento para os pequenos. Combina com qualquer camiseta!",
+      "price": 95,
+      "category": "Bebê",
+      "sizes": [
+        "M",
+        "G",
+        "GG",
+        "1",
+        "2",
+        "3"
+      ],
+      "images": [
+        "/images/jardineira-jeans.png"
+      ],
+      "stock": 15,
+      "featured": true,
+      "createdAt": "2026-07-02T12:12:17.260Z"
+    },
+    {
+      "id": "prod-4",
+      "name": "Body Algodão Ursinho Abraço",
+      "description": "Body de manga curta feito em malha de algodão macio com estampa fofa de ursinho. Possui gola americana que facilita a troca de roupas no bebê e botões de pressão entre as pernas.",
+      "price": 45,
+      "category": "Bebê",
+      "sizes": [
+        "RN",
+        "P",
+        "M",
+        "G"
+      ],
+      "images": [
+        "/images/body-ursinho.png"
+      ],
+      "stock": 25,
+      "featured": false,
+      "createdAt": "2026-07-02T12:12:17.260Z"
     }
   ]
 }

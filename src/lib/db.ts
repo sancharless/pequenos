@@ -84,7 +84,7 @@ const INITIAL_DB: DatabaseSchema = {
       price: 89.90,
       category: 'Menina',
       sizes: ['P', 'M', 'G', '1', '2', '4'],
-      images: ['/images/placeholder-vestido.jpg'],
+      images: ['/images/vestido-floral.png'],
       stock: 12,
       featured: true,
       createdAt: new Date().toISOString()
@@ -96,7 +96,7 @@ const INITIAL_DB: DatabaseSchema = {
       price: 119.90,
       category: 'Menino',
       sizes: ['2', '4', '6', '8', '10'],
-      images: ['/images/placeholder-moletom.jpg'],
+      images: ['/images/moletom-dinossauro.png'],
       stock: 8,
       featured: true,
       createdAt: new Date().toISOString()
@@ -108,7 +108,7 @@ const INITIAL_DB: DatabaseSchema = {
       price: 95.00,
       category: 'Bebê',
       sizes: ['M', 'G', 'GG', '1', '2', '3'],
-      images: ['/images/placeholder-jardineira.jpg'],
+      images: ['/images/jardineira-jeans.png'],
       stock: 15,
       featured: true,
       createdAt: new Date().toISOString()
@@ -120,7 +120,7 @@ const INITIAL_DB: DatabaseSchema = {
       price: 45.00,
       category: 'Bebê',
       sizes: ['RN', 'P', 'M', 'G'],
-      images: ['/images/placeholder-body.jpg'],
+      images: ['/images/body-ursinho.png'],
       stock: 25,
       featured: false,
       createdAt: new Date().toISOString()
@@ -152,10 +152,34 @@ function getLocalDb(): DatabaseSchema {
   try {
     const content = fs.readFileSync(DB_PATH, 'utf-8');
     const db = JSON.parse(content);
+    let updated = false;
+
     // Ensure admin password is set
     if (!db.adminUser || !db.adminUser.passwordHash) {
       db.adminUser = INITIAL_DB.adminUser;
       db.adminUser.passwordHash = hashPassword('admin123');
+      updated = true;
+    }
+    
+    // Ensure e-commerce products are loaded
+    if (!db.products || !Array.isArray(db.products) || db.products.length === 0) {
+      db.products = INITIAL_DB.products;
+      updated = true;
+    }
+
+    // Ensure e-commerce settings are loaded
+    if (!db.settings || !db.settings.whatsappNumber) {
+      db.settings = INITIAL_DB.settings;
+      updated = true;
+    }
+
+    // Ensure orders are initialized
+    if (!db.orders || !Array.isArray(db.orders)) {
+      db.orders = [];
+      updated = true;
+    }
+
+    if (updated) {
       saveLocalDb(db);
     }
     return db;
