@@ -1523,3 +1523,142 @@ img {
     gap: 16px;
   }
 }
+
+/* Gerenciador de Múltiplas Imagens no Admin */
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.image-preview-card {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-dark);
+  overflow: hidden;
+  background: var(--bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.image-preview-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.image-preview-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: var(--primary);
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.image-badge-secondary {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: var(--text-medium);
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.image-actions-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 20;
+}
+
+.image-preview-card:hover .image-actions-overlay {
+  opacity: 1;
+}
+
+.image-action-btn-row {
+  display: flex;
+  gap: 4px;
+}
+
+.image-action-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: var(--text-dark);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.image-action-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.image-action-btn-small {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: var(--text-dark);
+  cursor: pointer;
+  font-size: 10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.image-action-btn-small:hover {
+  background: var(--secondary);
+  color: white;
+}
+
+.image-action-delete {
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+}
+
+.image-action-delete:hover {
+  background: #dc2626;
+}
+
+.image-add-url-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}

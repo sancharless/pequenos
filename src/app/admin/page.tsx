@@ -77,6 +77,7 @@ export default function AdminPage() {
   // Modals / Product Forms
   const [showProductModal, setShowProductModal] = useState(false);
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
+  const [imageUrlInput, setImageUrlInput] = useState('');
   const [productForm, setProductForm] = useState({
     name: '',
     description: '',
@@ -149,17 +150,78 @@ export default function AdminPage() {
     setIsLoggedIn(false);
   };
 
-  // Image base64 handler
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // Image base64 handler for multiple uploads
+  const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
-    if (files && files[0]) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const base64String = reader.result as string;
-        setProductForm(prev => ({ ...prev, images: [base64String] }));
-      };
-      reader.readAsDataURL(files[0]);
+    if (files && files.length > 0) {
+      const loadPromises = Array.from(files).map((file) => {
+        return new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onloadend = () => resolve(reader.result as string);
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
+      });
+
+      try {
+        const base64Strings = await Promise.all(loadPromises);
+        setProductForm(prev => ({
+          ...prev,
+          images: [...prev.images, ...base64Strings]
+        }));
+      } catch (err) {
+        console.error('Erro ao ler arquivos de imagem:', err);
+        alert('Erro ao carregar uma ou mais imagens.');
+      }
     }
+  };
+
+  const handleAddImageUrl = () => {
+    if (!imageUrlInput.trim()) return;
+    const url = imageUrlInput.trim();
+    if (!url.startsWith('http://') && !url.startsWith('https://') && !url.startsWith('/')) {
+      alert('Por favor, insira uma URL válida (começando com http://, https:// ou /)');
+      return;
+    }
+    setProductForm(prev => ({
+      ...prev,
+      images: [...prev.images, url]
+    }));
+    setImageUrlInput('');
+  };
+
+  const handleRemoveImage = (index: number) => {
+    setProductForm(prev => {
+      const nextImages = [...prev.images];
+      nextImages.splice(index, 1);
+      return { ...prev, images: nextImages };
+    });
+  };
+
+  const handleSetCover = (index: number) => {
+    setProductForm(prev => {
+      if (index <= 0 || index >= prev.images.length) return prev;
+      const nextImages = [...prev.images];
+      const target = nextImages[index];
+      nextImages.splice(index, 1); // remove from current index
+      nextImages.unshift(target); // prepend to beginning
+      return { ...prev, images: nextImages };
+    });
+  };
+
+  const handleMoveImage = (index: number, direction: 'left' | 'right') => {
+    setProductForm(prev => {
+      const nextImages = [...prev.images];
+      const newIndex = direction === 'left' ? index - 1 : index + 1;
+      
+      if (newIndex < 0 || newIndex >= nextImages.length) return prev;
+      
+      const temp = nextImages[index];
+      nextImages[index] = nextImages[newIndex];
+      nextImages[newIndex] = temp;
+      
+      return { ...prev, images: nextImages };
+    });
   };
 
   const handleSizeToggle = (size: string) => {
@@ -177,6 +239,7 @@ export default function AdminPage() {
 
   const openAddModal = () => {
     setEditingProduct(null);
+    setImageUrlInput('');
     setProductForm({
       name: '',
       description: '',
@@ -192,13 +255,14 @@ export default function AdminPage() {
 
   const openEditModal = (product: Product) => {
     setEditingProduct(product);
+    setImageUrlInput('');
     setProductForm({
       name: product.name,
       description: product.description,
       price: String(product.price),
       category: product.category,
       sizes: product.sizes,
-      images: product.images,
+      images: product.images || [],
       stock: String(product.stock),
       featured: product.featured
     });
@@ -209,6 +273,10 @@ export default function AdminPage() {
     e.preventDefault();
     if (!productForm.name || !productForm.price || !productForm.sizes.length) {
       alert('Por favor, preencha nome, preço e tamanhos.');
+      return;
+    }
+    if (!productForm.images || !productForm.images.length) {
+      alert('Por favor, adicione pelo menos uma imagem (foto) para o produto.');
       return;
     }
 
@@ -842,24 +910,107 @@ export default function AdminPage() {
                   </div>
                 </div>
 
-                {/* Image Upload */}
+                {/* Image Upload and Gallery Management */}
                 <div className="form-group">
-                  <label className="form-label">Imagem da Roupa (Foto) *</label>
+                  <label className="form-label" style={{ fontWeight: '600' }}>Fotos do Produto *</label>
+                  
+                  {/* File Upload (Multiple) */}
                   <input 
                     type="file" 
+                    multiple
                     accept="image/*" 
                     onChange={handleImageChange} 
                     className="form-input" 
-                    style={{ padding: '8px' }}
+                    style={{ padding: '8px', marginBottom: '8px' }}
                   />
-                  {productForm.images && productForm.images[0] && (
-                    <div style={{ marginTop: '12px' }}>
-                      <span className="form-label">Pré-visualização:</span>
-                      <img 
-                        src={productForm.images[0]} 
-                        alt="Preview" 
-                        style={{ width: '80px', height: '80px', objectFit: 'cover', borderRadius: '4px', border: '1px solid var(--border-dark)', marginTop: '6px' }} 
-                      />
+
+                  {/* Add Image by URL */}
+                  <div className="image-add-url-row">
+                    <input
+                      type="text"
+                      placeholder="Ou cole a URL de uma imagem pública..."
+                      value={imageUrlInput}
+                      onChange={(e) => setImageUrlInput(e.target.value)}
+                      className="form-input"
+                      style={{ flexGrow: 1 }}
+                    />
+                    <button
+                      type="button"
+                      onClick={handleAddImageUrl}
+                      className="btn btn-secondary btn-sm"
+                      style={{ minHeight: 'unset', whiteSpace: 'nowrap' }}
+                    >
+                      + Link
+                    </button>
+                  </div>
+
+                  {/* Previews Grid */}
+                  {productForm.images && productForm.images.length > 0 && (
+                    <div style={{ marginTop: '16px' }}>
+                      <span className="form-label" style={{ fontSize: '12px', color: 'var(--text-medium)' }}>
+                        Galeria de Fotos ({productForm.images.length} {productForm.images.length === 1 ? 'foto' : 'fotos'}) - A primeira será a Capa:
+                      </span>
+                      
+                      <div className="images-grid">
+                        {productForm.images.map((img, idx) => (
+                          <div key={idx} className="image-preview-card">
+                            <img src={img} alt={`Preview ${idx + 1}`} />
+                            
+                            {/* Badges */}
+                            {idx === 0 ? (
+                              <span className="image-badge">★ Capa</span>
+                            ) : (
+                              <span className="image-badge-secondary">{idx + 1}</span>
+                            )}
+                            
+                            {/* Actions Overlay */}
+                            <div className="image-actions-overlay">
+                              {idx > 0 && (
+                                <button
+                                  type="button"
+                                  title="Definir como Capa"
+                                  onClick={() => handleSetCover(idx)}
+                                  className="image-action-btn"
+                                  style={{ marginBottom: '4px' }}
+                                >
+                                  Capa
+                                </button>
+                              )}
+                              
+                              <div className="image-action-btn-row">
+                                <button
+                                  type="button"
+                                  title="Mover para Esquerda"
+                                  disabled={idx === 0}
+                                  onClick={() => handleMoveImage(idx, 'left')}
+                                  className="image-action-btn-small"
+                                  style={{ opacity: idx === 0 ? 0.4 : 1, cursor: idx === 0 ? 'not-allowed' : 'pointer' }}
+                                >
+                                  ←
+                                </button>
+                                <button
+                                  type="button"
+                                  title="Mover para Direita"
+                                  disabled={idx === productForm.images.length - 1}
+                                  onClick={() => handleMoveImage(idx, 'right')}
+                                  className="image-action-btn-small"
+                                  style={{ opacity: idx === productForm.images.length - 1 ? 0.4 : 1, cursor: idx === productForm.images.length - 1 ? 'not-allowed' : 'pointer' }}
+                                >
+                                  →
+                                </button>
+                                <button
+                                  type="button"
+                                  title="Excluir Imagem"
+                                  onClick={() => handleRemoveImage(idx)}
+                                  className="image-action-btn-small image-action-delete"
+                                >
+                                  ✕
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>
