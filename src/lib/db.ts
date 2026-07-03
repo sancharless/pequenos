@@ -53,6 +53,10 @@ export interface EcommerceSettings {
   instagramUrl: string;
   mercadoPagoToken: string;
   shippingFee: number;
+  shippingFeeLocal: number;
+  shippingFeeOthers: number;
+  shippingFreeThreshold: number;
+  storeState: string;
 }
 
 export interface AdminUser {
@@ -131,7 +135,11 @@ const INITIAL_DB: DatabaseSchema = {
     whatsappNumber: '5581999999999',
     instagramUrl: 'https://instagram.com/pequenosestilosos',
     mercadoPagoToken: '',
-    shippingFee: 15.00
+    shippingFee: 15.00,
+    shippingFeeLocal: 10.00,
+    shippingFeeOthers: 25.00,
+    shippingFreeThreshold: 199.00,
+    storeState: 'PE'
   }
 };
 
@@ -235,7 +243,11 @@ export const dbHelper = {
             whatsappNumber: settingsObj.whatsappNumber || '5581999999999',
             instagramUrl: settingsObj.instagramUrl || 'https://instagram.com/pequenosestilosos',
             mercadoPagoToken: settingsObj.mercadoPagoToken || '',
-            shippingFee: parseFloat(settingsObj.shippingFee || '15.00')
+            shippingFee: parseFloat(settingsObj.shippingFee || '15.00'),
+            shippingFeeLocal: parseFloat(settingsObj.shippingFeeLocal || '10.00'),
+            shippingFeeOthers: parseFloat(settingsObj.shippingFeeOthers || '25.00'),
+            shippingFreeThreshold: parseFloat(settingsObj.shippingFreeThreshold || '199.00'),
+            storeState: settingsObj.storeState || 'PE'
           };
         }
       } catch (err) {

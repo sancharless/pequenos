@@ -48,6 +48,10 @@ interface EcommerceSettings {
   instagramUrl: string;
   mercadoPagoToken: string;
   shippingFee: number;
+  shippingFeeLocal: number;
+  shippingFeeOthers: number;
+  shippingFreeThreshold: number;
+  storeState: string;
 }
 
 export default function AdminPage() {
@@ -66,7 +70,11 @@ export default function AdminPage() {
     whatsappNumber: '',
     instagramUrl: '',
     mercadoPagoToken: '',
-    shippingFee: 0
+    shippingFee: 0,
+    shippingFeeLocal: 0,
+    shippingFeeOthers: 0,
+    shippingFreeThreshold: 0,
+    storeState: 'PE'
   });
 
   // Loading States
@@ -775,16 +783,66 @@ export default function AdminPage() {
                   </div>
                 </div>
 
-                <div className="form-group">
-                  <label className="form-label">Taxa de Entrega / Frete Fixo (R$) *</label>
-                  <input 
-                    type="number" 
-                    step="0.01"
-                    value={settings.shippingFee}
-                    onChange={(e) => setSettings(prev => ({ ...prev, shippingFee: Number(e.target.value) }))}
-                    required
-                    className="form-input" 
-                  />
+                <div className="form-row-2">
+                  <div className="form-group">
+                    <label className="form-label">Estado de Origem (UF da Loja) *</label>
+                    <select 
+                      value={settings.storeState || 'PE'}
+                      onChange={(e) => setSettings(prev => ({ ...prev, storeState: e.target.value }))}
+                      required
+                      className="form-input"
+                      style={{ padding: '12px 10px' }}
+                    >
+                      {['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'].map(uf => (
+                        <option key={uf} value={uf}>{uf}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Valor Mínimo para Frete Grátis (R$ - 0 para desativar) *</label>
+                    <input 
+                      type="number" 
+                      step="0.01"
+                      value={settings.shippingFreeThreshold || 0}
+                      onChange={(e) => setSettings(prev => ({ ...prev, shippingFreeThreshold: Number(e.target.value) }))}
+                      required
+                      placeholder="Ex: 199.90"
+                      className="form-input" 
+                    />
+                  </div>
+                </div>
+
+                <div className="form-row-2">
+                  <div className="form-group">
+                    <label className="form-label">Frete Local (Mesmo Estado) (R$) *</label>
+                    <input 
+                      type="number" 
+                      step="0.01"
+                      value={settings.shippingFeeLocal || 0}
+                      onChange={(e) => setSettings(prev => ({ 
+                        ...prev, 
+                        shippingFeeLocal: Number(e.target.value),
+                        shippingFee: Number(e.target.value) // Sync with main shipping fee for backwards compatibility
+                      }))}
+                      required
+                      placeholder="Ex: 10.00"
+                      className="form-input" 
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Frete Nacional (Outros Estados) (R$) *</label>
+                    <input 
+                      type="number" 
+                      step="0.01"
+                      value={settings.shippingFeeOthers || 0}
+                      onChange={(e) => setSettings(prev => ({ ...prev, shippingFeeOthers: Number(e.target.value) }))}
+                      required
+                      placeholder="Ex: 25.00"
+                      className="form-input" 
+                    />
+                  </div>
                 </div>
 
                 <button type="submit" className="btn btn-primary" style={{ alignSelf: 'flex-start', marginTop: '16px' }}>

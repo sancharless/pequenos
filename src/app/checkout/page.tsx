@@ -11,6 +11,13 @@ export default function CheckoutPage() {
   const [shippingFee, setShippingFee] = useState<number>(15.00);
   const [whatsappNumber, setWhatsappNumber] = useState<string>('');
   const [loading, setLoading] = useState(false);
+  const [shippingSettings, setShippingSettings] = useState({
+    shippingFee: 15.00,
+    shippingFeeLocal: 10.00,
+    shippingFeeOthers: 25.00,
+    shippingFreeThreshold: 199.00,
+    storeState: 'PE'
+  });
 
   // Form State
   const [formData, setFormData] = useState({
@@ -25,6 +32,9 @@ export default function CheckoutPage() {
     city: '',
     state: 'PE', // Default state
   });
+
+  const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const total = subtotal + shippingFee;
 
   useEffect(() => {
     // Load cart
@@ -43,15 +53,42 @@ export default function CheckoutPage() {
       router.push('/');
     }
 
-    // Load settings (shipping fee, whatsapp)
+    // Load settings (shipping rules, whatsapp)
     fetch('/api/settings')
       .then(res => res.json())
       .then(data => {
         if (data.shippingFee !== undefined) setShippingFee(Number(data.shippingFee));
         if (data.whatsappNumber) setWhatsappNumber(data.whatsappNumber);
+        setShippingSettings({
+          shippingFee: Number(data.shippingFee !== undefined ? data.shippingFee : 15),
+          shippingFeeLocal: Number(data.shippingFeeLocal !== undefined ? data.shippingFeeLocal : 10),
+          shippingFeeOthers: Number(data.shippingFeeOthers !== undefined ? data.shippingFeeOthers : 25),
+          shippingFreeThreshold: Number(data.shippingFreeThreshold !== undefined ? data.shippingFreeThreshold : 199),
+          storeState: data.storeState || 'PE'
+        });
       })
       .catch(err => console.error('Error fetching settings:', err));
   }, [router]);
+
+  // Recalculate shipping fee automatically based on subtotal and target state
+  useEffect(() => {
+    if (!shippingSettings) return;
+
+    let fee = shippingSettings.shippingFee;
+    const isFree = shippingSettings.shippingFreeThreshold > 0 && subtotal >= shippingSettings.shippingFreeThreshold;
+
+    if (isFree) {
+      fee = 0;
+    } else if (formData.state) {
+      if (formData.state.toUpperCase() === shippingSettings.storeState.toUpperCase()) {
+        fee = shippingSettings.shippingFeeLocal;
+      } else {
+        fee = shippingSettings.shippingFeeOthers;
+      }
+    }
+
+    setShippingFee(fee);
+  }, [formData.state, subtotal, shippingSettings]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -78,9 +115,6 @@ export default function CheckoutPage() {
       }
     }
   };
-
-  const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const total = subtotal + shippingFee;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -373,8 +407,20 @@ export default function CheckoutPage() {
                   <span>R$ {subtotal.toFixed(2).replace('.', ',')}</span>
                 </div>
                 <div className="summary-calc-row">
-                  <span>Frete Fixo</span>
-                  <span>R$ {shippingFee.toFixed(2).replace('.', ',')}</span>
+                  <span>{
+                    shippingSettings.shippingFreeThreshold > 0 && subtotal >= shippingSettings.shippingFreeThreshold
+                      ? 'Frete Grátis'
+                      : formData.state.toUpperCase() === shippingSettings.storeState.toUpperCase()
+                        ? `Frete Local (${formData.state})`
+                        : `Frete Nacional (${formData.state})`
+                  }</span>
+                  <span>
+                    {shippingFee === 0 ? (
+                      <strong style={{ color: 'var(--success)' }}>Grátis</strong>
+                    ) : (
+                      `R$ ${shippingFee.toFixed(2).replace('.', ',')}`
+                    )}
+                  </span>
                 </div>
                 <div className="summary-calc-row total">
                   <span>Total</span>

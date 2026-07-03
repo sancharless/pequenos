@@ -20,6 +20,76 @@ export default function ProductDetail({ product, settings }: ProductDetailProps)
   const [copySuccess, setCopySuccess] = useState(false);
   const [cartCount, setCartCount] = useState(0);
 
+  // Shipping calculator state
+  const [cepInput, setCepInput] = useState('');
+  const [cepLoading, setCepLoading] = useState(false);
+  const [cepResult, setCepResult] = useState<{
+    city: string;
+    uf: string;
+    fee: number;
+    label: string;
+    days: string;
+  } | null>(null);
+
+  const handleCalculateShipping = async () => {
+    const cleanCep = cepInput.replace(/\D/g, '');
+    if (cleanCep.length !== 8) {
+      alert('Por favor, informe um CEP válido com 8 dígitos.');
+      return;
+    }
+
+    setCepLoading(true);
+    setCepResult(null);
+
+    try {
+      const res = await fetch(`https://viacep.com.br/ws/${cleanCep}/json/`);
+      const data = await res.json();
+      
+      if (data.erro) {
+        alert('CEP não encontrado. Verifique os dígitos e tente novamente.');
+        setCepLoading(false);
+        return;
+      }
+
+      const uf = data.uf || 'PE';
+      const city = data.localidade || '';
+      const currentSubtotal = product.price * quantity;
+      
+      let fee = settings.shippingFee;
+      let label = 'Frete Nacional';
+      let days = '5 a 10 dias úteis';
+
+      const isFree = settings.shippingFreeThreshold > 0 && currentSubtotal >= settings.shippingFreeThreshold;
+
+      if (isFree) {
+        fee = 0;
+        label = 'Frete Grátis';
+        days = uf.toUpperCase() === (settings.storeState || 'PE').toUpperCase() ? '1 a 3 dias úteis' : '5 a 10 dias úteis';
+      } else if (uf.toUpperCase() === (settings.storeState || 'PE').toUpperCase()) {
+        fee = settings.shippingFeeLocal !== undefined ? settings.shippingFeeLocal : 10;
+        label = 'Frete Local';
+        days = '1 a 3 dias úteis';
+      } else {
+        fee = settings.shippingFeeOthers !== undefined ? settings.shippingFeeOthers : 25;
+        label = 'Frete Nacional';
+        days = '5 a 10 dias úteis';
+      }
+
+      setCepResult({
+        city,
+        uf,
+        fee,
+        label,
+        days
+      });
+    } catch (err) {
+      console.error(err);
+      alert('Erro ao consultar o CEP. Tente novamente mais tarde.');
+    } finally {
+      setCepLoading(false);
+    }
+  };
+
   // Load cart from localStorage
   useEffect(() => {
     const savedCart = localStorage.getItem('pequenos_estilosos_cart');
@@ -235,6 +305,59 @@ export default function ProductDetail({ product, settings }: ProductDetailProps)
                   Comprar Agora (PIX/Cartão)
                 </button>
               </div>
+            </div>
+
+            {/* Calculadora de Frete */}
+            <div className="shipping-calc-container">
+              <div className="shipping-calc-title">
+                🚚 Calcular Frete e Prazos
+              </div>
+              <div className="shipping-calc-input-row">
+                <input
+                  type="text"
+                  placeholder="00000-000"
+                  maxLength={9}
+                  value={cepInput}
+                  onChange={(e) => {
+                    let val = e.target.value.replace(/\D/g, '');
+                    if (val.length > 5) {
+                      val = val.substring(0, 5) + '-' + val.substring(5, 8);
+                    }
+                    setCepInput(val);
+                  }}
+                  className="shipping-calc-input"
+                />
+                <button
+                  type="button"
+                  onClick={handleCalculateShipping}
+                  disabled={cepLoading}
+                  className="shipping-calc-btn"
+                >
+                  {cepLoading ? '...' : 'Calcular'}
+                </button>
+              </div>
+
+              {cepResult && (
+                <div className="shipping-calc-result">
+                  <div style={{ marginBottom: '8px', fontSize: '12px', color: 'var(--text-medium)', fontWeight: '600' }}>
+                    Entrega para: {cepResult.city} - {cepResult.uf}
+                  </div>
+                  <div className="shipping-calc-result-row">
+                    <span className="shipping-calc-result-label">{cepResult.label}</span>
+                    <span className="shipping-calc-result-val">
+                      {cepResult.fee === 0 ? (
+                        <span style={{ color: 'var(--success)' }}>Grátis</span>
+                      ) : (
+                        `R$ ${cepResult.fee.toFixed(2).replace('.', ',')}`
+                      )}
+                    </span>
+                  </div>
+                  <div className="shipping-calc-result-row" style={{ fontSize: '11px', color: 'var(--text-medium)', marginTop: '2px' }}>
+                    <span>Prazo Estimado</span>
+                    <span>{cepResult.days}</span>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Share / Social Box */}

@@ -1662,3 +1662,87 @@ img {
   gap: 8px;
   margin-top: 8px;
 }
+
+/* Calculadora de Frete na Página de Produto */
+.shipping-calc-container {
+  margin-top: 24px;
+  padding: 20px;
+  background: white;
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.shipping-calc-title {
+  font-family: var(--font-title);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shipping-calc-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.shipping-calc-input {
+  flex-grow: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  outline: none;
+  background: var(--bg-light);
+  transition: var(--transition);
+}
+
+.shipping-calc-input:focus {
+  border-color: var(--primary);
+  background: white;
+}
+
+.shipping-calc-btn {
+  padding: 10px 20px;
+  background: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.shipping-calc-btn:hover {
+  background: var(--secondary-hover);
+}
+
+.shipping-calc-result {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text-dark);
+  border-top: 1px dashed var(--border-dark);
+  padding-top: 14px;
+}
+
+.shipping-calc-result-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.shipping-calc-result-label {
+  font-weight: 600;
+  color: var(--text-medium);
+}
+
+.shipping-calc-result-val {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+

@@ -13,6 +13,9 @@ export default function OrderConfirmation({ initialOrder, settings }: OrderConfi
   const [order, setOrder] = useState<EcommerceOrder>(initialOrder);
   const [copied, setCopied] = useState(false);
 
+  const subtotal = order.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const orderShippingFee = Math.max(0, order.totalAmount - subtotal);
+
   // Poll for order payment status updates
   useEffect(() => {
     if (order.paymentStatus === 'approved' || order.paymentStatus === 'cancelled') {
@@ -163,9 +166,25 @@ export default function OrderConfirmation({ initialOrder, settings }: OrderConfi
                 <strong> CEP:</strong> {order.customerAddress.zipCode}
               </div>
               <div><strong>Cidade/UF:</strong> {order.customerAddress.city} - {order.customerAddress.state}</div>
-              <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: '1px solid var(--border-dark)', display: 'flex', justifyContent: 'space-between', color: 'var(--text-dark)', fontWeight: '700' }}>
-                <span>Total do Pedido:</span>
-                <span style={{ color: 'var(--primary)' }}>R$ {order.totalAmount.toFixed(2).replace('.', ',')}</span>
+              <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: '1px solid var(--border-dark)', display: 'flex', flexDirection: 'column', gap: '6px', fontSize: '13px', color: 'var(--text-medium)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <span>Subtotal:</span>
+                  <span>R$ {subtotal.toFixed(2).replace('.', ',')}</span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <span>Frete:</span>
+                  <span>
+                    {orderShippingFee === 0 ? (
+                      <span style={{ color: 'var(--success)', fontWeight: '600' }}>Grátis</span>
+                    ) : (
+                      `R$ ${orderShippingFee.toFixed(2).replace('.', ',')}`
+                    )}
+                  </span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-dark)', fontWeight: '700', fontSize: '15px', marginTop: '4px', paddingTop: '8px', borderTop: '1px dashed var(--border-dark)' }}>
+                  <span>Total do Pedido:</span>
+                  <span style={{ color: 'var(--primary)' }}>R$ {order.totalAmount.toFixed(2).replace('.', ',')}</span>
+                </div>
               </div>
             </div>
           </div>
