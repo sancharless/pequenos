@@ -97,16 +97,7 @@ export default function StoreFront({ products, settings }: StoreFrontProps) {
       <header className="header">
         <div className="container header-container">
           <Link href="/" className="logo-link">
-            <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="45" fill="#FFF2F7" stroke="#E5207B" strokeWidth="4"/>
-              <path d="M35 45C35 36.7157 41.7157 30 50 30C58.2843 30 65 36.7157 65 45C65 53.2843 58.2843 60 50 60C41.7157 60 35 53.2843 35 45Z" fill="#FFF"/>
-              <path d="M43 43C43 41.8954 43.8954 41 45 41C46.1046 41 47 41.8954 47 43C47 44.1046 46.1046 45 45 45C43.8954 45 43 44.1046 43 43Z" fill="#1F2937"/>
-              <path d="M53 43C53 41.8954 53.8954 41 55 41C56.1046 41 57 41.8954 57 43C57 44.1046 56.1046 45 55 45C53.8954 45 53 44.1046 53 43Z" fill="#1F2937"/>
-              <path d="M45 52C47.5 54.5 52.5 54.5 55 52" stroke="#1F2937" strokeWidth="3" strokeLinecap="round"/>
-              <rect x="25" y="15" width="22" height="12" rx="6" transform="rotate(-15 25 15)" fill="#0CA5C4"/>
-              <rect x="62" y="20" width="22" height="12" rx="6" transform="rotate(15 62 20)" fill="#E5207B"/>
-              <circle cx="50" cy="18" r="7" fill="#F4D03F"/>
-            </svg>
+            <img src="/logo.png" alt="Pequenos Estilosos Logo" style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover' }} />
             <span className="logo-text">Pequenos Estilosos</span>
           </Link>
 
@@ -186,25 +177,7 @@ export default function StoreFront({ products, settings }: StoreFrontProps) {
             <div className="hero-circle-bg">
               <div style={{ position: 'relative', width: '220px', height: '220px' }}>
                 {/* SVG Character representation from Logo */}
-                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
-                  <circle cx="50" cy="50" r="42" fill="#E5207B"/>
-                  <circle cx="50" cy="50" r="37" fill="#FFFFFF"/>
-                  {/* Doll eyes and mouth */}
-                  <circle cx="40" cy="48" r="5" fill="#1F2937"/>
-                  <circle cx="60" cy="48" r="5" fill="#1F2937"/>
-                  {/* Rosy cheeks */}
-                  <circle cx="34" cy="54" r="5" fill="#FFAEC9" opacity="0.8"/>
-                  <circle cx="66" cy="54" r="5" fill="#FFAEC9" opacity="0.8"/>
-                  <path d="M43 58C47 62 53 62 57 58" stroke="#1F2937" strokeWidth="4" strokeLinecap="round"/>
-                  {/* Hair buns */}
-                  <circle cx="28" cy="22" r="14" fill="#FFAEC9" stroke="#E5207B" strokeWidth="2"/>
-                  <circle cx="72" cy="22" r="14" fill="#FFAEC9" stroke="#E5207B" strokeWidth="2"/>
-                  {/* Hair texture */}
-                  <path d="M22 22C24 26 28 26 30 22" stroke="#E5207B" strokeWidth="1.5"/>
-                  <path d="M66 22C68 26 72 26 74 22" stroke="#E5207B" strokeWidth="1.5"/>
-                  {/* Yellow Bow */}
-                  <path d="M42 28L50 34L58 28L56 22L50 24L44 22L42 28Z" fill="#F4D03F" stroke="#E5207B" strokeWidth="2"/>
-                </svg>
+                <img src="/logo.png" alt="Pequenos Estilosos Principal" style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} />
               </div>
             </div>
           </div>
